@@ -14,7 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-//testtest
+Route::get('/form', function(){
+    return view('form');
+});
+Route::post('/form/confirm','Form\ConfirmController@index');
+Route::post('/form/confirm/done','Form\DoneController@index');
 
 Auth::routes();
 
