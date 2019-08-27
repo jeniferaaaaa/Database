@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Form;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\FormValidateRequest;
 
 class ConfirmController extends Controller
 {
@@ -12,7 +13,7 @@ class ConfirmController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(FormValidateRequest $request)
     {
         //リクエストデータの受け取り
         $data = $request->all();

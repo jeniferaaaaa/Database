@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Form;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Admin;
 use App\Site;
 use DB;
