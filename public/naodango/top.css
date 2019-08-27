@@ -1,0 +1,208 @@
+/* ここからがTOP画面 */
+body {
+    margin: 0;
+    font-family: "メイリオ";
+    background-color: #FFCCCC;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .container {
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  
+  .top-wrapper {
+    margin: 100px 400px 50px 400px;
+    padding: 20px 100px 20px 100px;
+    background-color:#FF6699;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  
+  header {  
+    height: 65px;
+    width: 100%;
+    background-color: white;
+    /* positionプロパティをfixedに、topを0に指定してください */
+    position: fixed;
+    top: 0;
+    /* z-indexを10に指定してください */
+    z-index: 10;
+    opacity: 0.8;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 60px;
+  }
+  
+  .signup {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #FF6699;
+    border: solid 2px #FF6699;
+    border-radius: 3px;
+    transition: .4s;
+    margin: 13px 60px 13px 20px;
+    width: 250px;
+    padding-right: 30px;
+  }
+
+  .signup:hover {
+    background: #FF6699;
+    color: white;
+  }
+
+  .header-left li {
+      list-style:none;
+      float: left;
+  }
+  
+  .header-right {
+    display: inline-block;
+  }
+
+  .header-right a {
+    padding:20px;
+  }
+  
+  .container p {
+    font-size: x-large;
+  }
+
+  .container a {
+    font-size: large;
+    padding: 7px 15px;
+  }
+
+  .link1 {
+    color: blue;
+    border-bottom: dotted 2px blue;
+  }
+
+  .link1:hover {
+    color:green;
+    border-bottom: dotted 2px green;
+  }
+
+  .link2 {
+    color: blue;
+    border-bottom: dotted 2px blue;
+  }
+  
+  .link2:hover {
+    color:green;
+    border-bottom: dotted 2px green;
+  }
+
+  .link3 {
+    color: blue;
+    border-bottom: dotted 2px blue;
+  }
+
+  .link3:hover {
+    color:green;
+    border-bottom: dotted 2px green;
+  }
+
+  .link4 {
+    color: blue;
+    border-bottom: dotted 2px blue;
+  }
+
+  .link4:hover {
+    color:green;
+    border-bottom: dotted 2px green;
+  }
+
+  .link5 {
+    color: blue;
+    border-bottom: dotted 2px blue;
+  }
+
+  .link5:hover {
+    color:green;
+    border-bottom: dotted 2px green;
+  }
+
+  .link6 {
+    color: blue;
+    border-bottom: dotted 2px blue;
+  }
+
+  .link6:hover {
+    color:green;
+    border-bottom: dotted 2px green;
+  }
+
+  .link7 {
+    color: blue;
+    border-bottom: dotted 2px blue;
+  }
+
+  .link7:hover {
+    color:green;
+    border-bottom: dotted 2px green;
+  }
+
+  .link8 {
+    color: blue;
+    border-bottom: dotted 2px blue;
+  }
+
+  .link8:hover {
+    color:green;
+    border-bottom: dotted 2px green;
+  }
+
+
+  .bot-wrapper {
+      text-align: center;
+      font-weight: bold;
+      font-size: large;
+      background-color: #FF6699;
+      margin: 100px 400px 50px 400px;
+      padding: 20px 80px 20px 80px;
+      border-radius: 10px;
+      color: white;
+  }
+
+  .bot-wrapper li {
+      text-align: center;
+      font-weight: normal;
+      font-size: medium;
+      list-style:none;
+  }
+
+  .getstarted {
+      background-color: #FF99CC;
+      border-radius: 10px;
+      margin: 20px;
+      height: 35px;
+  }
+  
+  footer img {
+    width: 125px;
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  
+  footer {
+    padding-top: 30px;
+  }
+
+/* ここまでがTOP画面 */
