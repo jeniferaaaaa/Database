@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/form', function(){
-    return view('form');
+    return view('form.form');
 });
 Route::post('/form/confirm','Form\ConfirmController@index');
 Route::post('/form/confirm/done','Form\DoneController@index');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Form;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\FormValidateRequest;
 
 class ConfirmController extends Controller
 {
@@ -12,15 +13,19 @@ class ConfirmController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(FormValidateRequest $request)
     {
         //リクエストデータの受け取り
         $data = $request->all();
-        
-        //セッションへ保存
-        $request->session()->put('data',$data);
 
-        return view('confirm',compact('data'));
+        //セッションへ保存
+        $name = $request->session()->put('name',$request->input('name'));//申込み者名前
+        $email = $request->session()->put('email',$request->input('email'));//メールアドレス
+        $pass = $request->session()->put('pass',$request->input('password'));//パスワード
+        $site = $request->session()->put('site',$request->input('site_name'));//サイト名称
+        $domain = $request->session()->put('domain',$request->input('domain'));//ドメイン名
+        
+        return view('form.confirm',compact('data'));
     }
 
 }

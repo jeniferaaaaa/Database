@@ -8,7 +8,7 @@
                 <div class="panel-heading">サイト登録確認画面</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('form/confrim/done') }}">
+                    <form class="form-horizontal" method="POST" action="{{ url('form/confirm/done') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group">
