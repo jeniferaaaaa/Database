@@ -37,4 +37,17 @@ class Arbi extends Authenticatable
         'password',
     ];
 
+    /**
+     * デフォルトではログアウト時にremember_tokenを書き換えようとして
+     * エラーを吐くので、その処理を一旦無効化
+     * 
+     */
+
+    public function setAttribute($key,$value)
+    {
+        if ($key !== $this->getRememberTokenName()){
+            parent::setAttribute($key,$value);
+        }
+    }
+
 }
