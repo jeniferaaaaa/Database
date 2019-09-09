@@ -57,7 +57,7 @@
                             <label for="password-confirm" class="col-md-4 control-label">パスワード（確認）</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirm">
 
                                 @if ($errors->has('password-confirm'))
                                     <span class="help-block">
@@ -76,6 +76,20 @@
                                 @if ($errors->has('site_name'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('site_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('site_purpose') ? ' has-error' : '' }}">
+                            <label for="site_purpose" class="col-md-4 control-label">サイト利用目的</label>
+
+                            <div class="col-md-6">
+                                <input id="site_purpose" type="text" class="form-control" name="site_purpose" value="{{ old('site_purpose') }}">
+
+                                @if ($errors->has('site_purpose'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('site_purpose') }}</strong>
                                     </span>
                                 @endif
                             </div>

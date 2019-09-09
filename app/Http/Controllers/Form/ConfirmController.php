@@ -19,11 +19,12 @@ class ConfirmController extends Controller
         $data = $request->all();
 
         //セッションへ保存
-        $name = $request->session()->put('name',$request->input('name'));//申込み者名前
-        $email = $request->session()->put('email',$request->input('email'));//メールアドレス
-        $pass = $request->session()->put('pass',$request->input('password'));//パスワード
-        $site = $request->session()->put('site',$request->input('site_name'));//サイト名称
-        $domain = $request->session()->put('domain',$request->input('domain'));//ドメイン名
+        $request->session()->put('name',$request->input('name'));//申込み者名前
+        $request->session()->put('email',$request->input('email'));//メールアドレス
+        $request->session()->put('pass',$request->input('password'));//パスワード
+        $request->session()->put('site_name',$request->input('site_name'));//サイト名称
+        $request->session()->put('site_purpose',$request->input('site_purpose'));//サイト利用目的
+        $request->session()->put('domain',$request->input('domain'));//ドメイン名
         
         return view('form.confirm',compact('data'));
     }

@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Form;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Admin;
-use App\Site;
-use DB;
+use App\Model\Arbi;
+use App\Model\Site;
 
 class DoneController extends Controller
 {
@@ -21,24 +20,26 @@ class DoneController extends Controller
         $name = $request->session()->get('name');
         $email = $request->session()->get('email');
         $pass = $request->session()->get('pass');
-        $site = $request->session()->get('site');
+        $site_name = $request->session()->get('site_name');
+        $site_purpose = $request->session()->get('site_purpose');
         $domain = $request->session()->get('domain');
+
+        //管理者をまず登録
+        Arbi::create([
+            'name' => $name,
+            'email' => $email,
+            'password' => bcrypt($pass),
+        ]);
+
+        //登録した管理者のIDを取得
+        $id = Arbi::where('email',$email)->value('arbi_id');
 
         //siteテーブルへ登録
         Site::create([
-            'name' => $site,
+            'site_name' => $site_name,
+            'site_purpose' => $site_purpose,
             'domain' => $domain,
-        ]);
-
-        //site_idの取得
-        $id = Site::where('domain','=',$domain)->value('id');
-
-        //adminテーブルの登録
-        Admin::create([
-            'site_id' => $id,
-            'name' => $name,
-            'email' => $email,
-            'password' => $pass,
+            'arbi_id' => $id,
         ]);
 
         return view('form.done');

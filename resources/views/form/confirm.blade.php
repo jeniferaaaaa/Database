@@ -39,7 +39,7 @@
                             <label for="password-confirm" class="col-md-4 control-label">パスワード（確認）</label>
 
                             <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="password_confirmation">{{ $data['password_confirmation'] }}</label>
+                                <label class="col-md-4 control-label" name="password_confirmation">{{ $data['password_confirm'] }}</label>
                             </div>
                         </div>
 
@@ -48,6 +48,14 @@
 
                             <div class="col-md-6">
                                 <label class="col-md-4 control-label" name="site_name">{{ $data['site_name'] }}</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="site_purpose" class="col-md-4 control-label">サイト利用目的</label>
+
+                            <div class="col-md-6">
+                                <label class="col-md-4 control-label" name="site_purpose">{{ $data['site_purpose'] }}</label>
                             </div>
                         </div>
 
