@@ -3,11 +3,11 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Nofifiable;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
-class Arbi extends Model
+class Arbi extends Authenticatable
 {
     /**
      * モデルと関連しているテーブル

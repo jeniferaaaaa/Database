@@ -17,8 +17,8 @@ class CreateArbiTable extends Migration
             $table->increments('arbi_id');//管理者ID
             $table->string('name','30')->unique();//名前
             $table->string('email','255')->unique();//メールアドレス
-            $table->string('password','30');//パスワード
-            $table->timestamp('last_login');//最終ログイン日時
+            $table->string('password','255');//パスワード
+            $table->timestamp('last_login')->nullable();//最終ログイン日時
             $table->timestamps();
         });
     }

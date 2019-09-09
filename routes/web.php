@@ -22,4 +22,7 @@ Route::post('/form/confirm/done','Form\DoneController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/arbi_menu', function () {
+    return view('admin_menu');
+});
+

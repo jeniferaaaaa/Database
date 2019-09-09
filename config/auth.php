@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'arbi',
     ],
 
     /*
@@ -38,12 +38,12 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'arbi',
         ],
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'arbi',
         ],
     ],
 
@@ -64,11 +64,17 @@ return [
     |
     */
 
+    //プロバイダーに管理者テーブルを追加、デフォルトのusersをコメントアウト
+
     'providers' => [
-        'users' => [
+        'arbi' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Model\Arbi::class,
         ],
+        //'users' => [
+        //    'driver' => 'eloquent',
+        //    'model' => App\User::class,
+        //],
 
         // 'users' => [
         //     'driver' => 'database',
@@ -91,12 +97,16 @@ return [
     |
     */
 
-    'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_resets',
+    //パスワードリセットはいったんコメントアウト
+
+    /*'passwords' => [
+        'arbi' => [
+            'provider' => 'arbi',
+            //'table' => 'password_resets',
+            'table' => 'arbi',
             'expire' => 60,
         ],
     ],
+    */
 
 ];

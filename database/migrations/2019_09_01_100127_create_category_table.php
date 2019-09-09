@@ -20,7 +20,6 @@ class CreateCategoryTable extends Migration
             $table->string('category_name','30');//カテゴリ名称
             $table->string('category_path')->nullable();//カテゴリ画像パス
             $table->text('category_text')->nullable();//カテゴリ説明文
-            $table->integer('max_register')->nullable();//詳細登録件数
             $table->timestamps();//作成日時と更新日時
         });
     }
