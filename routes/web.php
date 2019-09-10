@@ -26,3 +26,9 @@ Route::get('/arbi_menu', function () {
     return view('admin_menu');
 });
 
+
+
+// fukase_test
+// site_front
+Route::get('list', 'SiteFrontController@list');
+
