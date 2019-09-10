@@ -22,7 +22,8 @@ Route::post('/form/confirm/done','Form\DoneController@index');
 
 Auth::routes();
 
-Route::get('/arbi_menu', function () {
-    return view('admin_menu');
+Route::get('/menu', function () {
+    return view('arbi.menu');
 });
+Route::get('/basic', 'Arbi\basic\EditController@index');
 
