@@ -26,4 +26,5 @@ Route::get('/menu', function () {
     return view('arbi.menu');
 });
 Route::get('/basic', 'Arbi\basic\EditController@index');
+Route::post('/basic/confirm', 'Arbi\basic\ConfirmController@index');
 
