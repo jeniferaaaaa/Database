@@ -21,6 +21,11 @@ class Site extends Model
         'sub_path2','sub_path3','site_text','arbi_id',
     ];
 
+    /**
+     * 管理者テーブルとのリレーション
+     * 
+     */
+
     public function arbi () 
     {
         return $this->belongsTo('App\Model\Arbi');

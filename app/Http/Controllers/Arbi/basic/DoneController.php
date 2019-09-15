@@ -18,13 +18,20 @@ class DoneController extends Controller
         $site_purpose = $request->session()->get('site_purpose');
 
         //管理者テーブルを更新
+        $arbis = Auth::user();//ログイン中のユーザのモデルを取得
+        $arbis->name = $name;
+        $arbis->email = $email;
+        $arbis->save();
 
         //管理者に紐付くサイトテーブルを更新
         $sites = Auth::user()->sites;
-        $sites->site_name = $site_name;
-        $sites->site_purpose = $site_purpose;
+        foreach ($sites as $site){
+            $site->site_name = $site_name;
+            $site->site_purpose = $site_purpose;
+            $site->save();
+        }
 
-        return view('form.done');
+        return view('arbi.basic.done');
 
     }
 }
