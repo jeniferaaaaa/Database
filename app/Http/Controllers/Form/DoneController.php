@@ -42,7 +42,34 @@ class DoneController extends Controller
             'arbi_id' => $id,
         ]);
 
+        //入力されたメールアドレスにメールを送信
+        $chkMail = $this->sendMail($email);
+        if($chkMail == null){
+            var_dump('メールを送信できませんでした');
+        }
+
         return view('form.done');
+    }
+
+    private function sendMail ($email)
+    {
+        // Mail::sendで送信できる.
+        // 第1引数に、テンプレートファイルのパスを指定し、
+        // 第2引数に、テンプレートファイルで使うデータを指定する
+        Mail::send(['text' => 'emails.register'], [
+            "aaa" => "こんにちは！"
+
+        ], function($message) use ($email){
+
+            // 第3引数にはコールバック関数を指定し、
+            // その中で、送信先やタイトルの指定を行う.
+            $message
+                ->to($email)
+                ->bcc('admin@sample.com')
+                ->subject("ユーザー登録ありがとうございます");
+        });
+
+        return 1;
     }
 
 }

@@ -8,17 +8,35 @@
                 <div class="panel-heading">管理者一覧画面</div>
 
                 <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    ログインしました。
 
                     <div class="col-md-6">
                         <a href='/basic'>基本情報編集</a>
                     </div>
+
+                    <div class="col-md-6">
+                        <a href='/item'>表示項目編集</a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <a href='/design'>デザイン設定編集</a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <a href='/top'>TOPページ編集</a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <a href='/category'>カテゴリ編集</a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <a href='/post'>投稿内容編集</a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <a href='/basic'>パスワード変更</a>
+                    </div>
+
                 </div>
             </div>
         </div>

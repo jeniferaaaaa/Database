@@ -9,6 +9,20 @@ use Auth;
 
 class DoneController extends Controller
 {
+    /**
+     * ログインしていないユーザを弾く初期化処理
+     * 
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * セッションからデータを取得し
+     * 管理者テーブルとサ管理者に紐付くサイトテーブルを更新する
+     * 
+     */
     public function index (Request $request)
     {
         //セッションから申し込みデータ取得
