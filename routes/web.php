@@ -29,3 +29,9 @@ Route::get('/basic', 'Arbi\basic\EditController@index');
 Route::post('/basic/confirm', 'Arbi\basic\ConfirmController@index');
 Route::post('/basic/confirm/done', 'Arbi\basic\DoneController@index');
 
+
+
+// fukase_test
+// site_front
+Route::get('list', 'SiteFrontController@list');
+
