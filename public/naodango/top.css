@@ -1,208 +1,294 @@
-/* ここからがTOP画面 */
+/*リセットCSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    margin: 0;
-    font-family: "メイリオ";
-    background-color: #FFCCCC;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .container {
-    width: 1170px;
-    padding: 0 15px;
-    margin: 0 auto;
-    text-align: center;
-  }
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
-  
-  .top-wrapper {
-    margin: 100px 400px 50px 400px;
-    padding: 20px 100px 20px 100px;
-    background-color:#FF6699;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    font-size: large;
+
+/*全体部分*/
+body {
+    font-family: 'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/*ヘッダー部分*/
+header {
+    background-color: #F58F98;
+    height: 80px;
     font-weight: bold;
-    border-radius: 10px;
-  }
-  
-  header {  
-    height: 65px;
-    width: 100%;
-    background-color: white;
-    /* positionプロパティをfixedに、topを0に指定してください */
     position: fixed;
-    top: 0;
-    /* z-indexを10に指定してください */
-    z-index: 10;
-    opacity: 0.8;
-  }
-  
-  .logo {
-    width: 150px;
-    margin-top: 10px;
+    width: 2000px;
+}
+
+header li {
     float: left;
-    margin-left: 60px;
-  }
-  
-  .signup {
-    display: inline-block;
-    padding: 0.3em 1em;
+    padding: 35px 50px 30px 50px;
+}
+
+header a {
     text-decoration: none;
-    color: #FF6699;
-    border: solid 2px #FF6699;
-    border-radius: 3px;
-    transition: .4s;
-    margin: 13px 60px 13px 20px;
-    width: 250px;
-    padding-right: 30px;
-  }
+    color: black;
+}
 
-  .signup:hover {
-    background: #FF6699;
+header a:hover {
     color: white;
-  }
+}
 
-  .header-left li {
-      list-style:none;
-      float: left;
-  }
-  
-  .header-right {
+/*liの一つ目の要素*/
+header li:first-child {
+    padding: 7px 30px 0 80px;
+}
+
+/*「あなたもまとめてみる？」リンク*/
+.you-btn {
+    background-color: 	#E95B6B;
+    padding: 20px 40px 20px 40px;
+    margin: 20px 80px 5px 450px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+header li:nth-of-type(5) {
+    margin: 0;
+    padding: 30px;
+}
+
+.you-btn:hover {
+    color: black;
+    background-color: #F6BABC;
+    box-shadow: 2px 2px 4px gray;
+}
+
+/*ハートの部分*/
+.heart-part {
+    background-image: url(images/heart_top.jpg);
+    height: 568px;
+}
+
+/*おまとめ一覧部分*/
+.omatome {
+    background-color: #F6BABC;
+    height: 1100px;
+}
+
+.omatome h1 {
+    font-size: 25px;
+    text-align: center;
+    padding: 25px;
+}
+
+.image1 {
+    height: 200px;
+    width: 200px;
+}
+
+.image2 {
+    height: 200px;
+    width: 200px;
+}
+
+.image3 {
+    height: 200px;
+    width: 200px;
+}
+
+.image4 {
+    height: 200px;
+    width: 200px;
+}
+
+.image5 {
+    height: 200px;
+    width: 200px;
+}
+
+.image6 {
+    height: 200px;
+    width: 200px;
+}
+
+.image7 {
+    height: 200px;
+    width: 200px;
+}
+
+.image8 {
+    height: 200px;
+    width: 200px;
+}
+
+.image9 {
+    height: 200px;
+    width: 200px;
+}
+
+table {
+    text-align: center;
+    width: 1000px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {   
+    color: white;
+}
+
+/*ページャー*/
+* {
+    margin: auto;
+    padding: 0;
+    font-style: normal;
+    list-style: none;
+}
+
+.pagination {
+    text-align: center;
+}
+
+
+ul.pager {
+    margin: 40px auto;
     display: inline-block;
-  }
+    *display:inline;
+    zoom:1;
+}
 
-  .header-right a {
-    padding:20px;
-  }
-  
-  .container p {
-    font-size: x-large;
-  }
-
-  .container a {
-    font-size: large;
-    padding: 7px 15px;
-  }
-
-  .link1 {
-    color: blue;
-    border-bottom: dotted 2px blue;
-  }
-
-  .link1:hover {
-    color:green;
-    border-bottom: dotted 2px green;
-  }
-
-  .link2 {
-    color: blue;
-    border-bottom: dotted 2px blue;
-  }
-  
-  .link2:hover {
-    color:green;
-    border-bottom: dotted 2px green;
-  }
-
-  .link3 {
-    color: blue;
-    border-bottom: dotted 2px blue;
-  }
-
-  .link3:hover {
-    color:green;
-    border-bottom: dotted 2px green;
-  }
-
-  .link4 {
-    color: blue;
-    border-bottom: dotted 2px blue;
-  }
-
-  .link4:hover {
-    color:green;
-    border-bottom: dotted 2px green;
-  }
-
-  .link5 {
-    color: blue;
-    border-bottom: dotted 2px blue;
-  }
-
-  .link5:hover {
-    color:green;
-    border-bottom: dotted 2px green;
-  }
-
-  .link6 {
-    color: blue;
-    border-bottom: dotted 2px blue;
-  }
-
-  .link6:hover {
-    color:green;
-    border-bottom: dotted 2px green;
-  }
-
-  .link7 {
-    color: blue;
-    border-bottom: dotted 2px blue;
-  }
-
-  .link7:hover {
-    color:green;
-    border-bottom: dotted 2px green;
-  }
-
-  .link8 {
-    color: blue;
-    border-bottom: dotted 2px blue;
-  }
-
-  .link8:hover {
-    color:green;
-    border-bottom: dotted 2px green;
-  }
-
-
-  .bot-wrapper {
-      text-align: center;
-      font-weight: bold;
-      font-size: large;
-      background-color: #FF6699;
-      margin: 100px 400px 50px 400px;
-      padding: 20px 80px 20px 80px;
-      border-radius: 10px;
-      color: white;
-  }
-
-  .bot-wrapper li {
-      text-align: center;
-      font-weight: normal;
-      font-size: medium;
-      list-style:none;
-  }
-
-  .getstarted {
-      background-color: #FF99CC;
-      border-radius: 10px;
-      margin: 20px;
-      height: 35px;
-  }
-  
-  footer img {
-    width: 125px;
+ul.pager li {
     float: left;
-    margin-bottom: 20px;
-  }
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px #999999 solid;
+}
+ul.pager li.next {
+    border-right: none;
+}
 
-  
-  footer {
-    padding-top: 30px;
-  }
+ul.pager li a:link,
+ul.pager li a:visited {
+    color: #E95B6B;
+    text-decoration: none;
+}
 
-/* ここまでがTOP画面 */
+ul.pager li a:hover,
+ul.pager li a:active {
+    color: white;
+    text-decoration: none;
+}
+
+ul.pager li em {
+    font-weight: bold;
+}
+
+/*おまとめ紹介部分*/
+.omatome-ad {
+    background-color: #F58F98;
+    height: 115px;
+    padding: 25px 40px 20px 40px;
+    margin: 50px 40px 40px 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.omatome-ad h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.omatome-ad h2 {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 18px;
+}
+
+/*おまとめ紹介ボタン部分*/
+.intro-button {
+    background-color: #E95B6B;
+    margin: 40px 250px auto 250px;
+    padding: 15px 40px 15px 40px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.omatome-button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.intro-button:hover {
+    background-color: #F6BABC;
+}
+
+/*フッター部分*/
+footer {
+    background-color: #F58F98;
+    margin: auto;
+    height: 100px;
+}
+
+footer li {
+    float: left;
+    margin: 15px 0 0 0;
+}
+
+footer a {
+    margin: 15px 0 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+/*利用規約部分*/
+a.rule {
+    margin: 0;
+}
+
+.copyright a {
+    float: right;
+    margin: 80px 20px 0 0;
+}
+
