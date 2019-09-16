@@ -1,0 +1,190 @@
+/*リセットCSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}   
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*全体部分*/
+body {
+    font-family: 'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/*ヘッダー部分*/
+header {
+    background-color: #F58F98;
+    height: 80px;
+    font-weight: bold;
+    position: fixed;
+    width: 2000px;
+}
+
+header li {
+    float: left;
+    padding: 35px 50px 30px 50px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: white;
+}
+
+/*liの一つ目の要素*/
+header li:first-child {
+    padding: 7px 30px 0 80px;
+}
+
+/*サイト新規登録欄*/
+.sign-up {
+    background-color:#F6BABC;
+    height: 1000px;
+    padding: 110px 80px;
+}
+
+.sign-up h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 120px 0 120px;
+}
+
+.sign-up h3 {
+    font-size: 18px;
+    margin: 0 120px 0 120px;
+}
+
+/*入力欄*/
+.input {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.hissu{
+    padding: 10px 10px 20px 10px;
+}
+
+.input span {
+    background-color: #F58F98;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(6) td:first-child {
+    vertical-align: top;
+}
+
+input {
+    height: 27px;
+    width: 200px;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #F58F98;
+    background: #FFF;
+    border: solid 3px #F58F98;
+    border-radius: 10px;
+}
+
+input:focus {
+    border: solid 3px #EF4868;
+    outline: 0;  
+  }
+
+
+
+textarea {
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #F58F98;
+    background: #FFF;
+    border: solid 3px #F58F98;
+    border-radius: 10px;
+    font-family: 'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+textarea:focus {
+    border: solid 3px #EF4868;
+    outline: 0;  
+}
+
+.error_name {
+    color: red;
+}   
+
+.error_email {
+    color: red;
+}
+
+.error_pass1 {
+    color: red;
+}
+
+.error_pass2 {
+    color: red;
+}
+
+.error_site_name {
+    color: red;
+}
+
+.error_site_purpose {
+    color: red;
+}
+
+.error_domain {
+    color: red;
+}

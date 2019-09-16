@@ -13,8 +13,92 @@
     <title>サイト新規登録｜matomar</title>
   </head>
   <body>
+    
+    <!--ヘッダー-->
+    <header>
+      <ul>
+          <li><img src="images/make/top-logo.png"></li>
+          <li><a href="#">機能紹介</a></li>
+          <li><a href="#">料金</a></li>
+          <li><a href="#">事例</a></li>
+      </ul>
+    </header>
 
+    <!--サイト新規登録欄-->
+    <div class="sign-up">
+      <h2>サイト新規登録</h2><br />
+      <h3>まずはあなたとサイトの基本情報を登録してください。</h3><br />
+         
+        <!--入力欄-->
+        <div class="input">
+          <form method="POST" action="#">
+            <p class=hissu>※<span>必須</span>は必須入力項目です。</p>
+            <table>
+              <tr>
+                <td>
+                  <span>必須</span>ニックネーム<br /><br />
+                  <div class="error_name">※ニックネームは必須です。</div>
+                </td>
+                <td><input type="text" name="name"></td>
+              </tr>
+             <tr>
+                <td>
+                  <span>必須</span>メールアドレス<br /><br />
+                  <div class="error_email">※メールアドレスは必須です。</div>
+                </td>
+                <td>
+                  <input type="email" name="email">
+                  <p>※ご登録いただいたメールアドレスにアカウント情報をお送りいたします。</p>
+                </td>
+             </tr>
+              <tr>
+                <td>
+                  <span>必須</span>パスワード<br /><br />
+                  <div class="error_pass1">※パスワードは必須です。</div>
+                </td>
+                <td><input type="password" name="pass1"></td>
+             </tr>
+              <tr>
+                <td>
+                  <span>必須</span>パスワード（確認）<br /><br />
+                  <div class="error_pass2">※パスワード（確認）は必須です。</div>
+                </td>
+                <td>
+                  <input type="password" name="pass2"><br /><br />  
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>必須</span>サイト名称<br /><br />
+                  <div class="error_site_name">※サイト名称は必須です。</div>
+                </td>
+                <td><input type="text" name="site_name"></td>
+              </tr>
+              <tr>
+                <td>
+                  <span>必須</span>サイト利用目的<br /><br />
+                  <div class="error_site_purpose">※サイト利用目的は必須です。</div>
+                </td>
+                <td><textarea name="site_purpose" cols="40" rows="5" wrap="hard"></textarea></td>
+              </tr>
+              <tr>
+                <td>
+                  <span>必須</span>ドメイン<br /><br />
+                  <div class="error_domain">※ドメインは必須です。</div>
+                </td>
+                <td><input type="text" name="domain"></td>
+              </tr>
+            </table>
+          </form>
+        </div>
 
+        <!--確認・戻るボタン-->
+        <div class="button">
+          <button type="button" onclick="history.back()" class="back">戻る</button>
+          <button type="submit" class="confirm">確認画面へ進む</button>
+        </div>
+
+    </div>
 
   </body>
 </html>
