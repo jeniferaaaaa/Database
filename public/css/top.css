@@ -99,7 +99,6 @@ header li:nth-of-type(5) {
 
 /*ハートの部分*/
 .heart-part {
-    background-image: url(/images/make/heart_top.jpg);
     height: 568px;
 }
 
