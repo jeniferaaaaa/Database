@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Model\Arbi;
 use App\Model\Site;
+use App\formException;
+use DB;
 
 class DoneController extends Controller
 {
@@ -23,6 +25,12 @@ class DoneController extends Controller
         $site_name = $request->session()->get('site_name');
         $site_purpose = $request->session()->get('site_purpose');
         $domain = $request->session()->get('domain');
+
+        //テスト(DB二重登録防止)
+        $boolean = DB::table('arbi')->where('email',$email)->exists();
+        if ($boolean){
+            throw new \Exception('すでに登録されているメールアドレスです');
+        }
 
         //管理者をまず登録
         Arbi::create([
@@ -45,7 +53,7 @@ class DoneController extends Controller
         //入力されたメールアドレスにメールを送信
         $chkMail = $this->sendMail($email);
         if($chkMail == null){
-            var_dump('メールを送信できませんでした');
+            throw new \Exception('メールが送信できませんでした');
         }
 
         return view('form.done');
