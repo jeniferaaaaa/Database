@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('top');
 });
 Route::get('/form', function(){
     return view('form.form');
