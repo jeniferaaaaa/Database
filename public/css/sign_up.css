@@ -80,7 +80,7 @@ header li:first-child {
 /*サイト新規登録欄*/
 .sign-up {
     background-color:#F6BABC;
-    height: 1000px;
+    height: 1060px;
     padding: 110px 80px;
 }
 
@@ -188,3 +188,71 @@ textarea:focus {
 .error_domain {
     color: red;
 }
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #E95B6B;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back:hover {
+    background-color: #F6BABC;
+}
+
+.confirm {
+    background-color: #E95B6B;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.confirm:hover {
+    background-color: #F6BABC;
+}
+
+/*フッター部分*/
+footer {
+    background-color: #F58F98;
+    margin: auto;
+    height: 100px;
+}
+
+footer li {
+    float: left;
+    margin: 15px 0 0 0;
+}
+
+footer a {
+    margin: 15px 0 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+/*利用規約部分*/
+a.rule {
+    margin: 0;
+}
+
+.copyright a {
+    float: right;
+    margin: 80px 20px 0 0;
+}
+
+
