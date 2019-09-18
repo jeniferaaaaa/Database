@@ -1,0 +1,194 @@
+/*リセットCSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}   
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*全体部分*/
+body {
+    font-family: 'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/*ヘッダー部分*/
+header {
+    background-color: #F58F98;
+    height: 80px;
+    font-weight: bold;
+    position: fixed;
+    width: 2000px;
+}
+
+header li {
+    float: left;
+    padding: 35px 50px 30px 50px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: white;
+}
+
+/*liの一つ目の要素*/
+header li:first-child {
+    padding: 7px 30px 0 80px;
+}
+
+/*サイト新規登録確認欄*/
+.sign-up-confirm {
+    background-color:#F6BABC;
+    height: auto;
+    padding: 110px 80px;
+}
+
+.sign-up-confirm h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 120px 0 120px;
+}
+
+.sign-up-confirm h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*入力確認欄*/
+.input-confirm {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.input-confirm span {
+    background-color: #F58F98;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input-confirm p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(6) td:first-child {
+    vertical-align: top;
+}
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #E95B6B;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back:hover {
+    background-color: #F6BABC;
+}
+
+.ok {
+    background-color: #E95B6B;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.ok:hover {
+    background-color: #F6BABC;
+}
+
+/*フッター部分*/
+footer {
+    background-color: #F58F98;
+    margin: auto;
+    height: 100px;
+}
+
+footer li {
+    float: left;
+    margin: 15px 0 0 0;
+}
+
+footer a {
+    margin: 15px 0 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+/*利用規約部分*/
+a.rule {
+    margin: 0;
+}
+
+.copyright a {
+    float: right;
+    margin: 80px 20px 0 0;
+}
+
+
