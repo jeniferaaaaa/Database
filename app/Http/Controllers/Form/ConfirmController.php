@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Form;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\FormValidateRequest;
+use App\formException;
 
 class ConfirmController extends Controller
 {
@@ -17,6 +19,11 @@ class ConfirmController extends Controller
     {
         //リクエストデータの受け取り
         $data = $request->all();
+
+        //データが空の場合例外を投げる
+        if ($data === NULL){
+            throw new \Exception ('入力されているデータが受け取れません');
+        }
 
         //セッションへ保存
         $request->session()->put('name',$request->input('name'));//申込み者名前

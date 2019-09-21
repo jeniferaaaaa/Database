@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Arbi\basic;
+namespace App\Http\Controllers\Arbi\item;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

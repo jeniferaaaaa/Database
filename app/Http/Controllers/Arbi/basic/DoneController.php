@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Arbi\basic;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Arbi;
 use App\Model\Site;
