@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Arbi\basic;
+namespace App\Http\Controllers\Arbi\item;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -27,22 +27,26 @@ class DoneController extends Controller
     public function index (Request $request)
     {
         //セッションから申し込みデータ取得
-        $name = $request->session()->get('name');
-        $email = $request->session()->get('email');
-        $site_name = $request->session()->get('site_name');
-        $site_purpose = $request->session()->get('site_purpose');
+        $at1_name = $request->session()->get('attribute1');
+        $at2_name = $request->session()->get('attribute2');
+        $at3_name = $request->session()->get('attribute3');
+        $at4_name = $request->session()->get('attribute4');
+        $at5_name = $request->session()->get('attribute5');
+        $dt1_name = $request->session()->get('detail1');
+        $dt2_name = $request->session()->get('detail2');
+        $dt3_name = $request->session()->get('detail3');
 
-        //管理者テーブルを更新
-        $arbis = Auth::user();//ログイン中のユーザのモデルを取得
-        $arbis->name = $name;
-        $arbis->email = $email;
-        $arbis->save();
-
-        //管理者に紐付くサイトテーブルを更新
+        //サイトテーブルを更新
         $sites = Auth::user()->sites;
         foreach ($sites as $site){
-            $site->site_name = $site_name;
-            $site->site_purpose = $site_purpose;
+            $site->at1_name = $at1_name;
+            $site->at2_name = $at2_name;
+            $site->at3_name = $at3_name;
+            $site->at4_name = $at4_name;
+            $site->at5_name = $at5_name;
+            $site->dt1_name = $dt1_name;
+            $site->dt2_name = $dt2_name;
+            $site->dt3_name = $dt3_name;
             $site->save();
         }
 

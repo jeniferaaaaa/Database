@@ -21,8 +21,8 @@ class EditController extends Controller
      * ログインユーザのデータを取得して入力画面表示
      * 
      */
-    public function index () {
-
+    public function index () 
+    {
         //ログイン中のユーザに紐付くサイトテーブルのオフジェクトを取得
         $sites = Auth::user()->sites;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Arbi\basic;
+namespace App\Http\Controllers\Arbi\item;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -23,17 +23,21 @@ class ConfirmController extends Controller
      * 完了画面で登録するために入力データをセッションに保存
      * 
      */
-    public function index (BasicValidateRequest $request)
+    public function index (Request $request)
     {
         //リクエストデータの受け取り
         $data = $request->all();
 
         //セッションへ保存
-        $request->session()->put('name',$request->input('name'));//申込み者名前
-        $request->session()->put('email',$request->input('email'));//メールアドレス
-        $request->session()->put('site_name',$request->input('site_name'));//サイト名称
-        $request->session()->put('site_purpose',$request->input('site_purpose'));//サイト利用目的
+        $request->session()->put('attribute1',$request->input('attribute1'));
+        $request->session()->put('attribute2',$request->input('attribute2'));
+        $request->session()->put('attribute3',$request->input('attribute3'));
+        $request->session()->put('attribute4',$request->input('attribute4'));
+        $request->session()->put('attribute5',$request->input('attribute5'));
+        $request->session()->put('detail1',$request->input('detail1'));
+        $request->session()->put('detail2',$request->input('detail2'));
+        $request->session()->put('detail3',$request->input('detail3'));        
 
-        return view ('arbi.basic.confirm',compact('data'));
+        return view ('arbi.item.confirm',compact('data'));
     }
 }

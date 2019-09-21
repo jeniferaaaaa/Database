@@ -23,6 +23,9 @@ class EditController extends Controller
      */
     public function index () 
     {
-        return view ('arbi.item.edit');
+        //ログインユーザに基づくサイトテーブルを取得
+        $sites = Auth::user()->sites;
+        
+        return view ('arbi.item.edit', compact('sites'));
     }
 }
