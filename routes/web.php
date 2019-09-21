@@ -12,7 +12,7 @@
 */
 
 //共通フロント----------------------------------------------------------------
-Route::get('/', 'TopController@incdex');
+Route::get('/', 'TopController@index');
 Route::get('/form', function(){
     return view('form.form');
 });
@@ -23,7 +23,7 @@ Route::post('/form/confirm/done','Form\DoneController@index');
 
 Auth::routes();
 
-Route::get('/menu', 'Arbu\MenuController@index');
+Route::get('/menu', 'Arbi\MenuController@index');
 //基本情報編集
 Route::get('/basic', 'Arbi\basic\EditController@index');
 Route::post('/basic/confirm', 'Arbi\basic\ConfirmController@index');
@@ -33,7 +33,9 @@ Route::get('/item', 'Arbi\item\EditController@index');
 Route::post('/item/confirm', 'Arbi\item\ConfirmController@index');
 Route::post('/item/confirm/done', 'Arbi\item\DoneController@index');
 //デザイン設定
-
+Route::get('/design', 'Arbi\design\EditController@index');
+Route::post('/design/confirm', 'Arbi\design\ConfirmController@index');
+Route::post('/design/confirm/done', 'Arbi\design\DoneController@index');
 //TOPページ編集
 
 //カテゴリ編集

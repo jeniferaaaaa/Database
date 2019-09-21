@@ -1,83 +1,80 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <!--スタイルシートの適用-->
+    <link rel="stylesheet" href="/css/sign_up_confirm.css">
+    <!--レスポンシブ対応スタイルシートの適用-->
+    <link rel="stylesheet" href="/css/sign_up_confirm_responsive.css">
+    <!--viewportの設定-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">サイト登録確認画面</div>
+    <!--タイトル-->
+    <title>サイト新規登録確認｜matomar</title>
+  </head>
+  <body>
+    
+    <!--ヘッダー-->
+    <header>
+      <ul>
+          <li><img src="/images/make/top-logo.png"></li>
+          <li><a href="#">機能紹介</a></li>
+          <li><a href="#">料金</a></li>
+          <li><a href="#">事例</a></li>
+      </ul>
+    </header>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('form/confirm/done') }}">
-                        {{ csrf_field() }}
+    <!--サイト新規登録欄-->
+    <div class="sign-up-confirm">
+      <h2>登録内容確認</h2><br />
+         
+        <!--入力欄-->
+        <form method="POST" action="{{ url('form/confirm/done') }}">{{ csrf_field() }}
+          <div class="input-confirm"> 
+            <table>
+              <tr>
+                <td><span>必須</span>ニックネーム<br /><br /></td>
+                <td><p class="name">{{ $data['name'] }}</p></td>
+              </tr>
+             <tr>
+                <td><span>必須</span>メールアドレス<br /><br /></td>
+                <td><p class="email">{{ $data['email'] }}</p></td>
+             </tr>
+              <tr>
+                <td><span>必須</span>サイト名称<br /><br /></td>
+                <td><p class="site_name">{{ $data['site_name'] }}</td>
+              </tr>
+              <tr>
+                <td><span>必須</span>サイト利用目的<br /><br /></td>
+                <td><p class="site_purpose">{{ $data['site_purpose'] }}</p></td>
+              </tr>
+              <tr>
+                <td><span>必須</span>ドメイン<br /><br /></td>
+                <td><p class="domain">{{ $data['domain'] }}</p></td>
+              </tr>
+            </table>          
+          </div>
 
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">お名前</label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['name'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email" class="col-md-4 control-label">メールアドレス</label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="email">{{ $data['email'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password" class="col-md-4 control-label">パスワード</label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="password">{{ $data['password'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">パスワード（確認）</label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="password_confirmation">{{ $data['password_confirm'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="site_name" class="col-md-4 control-label">サイト名称</label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="site_name">{{ $data['site_name'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="site_purpose" class="col-md-4 control-label">サイト利用目的</label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="site_purpose">{{ $data['site_purpose'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="domain" class="col-md-4 control-label">ドメイン</label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="domain">{{ $data['domain'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    申し込む
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+          <h3>この内容でよろしいでしょうか？</h3>
+          <!--確認・戻るボタン-->
+          <div class="button">  
+            <a class="back" href="javascript:history.back();">編集画面に戻る</a>
+            <button type="submit" class="ok" >ＯＫ</button>
+          </div>
+        </form>
     </div>
-</div>
-@endsection
+
+    <!--フッター-->
+    <footer>
+      <ul>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li>|</li>
+          <li><a href="#" class="rule">利用規約</a></li>
+      </ul>
+      <div class="copyright">
+          <a>Copyright © 2019 EqualShare All Rights Reserved.</a>
+     </div>
+   </footer>
+    
+  </body>
+</html>

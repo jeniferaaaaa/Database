@@ -18,6 +18,14 @@ class CreateSiteTable extends Migration
             $table->string('site_name','30')->unique();//サイト名称
             $table->string('site_purpose','30');//サイト利用目的
             $table->string('domain','30')->unique();//ドメイン名
+            $table->string('at1_name')->nullable();//属性1名称
+            $table->string('at2_name')->nullable();//属性2名称
+            $table->string('at3_name')->nullable();//属性3名称
+            $table->string('at4_name')->nullable();//属性4名称
+            $table->string('at5_name')->nullable();//属性5名称
+            $table->string('dt1_name')->nullable();//詳細1名称
+            $table->string('dt2_name')->nullable();//詳細2名称
+            $table->string('dt3_name')->nullable();//詳細3名称
             $table->integer('design')->nullable();//デザインID
             $table->string('logo_path')->nullable();//ロゴパス
             $table->integer('layout')->nullable();//レイアウト
