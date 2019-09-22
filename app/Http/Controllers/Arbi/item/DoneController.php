@@ -50,7 +50,7 @@ class DoneController extends Controller
             $site->save();
         }
 
-        return view('arbi.basic.done');
+        return view('arbi.item.done');
 
     }
 }

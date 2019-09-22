@@ -19,6 +19,14 @@
                             <input type="radio" name="layout" value="5">レイアウト5
                         </div>
 
+                        @foreach ($sites as $site)
+
+                        <div class="form-group">
+                            <label for="layout" class="col-md-4 control-label">
+                            現在選択中：{{ $site->layout }}
+                            </label>
+                        </div>    
+
                         <div class="form-group{{ $errors->has('color') ? ' has-error' : '' }}">
                             <input type="radio" name="color" value="blue">青
                             <input type="radio" name="color" value="red">赤
@@ -27,8 +35,13 @@
                             <input type="radio" name="color" value="dark">黒
                         </div>
 
-                        <div class="form-group{{ $errors->has('attribute1') ? ' has-error' : '' }}">
+                        <div class="form-group">
+                            <label for="color" class="col-md-4 control-label">
+                            現在選択中：{{ $site->color }}
+                            </label>
+                        </div>
 
+                        @endforeach
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
