@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Form;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Admin;
-use App\Site;
+use App\Model\Arbi;
+use App\Model\Site;
+use App\formException;
 use DB;
 
 class DoneController extends Controller
@@ -21,27 +23,62 @@ class DoneController extends Controller
         $name = $request->session()->get('name');
         $email = $request->session()->get('email');
         $pass = $request->session()->get('pass');
-        $site = $request->session()->get('site');
+        $site_name = $request->session()->get('site_name');
+        $site_purpose = $request->session()->get('site_purpose');
         $domain = $request->session()->get('domain');
+
+        //テスト(DB二重登録防止)
+        $boolean = DB::table('arbi')->where('email',$email)->exists();
+        if ($boolean){
+            throw new \Exception('すでに登録されているメールアドレスです');
+        }
+
+        //管理者をまず登録
+        Arbi::create([
+            'name' => $name,
+            'email' => $email,
+            'password' => bcrypt($pass),
+        ]);
+
+        //登録した管理者のIDを取得
+        $id = Arbi::where('email',$email)->value('arbi_id');
 
         //siteテーブルへ登録
         Site::create([
-            'name' => $site,
+            'site_name' => $site_name,
+            'site_purpose' => $site_purpose,
             'domain' => $domain,
+            'arbi_id' => $id,
         ]);
 
-        //site_idの取得
-        $id = Site::where('domain','=',$domain)->value('id');
-
-        //adminテーブルの登録
-        Admin::create([
-            'site_id' => $id,
-            'name' => $name,
-            'email' => $email,
-            'password' => $pass,
-        ]);
+        //入力されたメールアドレスにメールを送信
+        $chkMail = $this->sendMail($email);
+        if($chkMail == null){
+            throw new \Exception('メールが送信できませんでした');
+        }
 
         return view('form.done');
+    }
+
+    private function sendMail ($email)
+    {
+        // Mail::sendで送信できる.
+        // 第1引数に、テンプレートファイルのパスを指定し、
+        // 第2引数に、テンプレートファイルで使うデータを指定する
+        Mail::send(['text' => 'emails.register'], [
+            "aaa" => "こんにちは！"
+
+        ], function($message) use ($email){
+
+            // 第3引数にはコールバック関数を指定し、
+            // その中で、送信先やタイトルの指定を行う.
+            $message
+                ->to($email)
+                ->bcc('admin@sample.com')
+                ->subject("ユーザー登録ありがとうございます");
+        });
+
+        return 1;
     }
 
 }

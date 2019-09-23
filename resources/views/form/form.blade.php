@@ -1,111 +1,127 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <!--スタイルシートの適用-->
+    <link rel="stylesheet" href="css/sign_up.css">
+    <!--レスポンシブ対応スタイルシートの適用-->
+    <link rel="stylesheet" href="css/sign_up_responsive.css">
+    <!--viewportの設定-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">サイト登録画面</div>
+    <!--タイトル-->
+    <title>サイト新規登録｜matomar</title>
+  </head>
+  <body>
+    
+    <!--ヘッダー-->
+    <header>
+      <ul>
+          <li><img src="images/make/top-logo.png"></li>
+          <li><a href="#">機能紹介</a></li>
+          <li><a href="#">料金</a></li>
+          <li><a href="#">事例</a></li>
+      </ul>
+    </header>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('form/confirm') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">お名前</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">メールアドレス</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">パスワード</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password-confirm') ? ' has-error' : '' }}">
-                            <label for="password-confirm" class="col-md-4 control-label">パスワード（確認）</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
-
-                                @if ($errors->has('password-confirm'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password-confirm') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('site_name') ? ' has-error' : '' }}">
-                            <label for="site_name" class="col-md-4 control-label">サイト名称</label>
-
-                            <div class="col-md-6">
-                                <input id="site_name" type="text" class="form-control" name="site_name" value="{{ old('site_name') }}">
-
-                                @if ($errors->has('site_name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('site_name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('site_name') ? ' has-error' : '' }}">
-                            <label for="domain" class="col-md-4 control-label">ドメイン</label>
-
-                            <div class="col-md-6">
-                                <input id="domain" type="text" class="form-control" name="domain" value="{{ old('domain') }}">
-
-                                @if ($errors->has('domain'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('domain') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    確認画面へ
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <!--サイト新規登録欄-->
+    <div class="sign-up">
+      <h2>サイト新規登録</h2><br />
+      <h3>まずはあなたとサイトの基本情報を登録してください。</h3><br />
+         
+        <!--入力欄-->
+        <div class="input">
+          <form method="POST" action="{{ url('form/confirm') }}">{{ csrf_field() }}
+            <p class=hissu>※<span>必須</span>は必須入力項目です。</p>
+            <table>
+              <tr>
+                <td>
+                  <span>必須</span>ニックネーム<br /><br />
+                  @if ($errors->has('name'))
+                  <div class="error_name">※{{ $errors->first('name') }}</div>
+                  @endif
+                </td>
+                <td><input type="text" name="name"></td>
+              </tr>
+             <tr>
+                <td>
+                  <span>必須</span>メールアドレス<br /><br />
+                  @if ($errors->has('email'))
+                  <div class="error_email">※{{ $errors->first('email') }}</div>
+                  @endif
+                </td>
+                <td>
+                  <input type="email" name="email">
+                  <p>※ご登録いただいたメールアドレスにアカウント情報をお送りいたします。</p>
+                </td>
+             </tr>
+              <tr>
+                <td>
+                  <span>必須</span>パスワード<br /><br />
+                  @if ($errors->has('password'))
+                  <div class="error_pass1">※ {{ $errors->first('password') }}</div>
+                  @endif
+                </td>
+                <td><input type="password" name="password"></td>
+             </tr>
+              <tr>
+                <td>
+                  <span>必須</span>パスワード（確認）<br /><br />
+                  @if ($errors->has('password_confimation'))
+                  <div class="error_pass2">※{{ $errors->first('password_confimation') }}</div>
+                  @endif
+                </td>
+                <td>
+                  <input type="password" name="password_confimation"><br /><br />  
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>必須</span>サイト名称<br /><br />
+                  @if ($errors->has('site_name'))
+                  <div class="error_site_name">※{{ $errors->first('site_name') }}</div>
+                  @endif
+                </td>
+                <td><input type="text" name="site_name"></td>
+              </tr>
+              <tr>
+                <td>
+                  <span>必須</span>サイト利用目的<br /><br />
+                  @if ($errors->has('site_purpose'))
+                  <div class="error_site_purpose">※{{ $errors->first('site_purpose') }}</div>
+                  @endif
+                </td>
+                <td><textarea name="site_purpose" cols="40" rows="5" wrap="hard"></textarea></td>
+              </tr>
+              <tr>
+                <td>
+                  <span>必須</span>ドメイン<br /><br />
+                  @if ($errors->has('domain'))
+                  <div class="error_domain">※{{ $errors->first('domain') }}</div>
+                  @endif
+                </td>
+                <td><input type="text" name="domain"></td>
+              </tr>
+            </table>
+            <!--確認・戻るボタン-->
+            <div class="button">  
+              <a class="back" href="javascript:history.back();">戻る</a>
+              <button type="submit" class="confirm">確認画面へ進む</button>
             </div>
+          </form>
         </div>
-    </div>
-</div>
-@endsection
+
+    <!--フッター-->
+    <footer>
+      <ul>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li>|</li>
+          <li><a href="#" class="rule">利用規約</a></li>
+      </ul>
+      <div class="copyright">
+          <a>Copyright © 2019 EqualShare All Rights Reserved.</a>
+     </div>
+   </footer>
+    
+  </body>
+</html>

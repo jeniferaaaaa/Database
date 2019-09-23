@@ -24,7 +24,7 @@ class Data extends Model
      */
     protected $fillable =[
         'site_id','name','image_path','attribute1','attribute2','attribute3','attribute4','attribute5',
-        'detail1','detail2','detail3',
+        'detail1','detail2','detail3','displayFlag',
     ];
 
 }

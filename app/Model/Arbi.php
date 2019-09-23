@@ -50,4 +50,14 @@ class Arbi extends Authenticatable
         }
     }
 
+    /**
+     * サイトテーブルとのリレーション
+     * 
+     */
+
+    public function sites()
+    {
+        return $this->hasMany('App\Model\Site','arbi_id','arbi_id');
+    }
+
 }
