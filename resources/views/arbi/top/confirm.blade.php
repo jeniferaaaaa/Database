@@ -16,6 +16,7 @@
                             メイン画像
                             </label>
                         </div>
+
                         <div class="form-group">
                         <label for="main" class="col-md-4 control-label">
                             <img src="/{{ $data['main'] }}" width="200" height="130">
@@ -27,9 +28,13 @@
                             サブ画像1
                             </label>
                         </div>
+
                         <div class="form-group">
                         <label for="sub1" class="col-md-4 control-label">
+                        @if ($data['sub1'] == '')
+                        @else
                             <img src="/{{ $data['sub1'] }}" width="200" height="130">
+                        @endif
                         </label>
                         </div>
 
@@ -38,9 +43,13 @@
                             サブ画像2
                             </label>
                         </div>
+
                         <div class="form-group">
                         <label for="sub2" class="col-md-4 control-label">
+                        @if ($data['sub2'] == '')
+                        @else
                             <img src="/{{ $data['sub2'] }}" width="200" height="130">
+                        @endif
                         </label>
                         </div>
 
@@ -49,9 +58,13 @@
                             サブ画像3
                             </label>
                         </div>
+
                         <div class="form-group">
                         <label for="sub3" class="col-md-4 control-label">
+                        @if ($data['sub3'] == '')
+                        @else
                             <img src="/{{ $data['sub3'] }}" width="200" height="130">
+                        @endif
                         </label>
 
                         <div class="form-group">

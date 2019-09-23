@@ -48,7 +48,6 @@ class DoneController extends Controller
         }
 
         return view('arbi.top.done');
-
     }
     
     /**
@@ -63,8 +62,10 @@ class DoneController extends Controller
         $filename = str_replace($delPathName,'',$tmpPath);
         //リネーム
         $docPath .= 'main';
-        $db_Path = $docPath.$filename;
-        Storage::move($tmpPath,$db_Path); 
+        $move_Path = $docPath.$filename;
+        Storage::move($tmpPath,$move_Path); 
+        //DB登録用呼び出しネーム
+        $db_Path = \str_replace('public','storage',$move_Path);
         
         return $db_Path;
     }
@@ -84,8 +85,10 @@ class DoneController extends Controller
         $filename = str_replace($delPathName,'',$tmpPath);
         //リネーム
         $docPath .= 'sub';
-        $db_Path = $docPath.$filename;
-        Storage::move($tmpPath,$db_Path); 
+        $move_Path = $docPath.$filename;
+        Storage::move($tmpPath,$move_Path); 
+        //DB登録用呼び出しネーム
+        $db_Path = \str_replace('public','storage',$move_Path);
         
         return $db_Path;
     }
