@@ -37,7 +37,9 @@ Route::get('/design', 'Arbi\design\EditController@index');
 Route::post('/design/confirm', 'Arbi\design\ConfirmController@index');
 Route::post('/design/confirm/done', 'Arbi\design\DoneController@index');
 //TOPページ編集
-
+Route::get('/top', 'Arbi\top\EditController@index');
+Route::post('/top/confirm', 'Arbi\top\ConfirmController@index');
+Route::post('/top/confirm/done', 'Arbi\top\DoneController@index');
 //カテゴリ編集
 
 //投稿内容編集

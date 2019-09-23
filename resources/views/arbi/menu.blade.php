@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <a href='/basic'>パスワード変更</a>
+                        <a href='/change_pass'>パスワード変更</a>
                     </div>
 
                 </div>
