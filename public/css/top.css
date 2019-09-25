@@ -19,7 +19,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -44,68 +43,76 @@ table {
 	border-spacing: 0;
 }
 
+
 /*全体部分*/
 body {
-    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: 'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 /*ヘッダー部分*/
 header {
-    background-color: #fff;
+    background-color: #F58F98;
     height: 80px;
     font-weight: bold;
     position: fixed;
-    width: 100%;
+    width: 2000px;
 }
 
 header li {
     float: left;
-    padding: 33px 50px 30px 50px;
+    padding: 35px 50px 30px 50px;
 }
 
 header a {
     text-decoration: none;
+    color: black;
 }
 
 header a:hover {
-    color:#67A7CC;
+    color: white;
 }
 
-/*ロゴのみに下記適用*/
-li:first-child {
-    padding: 25px 30px;
-    margin: 0 240px;
+/*liの一つ目の要素*/
+header li:first-child {
+    padding: 7px 30px 0 80px;
 }
 
-/*新規登録ボタンにのみ下記適用*/
-li:nth-of-type(5) {
-    background-color: #FFF;
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 3px;
-    margin: 15px 150px 15px 40px;
-    padding: 17px 35px;
-    border: solid 2px #67A7CC;
-    height: 15px;
+/*「あなたもまとめてみる？」リンク*/
+.you-btn {
+    background-color: 	#E95B6B;
+    padding: 20px 40px 20px 40px;
+    margin: 20px 80px 5px 450px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
 }
 
-/*TOP画像*/
-.top-wrapper img {
-    height: 800px;
-    width: 100%;
-}
-
-/*おまとめ一覧*/
-.mid-wrapper {
-    background-color: #fff;
-    height: 1000px;
-}
-
-.mid-wrapper h1 {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
+header li:nth-of-type(5) {
+    margin: 0;
     padding: 30px;
+}
+
+.you-btn:hover {
+    color: black;
+    background-color: #F6BABC;
+    box-shadow: 2px 2px 4px gray;
+}
+
+/*ハートの部分*/
+.heart-part {
+    background-image: url(images/make/heart_top.jpg);
+    height: 568px;
+}
+
+/*おまとめ一覧部分*/
+.omatome {
+    background-color: #F6BABC;
+    height: 1100px;
+}
+
+.omatome h1 {
+    font-size: 25px;
+    text-align: center;
+    padding: 25px;
 }
 
 .image1 {
@@ -159,19 +166,13 @@ table {
     margin: auto;
 }
 
-/*テーブルの余白設定*/
-td,th {
-    padding: 15px;
-}
-
 a {
     text-decoration: none;
     color: black;
-    font-weight: bold;  
 }
 
 a:hover {   
-    color: #67A7CC;
+    color: white;
 }
 
 /*ページャー*/
@@ -185,6 +186,7 @@ a:hover {
 .pagination {
     text-align: center;
 }
+
 
 ul.pager {
     margin: 40px auto;
@@ -205,7 +207,7 @@ ul.pager li.next {
 
 ul.pager li a:link,
 ul.pager li a:visited {
-    color: #67A7CC;
+    color: #E95B6B;
     text-decoration: none;
 }
 
@@ -218,9 +220,52 @@ ul.pager li a:active {
 ul.pager li em {
     font-weight: bold;
 }
+
+/*おまとめ紹介部分*/
+.omatome-ad {
+    background-color: #F58F98;
+    height: 115px;
+    padding: 25px 40px 20px 40px;
+    margin: 50px 40px 40px 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.omatome-ad h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.omatome-ad h2 {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 18px;
+}
+
+/*おまとめ紹介ボタン部分*/
+.intro-button {
+    background-color: #E95B6B;
+    margin: 40px 250px auto 250px;
+    padding: 15px 40px 15px 40px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.omatome-button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.intro-button:hover {
+    background-color: #F6BABC;
+}
+
 /*フッター部分*/
 footer {
-    background-color: #FFF;
+    background-color: #F58F98;
     margin: auto;
     height: 100px;
 }
@@ -236,10 +281,11 @@ footer a {
     color: black;
     font-size: 13px;
 }
-.rule {
-    margin:25px
-}
 
+/*利用規約部分*/
+a.rule {
+    margin: 0;
+}
 
 .copyright a {
     float: right;
