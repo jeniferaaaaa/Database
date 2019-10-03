@@ -41,6 +41,12 @@ Route::get('/top', 'Arbi\top\EditController@index');
 Route::post('/top/confirm', 'Arbi\top\ConfirmController@index');
 Route::post('/top/confirm/done', 'Arbi\top\DoneController@index');
 //カテゴリ編集
+Route::get('/category/list', 'Arbi\category\ListController@index');
+Route::post('/category/edit', 'Arbi\category\EditController@index');
+Route::post('/category/edit/confirm', 'Arbi\category\ConfirmController@index');
+Route::post('/category/edit/confirm/complete', 'Arbi\category\DoneController@index');
+//TODO:登録のルート
+//TODO:削除のルート
 
 //投稿内容編集
 

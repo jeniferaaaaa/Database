@@ -26,4 +26,13 @@ class Category extends Model
         'site_id','category_name','category_path','category_text',
     ];
 
+    /**
+     * サイトテーブルとのリレーション
+     * 
+     */
+    public function site ()
+    {
+        return $this->belongsTo('App\Model\Site','site_id','id');
+    }
+
 }

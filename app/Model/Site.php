@@ -25,10 +25,18 @@ class Site extends Model
      * 管理者テーブルとのリレーション
      * 
      */
-
     public function arbi () 
     {
         return $this->belongsTo('App\Model\Arbi');
+    }
+
+    /**
+     * カテゴリテーブルとのリレーション
+     * 
+     */
+    public function category ()
+    {
+        return $this->hasMany('App\Model\Category');
     }
 
 }
