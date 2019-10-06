@@ -74,14 +74,18 @@ header a:hover {
 }
 
 /*ロゴのみに下記適用*/
-.logo {
-    padding: 25px;
-    margin: 0 300px 0 150px;
-    font-size: 30px;
+
+li:first-child {
+    padding: 24px 24px 24px 90px;
 }
 
-.logo a {
-    color: #618BAD;
+.logo {
+    margin: 5px 300px 0 150px;
+    font-size: 35px;
+}
+
+.logo:hover {
+    color: #67A7CC;
 }
 
 /*[新規登録]ボタンに下記適用*/
@@ -110,7 +114,7 @@ header a:hover {
 /*おまとめ一覧*/
 .mid-wrapper {
     background-color: #fff;
-    height: 1000px;
+    height: auto;
 }
 
 .mid-wrapper h1 {
@@ -231,11 +235,16 @@ ul.pager li em {
     font-weight: bold;
 }
 
+li.prev {
+    padding: 0 10px 0 0;
+}
+
 /*フッター部分*/
 footer {
     background-color: #fff;
     margin: auto;
     height: 100px;
+    border-top: solid 1px #67A7CC;
 }
 
 footer li {
@@ -256,6 +265,11 @@ a.rule {
 }
 
 .copyright a {
+    color: black;
     float: right;
     margin: 80px 20px 0 0;
+}
+
+li.policy {
+    padding: 0;
 }
