@@ -105,7 +105,7 @@ li:first-child {
 
 /*まずは～欄*/
 .sign-up {
-    background-color: rgba(103, 167, 204, 0.5);
+    background-color: rgba(103, 167, 204, 0.4);
     height: 1300px;
 }
 .sign-up h2 {
@@ -175,7 +175,7 @@ textarea {
     background: #FFF;
     border: solid 3px #67A7CC;
     border-radius: 10px;
-    font-family: 'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 textarea:focus {
