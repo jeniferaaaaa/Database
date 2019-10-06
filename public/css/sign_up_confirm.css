@@ -224,6 +224,10 @@ a.rule {
     margin: 80px 20px 0 0;
 }
 
+.copyright a:hover {
+    color: black;
+}
+
 li.policy {
     padding: 0;
 }
