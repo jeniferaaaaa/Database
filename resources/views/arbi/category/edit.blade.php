@@ -5,80 +5,53 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">基本情報編集</div>
+                <div class="panel-heading">カテゴリ編集</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('basic/confirm') }}">
+                    <form class="form-horizontal" method="POST" action="{{ url('category/edit/confirm') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
-                        <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">
-                                名前
+                        <div class="form-group {{ $errors->has('category_name') ? ' has-error' : '' }}">
+                            <label for="category_name" class="col-md-4 control-label">
+                                カテゴリ名称
                             </label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ Auth::user()->name}}">
+                                <input id="category_name" type="text" class="form-control" name="category_name">
 
-                            @if ($errors->has('name'))
+                            @if ($errors->has('category_name'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('name') }}</strong>
+                                    <strong>{{ $errors->first('category_name') }}</strong>
                                 </span>
                             @endif
                             </div>
                         </div>
 
-                        <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">
-                                メールアドレス
+                        <div class="form-group">
+                            <label for="category_path" class="col-md-4 control-label"> 
+                            カテゴリ画像
+                            </label>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('category_path') ? ' has-error' : '' }}">
+                            <input type="file" name="category_path">
+                        </div>
+
+                        <div class="form-group {{ $errors->has('category_text') ? ' has-error' : '' }}">
+                            <label for="category_text" class="col-md-4 control-label">
+                                カテゴリ説明
                             </label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text" class="form-control" name="email" value="{{ Auth::user()->email}}">
+                                <input id="category_text" type="text" class="form-control" name="category_text">
 
-                            @if ($errors->has('email'))
+                            @if ($errors->has('category_text'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('email') }}</strong>
+                                    <strong>{{ $errors->first('category_text') }}</strong>
                                 </span>
                             @endif
                             </div>
                         </div>
-
-                        @foreach ($sites as $site)
-
-                        <div class="form-group {{ $errors->has('site_name') ? ' has-error' : '' }}">
-                            <label for="site_name" class="col-md-4 control-label">
-                                サイト名称
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="site_name" type="text" class="form-control" name="site_name" value="{{ $site->site_name }}">
-
-                            @if ($errors->has('site_name'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('site_name') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-                        
-                        <div class="form-group {{ $errors->has('site_purpose') ? ' has-error' : '' }}">
-                            <label for="site_purpose" class="col-md-4 control-label">
-                                サイト利用目的
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="site_purpose" type="text" class="form-control" name="site_purpose" value="{{ $site->site_purpose }}">
-
-                            @if ($errors->has('site_purpose'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('site_purpose') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-
-                        @endforeach
-
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

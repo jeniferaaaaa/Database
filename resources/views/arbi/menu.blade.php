@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <a href='/category'>カテゴリ編集</a>
+                        <a href='/category/list'>カテゴリ編集</a>
                     </div>
 
                     <div class="col-md-6">

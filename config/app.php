@@ -226,6 +226,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        //独自の共通系
+        'fileConst' => App\Consts\fileConst::class,
+        'fileCommon' => App\Libs\fileCommon::class,
+
     ],
 
 ];

@@ -23,9 +23,6 @@ class EditController extends Controller
      */
     public function index () 
     {
-        //ログイン中のユーザに紐付くサイトテーブルのオフジェクトを取得
-        $sites = Auth::user()->sites;
-
-        return view ('arbi.category.edit',compact('sites'));
+        return view ('arbi.category.edit');
     }
 }

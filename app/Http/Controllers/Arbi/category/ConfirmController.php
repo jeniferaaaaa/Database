@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\BasicValidateRequest;
 
+use App\Consts\fileConst;
+use App\Libs\fileCommon;
 
 class ConfirmController extends Controller
 {
@@ -23,17 +25,28 @@ class ConfirmController extends Controller
      * 完了画面で登録するために入力データをセッションに保存
      * 
      */
-    public function index (BasicValidateRequest $request)
+    public function index (Request $request)
     {
         //リクエストデータの受け取り
-        $data = $request->all();
+        $category_name = $request->input('category_name');
+        $category_text = $request->input('category_text');
 
-        //セッションへ保存
-        $request->session()->put('name',$request->input('name'));//申込み者名前
-        $request->session()->put('email',$request->input('email'));//メールアドレス
-        $request->session()->put('site_name',$request->input('site_name'));//サイト名称
-        $request->session()->put('site_purpose',$request->input('site_purpose'));//サイト利用目的
+        //tmpファイルのパス
+        $tmpPath = fileConst::TMP_PATH;
+        $category_tmp_path = (fileCommon::uploadCheck($request->file('category_path')))->store($tmpPath);
+        $category_read_path = fileCommon::replaceReadName($category_tmp_path);
 
+        //セッション用の配列作成
+        $data = [
+            'category_name' => $category_name,
+            'category_tmp_path' => $category_tmp_path,
+            'category_read_path' => $category_read_path,
+            'category_text' => $category_text,
+        ];
+
+        //セッションへデータ保存
+        $request->session()->put('data',$data);
+        
         return view ('arbi.category.confirm',compact('data'));
     }
 }

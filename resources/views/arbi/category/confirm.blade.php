@@ -5,52 +5,42 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">基本情報編集確認画面</div>
+                <div class="panel-heading">カテゴリ編集確認画面</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('basic/confirm/done') }}">
+                    <form class="form-horizontal" method="POST" action="{{ url('category/edit/confirm/done') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                名前
+                            <label for="category_name" class="col-md-4 control-label">
+                                カテゴリ名称
                             </label>
 
                             <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['name'] }}</label>
+                                <label class="col-md-4 control-label" name="category_name">{{ $data['category_name'] }}</label>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="col-md-4 control-label">
-                                メールアドレス
+                            <label for="category_path" class="col-md-4 control-label">
+                                カテゴリ画像
                             </label>
 
                             <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="email">{{ $data['email'] }}</label>
+                                <img src="/{{ $data['category_read_path'] }}" width="200" height="130">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="site_name" class="col-md-4 control-label">
-                                サイト名称
+                            <label for="category_text" class="col-md-4 control-label">
+                                カテゴリ説明文
                             </label>
 
                             <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="site_name">{{ $data['site_name'] }}</label>
+                                <label class="col-md-4 control-label" name="category_text">{{ $data['category_text'] }}</label>
                             </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="site_purpose" class="col-md-4 control-label">
-                                サイト利用目的
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="site_purpose">{{ $data['site_purpose'] }}</label>
-                            </div>
-                        </div>
-
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
