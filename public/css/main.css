@@ -86,8 +86,8 @@ li:first-child {
     color: #67A7CC;
 }
 
-/*[新規登録]ボタンに下記適用*/
-.register { 
+/*[ログイン]ボタンに下記適用*/
+.login { 
     color: #67A7CC;
     padding: 20px;
     margin: 10px 50px 10px 50px;
@@ -98,7 +98,7 @@ li:first-child {
     transition: .4s;
 }
  
-.register:hover {
+.login:hover {
     background: #67A7CC;
     color: white;
   }
