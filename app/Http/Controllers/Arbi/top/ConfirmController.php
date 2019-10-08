@@ -28,10 +28,8 @@ class ConfirmController extends Controller
      */
     public function index (Request $request)
     {
-        //tmpファイルのパス
-        $tmpPath = fileConst::TMP_PATH;
         //メイン画像処理
-        $main_tmp_path = (fileCommon::uploadCheck($request->file('main')))->store($tmpPath);
+        $main_tmp_path = (fileCommon::uploadCheck($request->file('main')))->store(fileConst::TMP_PATH);
         $main_read_path = fileCommon::replaceReadName($main_tmp_path);
         //サブ画像の存在確認
         $sub1_tmp_path = $this->existSubImage($request->file('sub1'),$tmpPath);

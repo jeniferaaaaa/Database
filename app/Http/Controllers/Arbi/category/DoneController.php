@@ -31,12 +31,12 @@ class DoneController extends Controller
      */
     public function index (Request $request)
     {
-        //最終的に置くパス（定数化してもよき）
+        //最終的に置くパス
         $documentPath = fileConst::IMG_PATH;
         //セッションから配列データ取得
         $data = $request->session()->get('data');        
         //DBに保存するパス取得
-        $cate_path = $this->moveCategoryPath($data['category_tmp_path'],$documentPath);
+        $cate_path = $this->getMovedDBPath($data['category_tmp_path'],$documentPath,fileConst::CATEGORY_PATH);
 
         //ログインユーザに紐づくサイトIDを取得(TODO)
         $sites = Auth::user()->sites;
@@ -51,27 +51,5 @@ class DoneController extends Controller
         return view('arbi.category.done');
 
     }
-
-    /**
-     * tmpフォルダからリネームしてimages/categoryに移動させるメソッド
-     * 
-     */
-    private function moveCategoryPath (string $tmpPath,$docPath)
-    {
-        //取り除く文字列
-        $delPathName = 'public/tmp';
-        $filename = str_replace($delPathName,'',$tmpPath);
-        //リネーム
-        $docPath .= 'category';
-        $move_Path = $docPath.$filename;
-        Storage::move($tmpPath,$move_Path); 
-        //DB登録用呼び出しネーム
-        $db_Path = \str_replace('public','storage',$move_Path);
-        
-        return $db_Path;
-
-    }
-
-
     
 }

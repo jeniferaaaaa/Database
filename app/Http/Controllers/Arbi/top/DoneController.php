@@ -9,6 +9,9 @@ use App\Model\Site;
 use Auth;
 use Illuminate\Support\Facades\Storage;
 
+use App\Consts\fileConst;
+use App\Libs\fileCommon;
+
 class DoneController extends Controller
 {
     /**
@@ -22,20 +25,20 @@ class DoneController extends Controller
 
     /**
      * セッションからデータを取得し
-     * 管理者テーブルとサ管理者に紐付くサイトテーブルを更新する
+     * 管理者テーブルと管理者に紐付くサイトテーブルを更新する
      * 
      */
     public function index (Request $request)
     {
-        //最終的に置くパス（定数化してもよき）
-        $documentPath = 'public/images/';
+        //最終的に置くパス
+        $documentPath = fileConst::IMG_PATH;
         //セッションから配列データ取得
         $data = $request->session()->get('data');
         //DBに保存するパス取得
-        $main_path = $this->moveMainPath($data['main_tmp'],$documentPath);
-        $sub1_path = $this->moveSubPath($data['sub1_tmp'],$documentPath);
-        $sub2_path = $this->moveSubPath($data['sub2_tmp'],$documentPath);
-        $sub3_path = $this->moveSubPath($data['sub3_tmp'],$documentPath);
+        $main_path = fileCommon::getMovedDBPath($data['main_tmp'],$documentPath,fileConst::MAIN_PATH);
+        $sub1_path = fileCommon::getMovedDBPath($data['sub1_tmp'],$documentPath,fileConst::SUB_PATH);
+        $sub2_path = fileCommon::getMovedDBPath($data['sub2_tmp'],$documentPath,fileConst::SUB_PATH);
+        $sub3_path = fileCommon::getMovedDBPath($data['sub3_tmp'],$documentPath,fileConst::SUB_PATH);
 
         //サイトテーブルを更新
         $sites = Auth::user()->sites;
@@ -50,47 +53,5 @@ class DoneController extends Controller
         return view('arbi.top.done');
     }
     
-    /**
-     * tmpフォルダからリネームしてimages/mainに移動させるメソッド
-     * 
-     * 
-     */
-    private function moveMainPath (string $tmpPath,$docPath)
-    {
-        //取り除く文字列
-        $delPathName = 'public/tmp';
-        $filename = str_replace($delPathName,'',$tmpPath);
-        //リネーム
-        $docPath .= 'main';
-        $move_Path = $docPath.$filename;
-        Storage::move($tmpPath,$move_Path); 
-        //DB登録用呼び出しネーム
-        $db_Path = \str_replace('public','storage',$move_Path);
-        
-        return $db_Path;
-    }
-
-    /**
-     * tmpフォルダからリネームしてimages/subに移動させるメソッド
-     * 
-     * 
-     */
-    private function moveSubPath (string $tmpPath,$docPath)
-    {
-        if ($tmpPath == ''){
-            return '';
-        }
-        //取り除く文字列
-        $delPathName = 'public/tmp';
-        $filename = str_replace($delPathName,'',$tmpPath);
-        //リネーム
-        $docPath .= 'sub';
-        $move_Path = $docPath.$filename;
-        Storage::move($tmpPath,$move_Path); 
-        //DB登録用呼び出しネーム
-        $db_Path = \str_replace('public','storage',$move_Path);
-        
-        return $db_Path;
-    }
 
 }

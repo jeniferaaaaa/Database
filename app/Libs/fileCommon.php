@@ -29,5 +29,25 @@ class FileCommon
         throw new \Exception ('画像のアップロードに失敗しました');
     }
 
+    /**
+     * tmpフォルダからリネームしてimagesフォルダ下の特定の場所に移動させるメソッド
+     * （データベースに登録するパスを返す）
+     * 
+     */
+    public static function getMovedDBPath (string $tmpPath,$docPath,$imageUnderDir): ?string
+    {
+        //取り除く文字列
+        $delPathName = 'public/tmp';
+        $filename = str_replace($delPathName,'',$tmpPath);
+        //リネーム
+        $move_Path = $imageUnderDir.$filename;
+        Storage::move($tmpPath,$move_Path); 
+        //DB登録用呼び出しネーム
+        $db_Path = \str_replace('public','storage',$move_Path);
+        
+        return $db_Path;
+    }
+
+
 
 }
