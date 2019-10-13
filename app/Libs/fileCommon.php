@@ -2,6 +2,8 @@
 
 namespace app\Libs;
 
+use Illuminate\Support\Facades\Storage;
+
 class FileCommon
 {
     /**
@@ -36,11 +38,16 @@ class FileCommon
      */
     public static function getMovedDBPath (string $tmpPath,$docPath,$imageUnderDir): ?string
     {
+        //存在確認
+        if (empty($tmpPath)){
+            return '';
+        }
         //取り除く文字列
         $delPathName = 'public/tmp';
         $filename = str_replace($delPathName,'',$tmpPath);
         //リネーム
-        $move_Path = $imageUnderDir.$filename;
+        $docPath .= $imageUnderDir;
+        $move_Path = $docPath.$filename;
         Storage::move($tmpPath,$move_Path); 
         //DB登録用呼び出しネーム
         $db_Path = \str_replace('public','storage',$move_Path);

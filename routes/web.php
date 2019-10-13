@@ -47,8 +47,13 @@ Route::post('/category/edit/confirm', 'Arbi\category\ConfirmController@index');
 Route::post('/category/edit/confirm/done', 'Arbi\category\DoneController@index');
 //TODO:登録のルート
 //TODO:削除のルート
+Route::delete('/category/list/delete','Arbi\category\ListController@destroy');
 
 //投稿内容編集
+Route::get('/post/list', 'Arbi\post\ListController@index');
+Route::get('/post/edit', 'Arbi\post\EditController@index');
+Route::post('/post/edit/confirm', 'Arbi\post\ConfirmController@index');
+Route::post('/post/edit/confirm/done', 'Arbi\post\DoneController@index');
 
 // fukase_test
 // site_front

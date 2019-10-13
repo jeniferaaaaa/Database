@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <a href='/post'>投稿内容編集</a>
+                        <a href='/post/list'>投稿内容編集</a>
                     </div>
 
                     <div class="col-md-6">

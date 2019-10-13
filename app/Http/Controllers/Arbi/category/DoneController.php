@@ -36,13 +36,18 @@ class DoneController extends Controller
         //セッションから配列データ取得
         $data = $request->session()->get('data');        
         //DBに保存するパス取得
-        $cate_path = $this->getMovedDBPath($data['category_tmp_path'],$documentPath,fileConst::CATEGORY_PATH);
+        $cate_path = fileCommon::getMovedDBPath($data['category_tmp_path'],$documentPath,fileConst::CATEGORY_PATH);
 
-        //ログインユーザに紐づくサイトIDを取得(TODO)
+        //ログインユーザに紐づくサイトIDを取得
         $sites = Auth::user()->sites;
+        //この取得の仕方はかっこ悪いのでなんとかしたい
+        foreach ($sites as $site){
+            $id = $site->id;
+        }
 
+        //登録処理
         Category::create([
-            'site_id' => 1,
+            'site_id' => $id,
             'category_name' => $data['category_name'],
             'category_path' => $cate_path,
             'category_text' => $data['category_text'],

@@ -32,9 +32,9 @@ class ConfirmController extends Controller
         $main_tmp_path = (fileCommon::uploadCheck($request->file('main')))->store(fileConst::TMP_PATH);
         $main_read_path = fileCommon::replaceReadName($main_tmp_path);
         //サブ画像の存在確認
-        $sub1_tmp_path = $this->existSubImage($request->file('sub1'),$tmpPath);
-        $sub2_tmp_path = $this->existSubImage($request->file('sub2'),$tmpPath);
-        $sub3_tmp_path = $this->existSubImage($request->file('sub3'),$tmpPath);
+        $sub1_tmp_path = $this->existSubImage($request->file('sub1'),fileConst::TMP_PATH);
+        $sub2_tmp_path = $this->existSubImage($request->file('sub2'),fileConst::TMP_PATH);
+        $sub3_tmp_path = $this->existSubImage($request->file('sub3'),fileConst::TMP_PATH);
         //リクエストデータを受け取り、tmpフォルダへ一時保存する
         $sub1_read_path = fileCommon::replaceReadName($sub1_tmp_path);
         $sub2_read_path = fileCommon::replaceReadName($sub2_tmp_path);
