@@ -57,5 +57,5 @@ Route::post('/post/edit/confirm/done', 'Arbi\post\DoneController@index');
 
 // fukase_test
 // site_front
-Route::get('list', 'SiteFrontController@list');
+Route::get('/list', 'Front\ListController@list');
 

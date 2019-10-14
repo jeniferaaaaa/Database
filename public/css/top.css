@@ -19,6 +19,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -43,75 +44,84 @@ table {
 	border-spacing: 0;
 }
 
-
 /*全体部分*/
 body {
-    font-family: 'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 /*ヘッダー部分*/
 header {
-    background-color: #F58F98;
+    background:  rgba(255, 255, 255, 0.7);
     height: 80px;
     font-weight: bold;
     position: fixed;
-    width: 2000px;
+    width: 100%;
 }
 
 header li {
     float: left;
-    padding: 35px 50px 30px 50px;
+    padding: 33px 50px 30px 50px;
 }
 
 header a {
+    color: #67A7CC;
     text-decoration: none;
-    color: black;
+    
 }
 
 header a:hover {
-    color: white;
+    color:#618BAD;
 }
 
-/*liの一つ目の要素*/
-header li:first-child {
-    padding: 7px 30px 0 80px;
+/*ロゴのみに下記適用*/
+
+li:first-child {
+    padding: 24px 24px 24px 90px;
 }
 
-/*「あなたもまとめてみる？」リンク*/
-.you-btn {
-    background-color: 	#E95B6B;
-    padding: 20px 40px 20px 40px;
-    margin: 20px 80px 5px 450px;
+.logo {
+    margin: 5px 300px 0 150px;
+    font-size: 35px;
+}
+
+.logo:hover {
+    color: #67A7CC;
+}
+
+/*[新規登録]ボタンに下記適用*/
+.register { 
+    color: #67A7CC;
+    padding: 20px;
+    margin: 10px 50px 10px 50px;
+    border: solid 3px #67A7CC;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px gray;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+ 
+.register:hover {
+    background: #67A7CC;
+    color: white;
+  }
+
+/*TOP画像*/
+.top-wrapper img {
+    height: 800px;
+    width: 100%;
 }
 
-header li:nth-of-type(5) {
-    margin: 0;
-    padding: 30px;
+/*おまとめ一覧*/
+.mid-wrapper {
+    background-color: #fff;
+    height: auto;
 }
 
-.you-btn:hover {
-    color: black;
-    background-color: #F6BABC;
-    box-shadow: 2px 2px 4px gray;
-}
-
-/*ハートの部分*/
-.heart-part {
-    height: 568px;
-}
-
-/*おまとめ一覧部分*/
-.omatome {
-    background-color: #F6BABC;
-    height: 1100px;
-}
-
-.omatome h1 {
-    font-size: 25px;
+.mid-wrapper h1 {
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
-    padding: 25px;
+    padding: 30px;
 }
 
 .image1 {
@@ -165,13 +175,19 @@ table {
     margin: auto;
 }
 
+/*テーブルの余白設定*/
+td,th {
+    padding: 15px;
+}
+
 a {
     text-decoration: none;
     color: black;
+    font-weight: bold;  
 }
 
 a:hover {   
-    color: white;
+    color: #67A7CC;
 }
 
 /*ページャー*/
@@ -185,7 +201,6 @@ a:hover {
 .pagination {
     text-align: center;
 }
-
 
 ul.pager {
     margin: 40px auto;
@@ -206,7 +221,7 @@ ul.pager li.next {
 
 ul.pager li a:link,
 ul.pager li a:visited {
-    color: #E95B6B;
+    color: #67A7CC;
     text-decoration: none;
 }
 
@@ -220,51 +235,13 @@ ul.pager li em {
     font-weight: bold;
 }
 
-/*おまとめ紹介部分*/
-.omatome-ad {
-    background-color: #F58F98;
-    height: 115px;
-    padding: 25px 40px 20px 40px;
-    margin: 50px 40px 40px 40px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.omatome-ad h1 {
-    font-size: 30px;
-    font-weight: bold;
-    padding: 0;
-}
-
-.omatome-ad h2 {
-    font-size: 20px;
-    padding: 10px;
-    margin-bottom: 18px;
-}
-
-/*おまとめ紹介ボタン部分*/
-.intro-button {
-    background-color: #E95B6B;
-    margin: 40px 250px auto 250px;
-    padding: 15px 40px 15px 40px;
-    height: 18px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px gray;
-}
-
-.omatome-button a {
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
-
-.intro-button:hover {
-    background-color: #F6BABC;
+li.prev {
+    padding: 0 10px 0 0;
 }
 
 /*フッター部分*/
 footer {
-    background-color: #F58F98;
+    background-color: rgba(103, 167, 204, 0.1);
     margin: auto;
     height: 100px;
 }
@@ -281,13 +258,25 @@ footer a {
     font-size: 13px;
 }
 
+footer a:hover {
+    color: #618BAD;
+}
+
 /*利用規約部分*/
 a.rule {
     margin: 0;
 }
 
 .copyright a {
+    color: black;
     float: right;
     margin: 80px 20px 0 0;
 }
 
+.copyright a:hover {
+    color: black;
+}
+
+li.policy {
+    padding: 0;
+}

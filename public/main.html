@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <!--スタイルシートの適用-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--レスポンシブ対応スタイルシートの適用-->
+    <link rel="stylesheet" href="css/main_responsive.css">
+    <!--viewportの設定-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+    <!--タイトル-->
+    <title>基本情報編集｜Anyshare</title>
+  </head>
+  <body>
+
+    <!--ヘッダー-->
+    <header>
+        <ul>
+            <li><a class="logo">Anyshare</a></li>
+            <li><a href="#">管理者メニュー</a></li>
+            <li><a href="#">基本情報編集</a></li>
+            <li><a href="#">表示項目設定</a></li>
+            <li><a href="#">デザイン設定</a></li>
+            <li><a href="#">TOPページ編集</a></li>
+            <li><a href="#">カテゴリ編集</a></li>
+            <li><a href="#">投稿内容編集</a></li>
+            <a href="#" class="login">ログイン</a>
+            </ul>
+    </header>
+
+    <!--基本情報編集欄-->
+    <div class="main">
+            <h2>基本情報編集</h2><br />
+            <h3>あなたのサイトの基本情報を編集してください。</h3><br />
+            
+    <!--入力欄-->
+    <div class="input">
+            <form method="POST" action="#">
+              <p class=hissu>※<span>必須</span>は必須入力項目です。</p>
+              <table>
+                <tr>
+                  <td>
+                    <span>必須</span>ニックネーム<br /><br />
+                    <div class="error_name">※ニックネームは必須です。</div>
+                  </td>
+                  <td><input type="text" name="name"></td>
+                </tr>
+               <tr>
+                  <td>
+                    <span>必須</span>メールアドレス<br /><br />
+                    <div class="error_email">※メールアドレスは必須です。</div>
+                  </td>
+                  <td>
+                    <input type="email" name="email">
+                    <p>※ご登録いただいたメールアドレスにアカウント情報をお送りいたします。</p>
+                  </td>
+               </tr>
+                <tr>
+                  <td>
+                    <span>必須</span>サイト名称<br /><br />
+                    <div class="error_site_name">※サイト名称は必須です。</div>
+                  </td>
+                  <td><input type="text" name="site_name"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span>必須</span>サイト利用目的<br /><br />
+                    <div class="error_site_purpose">※サイト利用目的は必須です。</div>
+                  </td>
+                  <td><textarea name="site_purpose" cols="40" rows="5" wrap="hard"></textarea></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+    <!--確認・戻るボタン-->
+        <div class="button">  
+            <a class="back" href="#">戻る</a>
+            <a class="confirm" href="#">確認画面へ進む</a>
+        </div>
+    </div>
+        
+    <!--フッター-->
+    <footer>
+        <ul>
+            <li class="policy"><a href="#">プライバシーポリシー</a></li>
+            <li>|</li>
+            <li><a href="#" class="rule">利用規約</a></li>
+        </ul>
+            <div class="copyright">
+                <a>Copyright © 2019 EqualShare All Rights Reserved.</a>
+            </div>
+    </footer>
+  </body>
+</html>
