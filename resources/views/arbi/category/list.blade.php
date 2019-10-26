@@ -22,6 +22,23 @@
                         </label>
                     </div>
 
+                <div class="panel-body">
+                @foreach ($ctgData as $key => $value)
+                    <div class="form-group">
+                        <label for="name" class="col-md-4 control-label">
+                            {{ $value->category_name}}
+                        </label>
+
+                        <label for="name" class="col-md-4 control-label">
+                            登録
+                        </label>
+
+                        <label for="name" class="col-md-4 control-label">
+                            削除
+                        </label>
+                    </div>
+                @endforeach
+
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
                             <a href="/category/edit" type="button" class="btn btn-primary">カテゴリ新規登録</a>
