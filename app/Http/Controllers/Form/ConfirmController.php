@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Form;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\FormValidateRequest;
+use App\Http\Requests\FormValidate;
 use App\formException;
 
 class ConfirmController extends Controller
@@ -15,7 +15,7 @@ class ConfirmController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __invoke (FormValidateRequest $request)
+    public function __invoke (FormValidate $request)
     {
         //リクエストデータの受け取り
         $data = $request->all();

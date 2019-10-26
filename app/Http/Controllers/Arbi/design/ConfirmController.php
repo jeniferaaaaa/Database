@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Arbi\design;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\BasicValidateRequest;
+use App\Http\Requests\DesignValidate;
 
 
 class ConfirmController extends Controller
@@ -14,7 +14,7 @@ class ConfirmController extends Controller
      * 完了画面で登録するために入力データをセッションに保存
      * 
      */
-    public function __invoke (Request $request)
+    public function __invoke (DesignValidate $request)
     {
         //リクエストデータの受け取り
         $data = $request->all();

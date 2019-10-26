@@ -4,14 +4,10 @@ namespace App\Http\Controllers\Arbi\pass;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\PassValidate;
 use App\Model\Arbi;
-use App\Model\Site;
-use App\Model\Category;
-use Illuminate\Support\Facades\Storage;
 use Auth;
 
-use App\Consts\fileConst;
-use App\Libs\fileCommon;
 
 class DoneController extends Controller
 {
@@ -20,7 +16,7 @@ class DoneController extends Controller
      * 管理者テーブルとサ管理者に紐付くサイトテーブルを更新する
      * 
      */
-    public function __invoke (Request $request)
+    public function __invoke (PassValidate $request)
     {
         //リクエストデータ受け取り
         $password = $request->input('new_password');

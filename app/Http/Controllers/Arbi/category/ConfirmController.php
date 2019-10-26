@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Arbi\category;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\BasicValidateRequest;
+use App\Http\Requests\CategoryValidate;
 
 use App\Consts\fileConst;
 use App\Libs\fileCommon;
@@ -16,7 +16,7 @@ class ConfirmController extends Controller
      * 完了画面で登録するために入力データをセッションに保存
      * 
      */
-    public function __invoke (Request $request)
+    public function __invoke (CategoryValidate $request)
     {
         //リクエストデータの受け取り
         $category_name = $request->input('category_name');

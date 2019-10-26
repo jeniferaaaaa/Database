@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Arbi\top;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\BasicValidateRequest;
+use App\Http\Requests\TopValidate;
 
 use App\Consts\fileConst;
 use App\Libs\fileCommon;
@@ -17,7 +17,7 @@ class ConfirmController extends Controller
      * 完了画面で登録するために入力データをセッションに保存
      * 
      */
-    public function __invoke (Request $request)
+    public function __invoke (TopValidate $request)
     {
         //メイン画像処理
         $main_tmp_path = (fileCommon::uploadCheck($request->file('main')))->store(fileConst::TMP_PATH);
