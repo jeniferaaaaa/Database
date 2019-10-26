@@ -1,69 +1,36 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <!--スタイルシートの適用-->
+    <link rel="stylesheet" href="css/login.css">
+    <!--レスポンシブ対応スタイルシートの適用-->
+    <link rel="stylesheet" href="css/login_responsive.css">
+    <!--viewportの設定-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">ログイン画面</div>
+    <!--タイトル-->
+    <title>基本情報編集｜Anyshare</title>
+  </head>
+  <body>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">メールアドレス</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">パスワード</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> ログインしたままにする
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    ログイン
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    パスワードをお忘れですか?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <!--ログイン画面の枠-->
+    <div class="login">
+            
+    <!--入力欄-->
+    <div class="input">
+        <form method="POST" action="{{ route('login') }}">{{ csrf_field() }}
+            <p>メールアドレス</p><br />
+            <input type="email" name="email"><br />
+            <p>パスワード</p><br />
+            <input type="password" name="password"><br />
+            <div class="button">
+                <button type="submit">ログイン</button>
             </div>
-        </div>
+            <a href="/password/reset">パスワードをお忘れですか？</a>
+        </form>
     </div>
-</div>
-@endsection
+    </div>
+        
+  </body>
+</html>

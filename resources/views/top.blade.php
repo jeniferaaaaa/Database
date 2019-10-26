@@ -10,28 +10,28 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
     <!--タイトル-->
-    <title>TOP|matomar</title>
+    <title>TOP|Anyshare</title>
   </head>
   <body>
 
     <!--ヘッダー-->
     <header>
         <ul>
-            <li><img src="images/make/top-logo.png"></li>
+            <li><a class="logo">Anyshare</a></li>
             <li><a href="#">機能紹介</a></li>
             <li><a href="#">料金</a></li>
             <li><a href="#">事例</a></li>
-            <li><a href="#scroll" class="you-btn">あなたもまとめてみる？</a></li>
+            <a href="/form" class="register">新規登録</a>
         </ul>
     </header>
 
-    <!--ハート部分-->
-    <div class="heart-part">
-      <img src="images/make/heart_top.jpg">
+    <!--青の画像部分-->
+    <div class="top-wrapper">
+      <img src="images/make/furniture.jpg">
     </div>
 
     <!--おまとめ一覧部分-->
-    <div class="omatome">
+    <div class="mid-wrapper">
         <h1>今投稿されているおまとめ一覧</h1>
           <table>
             <tr>
@@ -79,21 +79,10 @@
           </ul>
         </div>
 
-        <!--紹介部分-->
-        <div class="omatome-ad">
-            <h1>あなたの好きなもののおまとめサイトを作ってみませんか？</h1>
-            <h2>自分の「好き」をみんなでシェアしましょう！</h2>
-            <!--紹介ボタン部分-->
-            <div class="omatome-button">
-            <a href="/form" id="scroll" class="intro-button">今すぐ無料で自分のおまとめサイトを作ってみる</a>
-            </div>
-        </div>
-    </div>
-
     <!--フッター-->
     <footer>
        <ul>
-           <li><a href="#">プライバシーポリシー</a></li>
+           <li class="policy"><a href="#">プライバシーポリシー</a></li>
            <li>|</li>
            <li><a href="#" class="rule">利用規約</a></li>
        </ul>

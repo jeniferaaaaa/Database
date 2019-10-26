@@ -15,20 +15,11 @@ use App\Libs\fileCommon;
 class DoneController extends Controller
 {
     /**
-     * ログインしていないユーザを弾く初期化処理
-     * 
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
      * セッションからデータを取得し
      * 管理者テーブルと管理者に紐付くサイトテーブルを更新する
      * 
      */
-    public function index (Request $request)
+    public function __invoke (Request $request)
     {
         //最終的に置くパス
         $documentPath = fileConst::IMG_PATH;

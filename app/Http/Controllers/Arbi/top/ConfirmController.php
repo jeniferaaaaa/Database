@@ -13,20 +13,11 @@ use App\Libs\fileCommon;
 class ConfirmController extends Controller
 {
     /**
-     * ログインしていないユーザを弾く初期化処理
-     * 
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
      * 入力画面で入力された内容を受け取って、確認画面に送信
      * 完了画面で登録するために入力データをセッションに保存
      * 
      */
-    public function index (Request $request)
+    public function __invoke (Request $request)
     {
         //メイン画像処理
         $main_tmp_path = (fileCommon::uploadCheck($request->file('main')))->store(fileConst::TMP_PATH);

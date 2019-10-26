@@ -8,7 +8,7 @@ use Auth;
 
 class ListController extends Controller
 {
-    public function index ()
+    public function __invoke ()
     {
         $categoryData = Auth::user()->category;
         var_dump($categoryData);

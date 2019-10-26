@@ -99,7 +99,7 @@ return [
 
     //パスワードリセットはいったんコメントアウト
 
-    /*'passwords' => [
+    'passwords' => [
         'arbi' => [
             'provider' => 'arbi',
             //'table' => 'password_resets',
@@ -107,6 +107,6 @@ return [
             'expire' => 60,
         ],
     ],
-    */
+
 
 ];

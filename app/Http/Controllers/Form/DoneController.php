@@ -17,7 +17,7 @@ class DoneController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function __invoke (Request $request)
     {
         //セッションから申し込みデータ取得
         $name = $request->session()->get('name');

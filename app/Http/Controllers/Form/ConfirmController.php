@@ -15,7 +15,7 @@ class ConfirmController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(FormValidateRequest $request)
+    public function __invoke (FormValidateRequest $request)
     {
         //リクエストデータの受け取り
         $data = $request->all();

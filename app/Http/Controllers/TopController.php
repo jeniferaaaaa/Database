@@ -12,7 +12,7 @@ class TopController extends Controller
      * TOP画面表示
      * 
      */
-    public function index ()
+    public function __invoke ()
     {
         //siteテーブルからviewへ情報を渡す（後に記載）
         return view ('top');

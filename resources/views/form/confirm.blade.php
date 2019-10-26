@@ -16,12 +16,13 @@
     
     <!--ヘッダー-->
     <header>
-      <ul>
-          <li><img src="/images/make/top-logo.png"></li>
-          <li><a href="#">機能紹介</a></li>
-          <li><a href="#">料金</a></li>
-          <li><a href="#">事例</a></li>
-      </ul>
+        <ul>
+            <li><a class="logo">Anyshare</a></li>
+            <li><a href="#">機能紹介</a></li>
+            <li><a href="#">料金</a></li>
+            <li><a href="#">事例</a></li>
+            <a href="#" class="register">新規登録</a>
+        </ul>
     </header>
 
     <!--サイト新規登録欄-->
@@ -29,17 +30,21 @@
       <h2>登録内容確認</h2><br />
          
         <!--入力欄-->
-        <form method="POST" action="{{ url('form/confirm/done') }}">{{ csrf_field() }}
-          <div class="input-confirm"> 
+        <div class="input-confirm">
+          <form method="POST" action="{{ url('form/confirm/done') }}">{{ csrf_field() }}
             <table>
               <tr>
                 <td><span>必須</span>ニックネーム<br /><br /></td>
                 <td><p class="name">{{ $data['name'] }}</p></td>
               </tr>
-             <tr>
+              <tr>
                 <td><span>必須</span>メールアドレス<br /><br /></td>
                 <td><p class="email">{{ $data['email'] }}</p></td>
-             </tr>
+              </tr>
+              <tr>
+                <td><span>必須</span>パスワード<br /><br /></td>
+                <td><p class="pass1">********</p></td>
+              </tr>
               <tr>
                 <td><span>必須</span>サイト名称<br /><br /></td>
                 <td><p class="site_name">{{ $data['site_name'] }}</td>
@@ -52,22 +57,22 @@
                 <td><span>必須</span>ドメイン<br /><br /></td>
                 <td><p class="domain">{{ $data['domain'] }}</p></td>
               </tr>
-            </table>          
-          </div>
+            </table>
 
-          <h3>この内容でよろしいでしょうか？</h3>
-          <!--確認・戻るボタン-->
-          <div class="button">  
-            <a class="back" href="javascript:history.back();">編集画面に戻る</a>
-            <button type="submit" class="ok" >ＯＫ</button>
-          </div>
-        </form>
+            <h3>この内容でよろしいでしょうか？</h3>
+            <!--確認・戻るボタン-->
+            <div class="button">  
+              <a class="back" href="javascript:history.back();">編集画面に戻る</a>
+              <button type="submit" class="ok">ＯＫ</button>
+            </div>
+          </form>
+        </div>
     </div>
-
-    <!--フッター-->
-    <footer>
+    
+   <!--フッター-->
+   <footer>
       <ul>
-          <li><a href="#">プライバシーポリシー</a></li>
+          <li class="policy"><a href="#">プライバシーポリシー</a></li>
           <li>|</li>
           <li><a href="#" class="rule">利用規約</a></li>
       </ul>
@@ -75,6 +80,7 @@
           <a>Copyright © 2019 EqualShare All Rights Reserved.</a>
      </div>
    </footer>
-    
-  </body>
+
+
+ </body>
 </html>
