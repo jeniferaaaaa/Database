@@ -56,7 +56,7 @@ class ConfirmController extends Controller
     private function existSubImage ($imageName, $tmpPath)
     {
         if ($imageName){
-            return ($this->uploadCheck($imageName))->store($tmpPath);
+            return (fileCommon::uploadCheck($imageName))->store($tmpPath);
         }
         return '';
     }

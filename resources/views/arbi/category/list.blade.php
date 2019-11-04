@@ -8,36 +8,37 @@
                 <div class="panel-heading">カテゴリ編集</div>
 
                 <div class="panel-body">
-                    <div class="form-group">
-                        <label for="name" class="col-md-4 control-label">
-                            カテゴリ名称
-                        </label>
-
-                        <label for="name" class="col-md-4 control-label">
-                            登録
-                        </label>
-
-                        <label for="name" class="col-md-4 control-label">
-                            削除
-                        </label>
-                    </div>
-
-                <div class="panel-body">
-                @foreach ($ctgData as $key => $value)
-                    <div class="form-group">
-                        <label for="name" class="col-md-4 control-label">
-                            {{ $value->category_name}}
-                        </label>
-
-                        <label for="name" class="col-md-4 control-label">
-                            登録
-                        </label>
-
-                        <label for="name" class="col-md-4 control-label">
-                            削除
-                        </label>
-                    </div>
-                @endforeach
+                    <table border="1" cellpadding="10" width="600">
+                        <tr align="center">
+                            <td width="40%">
+                                <label for="name">カテゴリ名称</label>
+                            </td>
+                            <td width="20%">
+                                <label for="name">登録</label>
+                            </td>
+                            <td width="20%">
+                                <label for="name">削除</label>
+                            </td>
+                        </tr>
+                        @foreach ($ctgData as $key => $value)
+                        <tr align="center">
+                            <td width="40%">
+                                <label for="name">{{ $value->category_name}}</label>
+                            </td>
+                            <td width="20%">
+                                <form method="POST" action="{{ url('/category/list/delete') }}">{{ csrf_field() }}
+                                    <button type="submit" class="btn btn-primary">登録</button>
+                                </form>
+                            </td>
+                            <td width="20%">
+                                <form method="POST" action="{{ url('/category/list/delete') }}">{{ csrf_field() }}
+                                    <input type="hidden" name="category_id" value="{{ $value->category_id }}">
+                                    <button type="submit" class="btn btn-danger">削除</button>
+                                </form>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </table>
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">

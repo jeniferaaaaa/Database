@@ -24,7 +24,7 @@ class PassValidate extends FormRequest
     public function rules()
     {
         return [
-            'old_password' => 'required|exists:arbi,password',
+            'old_password' => 'required',
             'new_password' => 'required|max:30|min:4',
             'new_password-confirmation' => 'same:new_password',
         ];
@@ -38,7 +38,6 @@ class PassValidate extends FormRequest
     {
         return [
             'old_password.required' => '現在のパスワードを入力してください',
-            'old_password.exists' => '現在のパスワードが一致しません',
             'new_password.required' => '新しいパスワードを入力してください',
             'new_password.max' => '新しいパスワードは4文字以上30文字以内で入力してください',
             'new_password.min' => '新しいパスワードは4文字以上30文字以内で入力してください',

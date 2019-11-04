@@ -24,6 +24,13 @@
                                     <strong>{{ $errors->first('old_password') }}</strong>
                                 </span>
                             @endif
+                            
+                            @if (session('false'))
+                            <span class="text-danger mt-3">
+                                    <strong>{{ session('false') }}</strong>
+                                </span>
+                            @endif
+
                             </div>
                         </div>
 

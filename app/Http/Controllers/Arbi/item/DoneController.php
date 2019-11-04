@@ -12,7 +12,7 @@ class DoneController extends Controller
 {
     /**
      * セッションからデータを取得し
-     * 管理者テーブルとサ管理者に紐付くサイトテーブルを更新する
+     * 管理者に紐付くサイトテーブルを更新する
      * 
      */
     public function __invoke (Request $request)

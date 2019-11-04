@@ -23,6 +23,11 @@ Route::post('/form/confirm/done','Form\DoneController');
 
 Auth::routes();
 
+Route::get('reset_pass', function (){
+    return view ('auth.reset_pass.reset');
+});
+Route::post('reset_pass/done','Arbi\ResetController');
+
 Route::middleware(['auth'])->group(function () {
     //メニュー画面表示
     Route::get('/menu', 'Arbi\MenuController');
@@ -47,12 +52,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/category/edit', 'Arbi\category\EditController');
     Route::post('/category/edit/confirm', 'Arbi\category\ConfirmController');
     Route::post('/category/edit/confirm/done', 'Arbi\category\DoneController');
-    //TODO:登録のルート
-    //TODO:削除のルート
-    Route::delete('/category/list/delete','Arbi\category\ListController');
+    Route::post('/category/list/delete','Arbi\category\DeleteController');
     
     //投稿内容編集
-    //Route::get('/post/list', 'Arbi\post\ListController');
+    Route::get('/post/list', 'Arbi\post\ListController');
     //Route::get('/post/edit', 'Arbi\post\EditController');
     //Route::post('/post/edit/confirm', 'Arbi\post\ConfirmController');
     //Route::post('/post/edit/confirm/done', 'Arbi\post\DoneController');

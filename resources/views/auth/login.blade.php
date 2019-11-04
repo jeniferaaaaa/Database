@@ -27,7 +27,7 @@
             <div class="button">
                 <button type="submit">ログイン</button>
             </div>
-            <a href="/password/reset">パスワードをお忘れですか？</a>
+            <a href="/reset_pass">パスワードをお忘れですか？</a>
         </form>
     </div>
     </div>
