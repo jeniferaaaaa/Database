@@ -56,7 +56,8 @@ Route::middleware(['auth'])->group(function () {
     
     //投稿内容編集
     Route::get('/post/list', 'Arbi\post\ListController');
-    //Route::get('/post/edit', 'Arbi\post\EditController');
+    Route::post('/post/edit', 'Arbi\post\EditController');
+    Route::post('/post/list/delete','Arbi\post\DeleteController');
     //Route::post('/post/edit/confirm', 'Arbi\post\ConfirmController');
     //Route::post('/post/edit/confirm/done', 'Arbi\post\DoneController');
     

@@ -10,8 +10,13 @@ class ListController extends Controller
 {
     public function __invoke ()
     {
-        $categoryData = Auth::user()->category;
-        var_dump($categoryData);
-        return view ('arbi.post.list');
+        //ログインユーザに紐付くサイトモデル取得
+        $siteObject = Auth::user()->sites;
+        //サイトに紐付くカテゴリテーブルのデータ取得
+        foreach ($siteObject as $value){
+            $dataDetail = $value->data;
+        }
+
+        return view ('arbi.post.list', compact('dataDetail'));
     }
 }

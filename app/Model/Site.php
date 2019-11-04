@@ -39,4 +39,13 @@ class Site extends Model
         return $this->hasMany('App\Model\Category');
     }
     
+    /**
+     * カテゴリテーブルとのリレーション
+     * 
+     */
+    public function data ()
+    {
+        return $this->hasMany('App\Model\Data');
+    }
+
 }

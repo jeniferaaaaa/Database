@@ -38,6 +38,6 @@ class ConfirmController extends Controller
         //セッションへデータ保存
         $request->session()->put('data',$data);
         
-        return view ('arbi.category.confirm',compact('data'));
+        return view ('arbi.post.confirm',compact('data'));
     }
 }

@@ -27,4 +27,13 @@ class Data extends Model
         'detail1','detail2','detail3','displayFlag',
     ];
 
+    /**
+     * サイトテーブルとのリレーション
+     * 
+     */
+    public function site ()
+    {
+        return $this->belongsTo('App\Model\Site','site_id','id');
+    }
+
 }
