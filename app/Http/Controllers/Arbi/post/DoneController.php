@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Arbi;
 use App\Model\Site;
-use App\Model\Category;
+use App\Model\Data;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 
@@ -25,26 +25,28 @@ class DoneController extends Controller
         //最終的に置くパス
         $documentPath = fileConst::IMG_PATH;
         //セッションから配列データ取得
-        $data = $request->session()->get('data');        
+        $data_id = $request->session()->get('data_id');
+        $data = $request->session()->get('data');
         //DBに保存するパス取得
-        $cate_path = fileCommon::getMovedDBPath($data['category_tmp_path'],$documentPath,fileConst::CATEGORY_PATH);
-
-        //ログインユーザに紐づくサイトIDを取得
-        $sites = Auth::user()->sites;
-        //この取得の仕方はかっこ悪いのでなんとかしたい
-        foreach ($sites as $site){
-            $id = $site->id;
-        }
+        //TODO::現在カテゴリフォルダに最終保存しているので変えること
+        $image_path = fileCommon::getMovedDBPath($data['image_tmp_path'],$documentPath,fileConst::CATEGORY_PATH);
 
         //登録処理
-        Category::create([
-            'site_id' => $id,
-            'category_name' => $data['category_name'],
-            'category_path' => $cate_path,
-            'category_text' => $data['category_text'],
-        ]);
+        $dataDetail = Data::findOrFail($data_id);
+        $dataDetail->name = $data['nameData'];
+        $dataDetail->image_path = $image_path;
+        $dataDetail->attribute1 = $data['at1Data'];
+        $dataDetail->attribute2 = $data['at2Data'];
+        $dataDetail->attribute3 = $data['at3Data'];
+        $dataDetail->attribute4 = $data['at4Data'];
+        $dataDetail->attribute5 = $data['at5Data'];
+        $dataDetail->detail1 = $data['dt1Data'];
+        $dataDetail->detail2 = $data['dt2Data'];
+        $dataDetail->detail3 = $data['dt3Data'];
+        $dataDetail->save();
 
-        return view('arbi.category.done');
+
+        return view('arbi.post.done');
 
     }
     

@@ -8,39 +8,113 @@
                 <div class="panel-heading">カテゴリ編集確認画面</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('category/edit/confirm/done') }}">
+                    <form class="form-horizontal" method="POST" action="{{ url('post/edit/confirm/done') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <label for="category_name" class="col-md-4 control-label">
-                                カテゴリ名称
+                            <label for="name" class="col-md-4 control-label">
+                                名前
                             </label>
 
                             <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="category_name">{{ $data['category_name'] }}</label>
+                                <label class="col-md-4 control-label" name="name">{{ $data['nameData'] }}</label>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="category_path" class="col-md-4 control-label">
-                                カテゴリ画像
+                            <label for="image_path" class="col-md-4 control-label">
+                                画像
                             </label>
 
                             <div class="col-md-6">
-                                <img src="/{{ $data['category_read_path'] }}" width="200" height="130">
+                                <img src="/{{ $data['image_read_path'] }}" width="200" height="130">
+                            </div>
+                        </div>
+
+                        @foreach ( $siteObjects as $siteData)
+
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">
+                                {{ $siteData->at1_name }}
+                            </label>
+
+                            <div class="col-md-6">
+                                <label class="col-md-4 control-label" name="name">{{ $data['at1Data'] }}</label>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="category_text" class="col-md-4 control-label">
-                                カテゴリ説明文
+                            <label for="name" class="col-md-4 control-label">
+                                {{ $siteData->at2_name }}
                             </label>
 
                             <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="category_text">{{ $data['category_text'] }}</label>
+                                <label class="col-md-4 control-label" name="name">{{ $data['at2Data'] }}</label>
                             </div>
                         </div>
-                        
+
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">
+                                {{ $siteData->at3_name }}
+                            </label>
+
+                            <div class="col-md-6">
+                                <label class="col-md-4 control-label" name="name">{{ $data['at3Data'] }}</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">
+                                {{ $siteData->at4_name }}
+                            </label>
+
+                            <div class="col-md-6">
+                                <label class="col-md-4 control-label" name="name">{{ $data['at4Data'] }}</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">
+                                {{ $siteData->at5_name }}
+                            </label>
+
+                            <div class="col-md-6">
+                                <label class="col-md-4 control-label" name="name">{{ $data['at5Data'] }}</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">
+                                {{ $siteData->dt1_name }}
+                            </label>
+
+                            <div class="col-md-6">
+                                <label class="col-md-4 control-label" name="name">{{ $data['dt1Data'] }}</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">
+                                {{ $siteData->dt2_name }}
+                            </label>
+
+                            <div class="col-md-6">
+                                <label class="col-md-4 control-label" name="name">{{ $data['dt2Data'] }}</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">
+                                {{ $siteData->dt3_name }}
+                            </label>
+
+                            <div class="col-md-6">
+                                <label class="col-md-4 control-label" name="name">{{ $data['dt3Data'] }}</label>
+                            </div>
+                        </div>
+
+                        @endforeach
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">カテゴリ編集</div>
+                <div class="panel-heading">投稿内容編集</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ url('post/edit/confirm') }}" enctype="multipart/form-data">

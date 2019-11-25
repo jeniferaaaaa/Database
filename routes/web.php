@@ -58,8 +58,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/post/list', 'Arbi\post\ListController');
     Route::post('/post/edit', 'Arbi\post\EditController');
     Route::post('/post/list/delete','Arbi\post\DeleteController');
-    //Route::post('/post/edit/confirm', 'Arbi\post\ConfirmController');
-    //Route::post('/post/edit/confirm/done', 'Arbi\post\DoneController');
+    Route::post('/post/edit/confirm', 'Arbi\post\ConfirmController');
+    Route::post('/post/edit/confirm/done', 'Arbi\post\DoneController');
     
     //パスワード変更
     Route::get('/change_pass', 'Arbi\pass\EditController');
