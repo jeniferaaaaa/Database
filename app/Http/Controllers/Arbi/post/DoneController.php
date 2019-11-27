@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Arbi\post;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\Arbi;
-use App\Model\Site;
 use App\Model\Data;
 use Illuminate\Support\Facades\Storage;
 use Auth;
@@ -25,11 +23,11 @@ class DoneController extends Controller
         //最終的に置くパス
         $documentPath = fileConst::IMG_PATH;
         //セッションから配列データ取得
-        $data_id = $request->session()->get('data_id');
-        $data = $request->session()->get('data');
+        $data_id = $request->session()->pull('data_id');
+        $data = $request->session()->pull('data');
         //DBに保存するパス取得
         //TODO::現在カテゴリフォルダに最終保存しているので変えること
-        $image_path = fileCommon::getMovedDBPath($data['image_tmp_path'],$documentPath,fileConst::CATEGORY_PATH);
+        $image_path = fileCommon::getMovedDBPath($data['image_tmp_path'],$documentPath,fileConst::DATA_PATH);
 
         //登録処理
         $dataDetail = Data::findOrFail($data_id);

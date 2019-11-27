@@ -11,7 +11,7 @@ class DeleteController extends Controller
 {
     public function __invoke (Request $request)
     {
-        $data_id = $request->input('data_id');
+        $data_id = $request->pull('data_id');
         $dataDetail = Data::findOrFail($data_id);
         $dataDetail->delete();
 

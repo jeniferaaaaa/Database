@@ -12,6 +12,7 @@ class ListController extends Controller
     {
         //ログインユーザに紐付くサイトモデル取得
         $siteObject = Auth::user()->sites;
+
         //サイトに紐付くカテゴリテーブルのデータ取得
         foreach ($siteObject as $value){
             $dataDetail = $value->data;
