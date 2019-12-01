@@ -1,0 +1,192 @@
+/*リセットCSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}   
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*全体部分*/
+body {
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/*ヘッダー部分*/
+header {
+    background:  rgba(255, 255, 255, 0.7);
+    height: 80px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+}
+
+header li {
+    float: left;
+    padding: 33px 15px 30px 15px;
+}
+
+header a {
+    color: #67A7CC;
+    text-decoration: none;    
+}
+
+header a:hover {
+    color:#618BAD;
+}
+
+/*ロゴのみに下記適用*/
+li:first-child {
+    padding: 24px;
+}
+
+.logo {
+    margin: 5px 80px 0 80px;
+    font-size: 35px;
+}
+
+.logo:hover {
+    color: #67A7CC;
+}
+
+/*[ログイン]ボタンに下記適用*/
+.login { 
+    color: #67A7CC;
+    padding: 20px;
+    margin: 10px 50px 10px 50px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+ 
+.login:hover {
+    background: #67A7CC;
+    color: white;
+  }
+
+/*デザイン設定完了欄*/
+.design_setting_done {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: auto;
+    padding: 110px 80px;
+}
+
+.design_setting_done h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 120px 0 120px;
+}
+
+.design_setting_done h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    text-align: center;
+    margin: 50px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back_to_top {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back_to_top:hover {
+    background-color: #618BAD;
+}
+
+/*フッター部分*/
+footer {
+    background-color: rgba(103, 167, 204, 0.1);
+    margin: auto;
+    height: 100px;
+}
+
+footer li {
+    float: left;
+    margin: 15px 0 0 0;
+    font-weight: bold;
+}
+
+footer a {
+    margin: 15px 0 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #618BAD;
+}
+
+/*利用規約部分*/
+a.rule {
+    margin: 0;
+}
+
+.copyright a {
+    color: black;
+    float: right;
+    margin: 80px 20px 0 0;
+}
+
+.copyright a:hover {
+    color: black;
+}
+
+li.policy {
+    padding: 0;
+}
+
