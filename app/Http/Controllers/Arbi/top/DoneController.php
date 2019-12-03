@@ -24,7 +24,7 @@ class DoneController extends Controller
         //最終的に置くパス
         $documentPath = fileConst::IMG_PATH;
         //セッションから配列データ取得
-        $data = $request->session()->get('data');
+        $data = $request->session()->pull('data');
         //DBに保存するパス取得
         $main_path = fileCommon::getMovedDBPath($data['main_tmp'],$documentPath,fileConst::MAIN_PATH);
         $sub1_path = fileCommon::getMovedDBPath($data['sub1_tmp'],$documentPath,fileConst::SUB_PATH);

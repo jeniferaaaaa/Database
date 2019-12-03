@@ -18,8 +18,8 @@ class DoneController extends Controller
     public function __invoke (Request $request)
     {
         //セッションから申し込みデータ取得
-        $layout = $request->session()->get('layout');
-        $color = $request->session()->get('color');
+        $layout = $request->session()->pull('layout');
+        $color = $request->session()->pull('color');
 
         //サイトテーブルを更新
         $sites = Auth::user()->sites;

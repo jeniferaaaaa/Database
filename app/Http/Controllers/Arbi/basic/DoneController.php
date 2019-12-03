@@ -12,16 +12,16 @@ class DoneController extends Controller
 {
     /**
      * セッションからデータを取得し
-     * 管理者テーブルとサ管理者に紐付くサイトテーブルを更新する
+     * 管理者テーブルと管理者に紐付くサイトテーブルを更新する
      * 
      */
     public function __invoke (Request $request)
     {
         //セッションから申し込みデータ取得
-        $name = $request->session()->get('name');
-        $email = $request->session()->get('email');
-        $site_name = $request->session()->get('site_name');
-        $site_purpose = $request->session()->get('site_purpose');
+        $name = $request->session()->pull('name');
+        $email = $request->session()->pull('email');
+        $site_name = $request->session()->pull('site_name');
+        $site_purpose = $request->session()->pull('site_purpose');
 
         //管理者テーブルを更新
         $arbis = Auth::user();//ログイン中のユーザのモデルを取得

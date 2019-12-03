@@ -11,7 +11,7 @@
 |
 */
 
-//共通フロント----------------------------------------------------------------
+//フロント----------------------------------------------------------------
 Route::get('/', 'TopController');
 Route::get('/form', function(){
     return view('form.form');
@@ -67,7 +67,5 @@ Route::middleware(['auth'])->group(function () {
     
 });
 
-// fukase_test
-// site_front
-Route::get('/list', 'Front\ListController@list');
+//各フロント画面--------------------------------------------------------------------
 

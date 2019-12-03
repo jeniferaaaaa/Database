@@ -17,7 +17,7 @@ class DoneController extends Controller
 {
     /**
      * セッションからデータを取得し
-     * 管理者テーブルとサ管理者に紐付くサイトテーブルを更新する
+     * 管理者に紐付けてカテゴリテーブルを更新する
      * 
      */
     public function __invoke (Request $request)
@@ -25,7 +25,7 @@ class DoneController extends Controller
         //最終的に置くパス
         $documentPath = fileConst::IMG_PATH;
         //セッションから配列データ取得
-        $data = $request->session()->get('data');        
+        $data = $request->session()->pull('data');        
         //DBに保存するパス取得
         $cate_path = fileCommon::getMovedDBPath($data['category_tmp_path'],$documentPath,fileConst::CATEGORY_PATH);
 

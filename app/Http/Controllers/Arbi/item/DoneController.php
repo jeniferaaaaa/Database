@@ -18,14 +18,14 @@ class DoneController extends Controller
     public function __invoke (Request $request)
     {
         //セッションから申し込みデータ取得
-        $at1_name = $request->session()->get('attribute1');
-        $at2_name = $request->session()->get('attribute2');
-        $at3_name = $request->session()->get('attribute3');
-        $at4_name = $request->session()->get('attribute4');
-        $at5_name = $request->session()->get('attribute5');
-        $dt1_name = $request->session()->get('detail1');
-        $dt2_name = $request->session()->get('detail2');
-        $dt3_name = $request->session()->get('detail3');
+        $at1_name = $request->session()->pull('attribute1');
+        $at2_name = $request->session()->pull('attribute2');
+        $at3_name = $request->session()->pull('attribute3');
+        $at4_name = $request->session()->pull('attribute4');
+        $at5_name = $request->session()->pull('attribute5');
+        $dt1_name = $request->session()->pull('detail1');
+        $dt2_name = $request->session()->pull('detail2');
+        $dt3_name = $request->session()->pull('detail3');
 
         //サイトテーブルを更新
         $sites = Auth::user()->sites;
