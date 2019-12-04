@@ -17,8 +17,6 @@ class EditController extends Controller
     {
         //ログインユーザに紐付くサイトモデル取得
         $siteObjects = Auth::user()->sites;
-        $maybeExistSession = $request->session()->get('data_id');
-        var_dump($maybeExistSession);
 
         //リクエスト受け取り
         $data_id = $request->input('data_id');

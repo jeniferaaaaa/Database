@@ -15,7 +15,7 @@ class DoneController extends Controller
 {
     /**
      * セッションからデータを取得し
-     * 管理者テーブルとサ管理者に紐付くサイトテーブルを更新する
+     * データテーブルを更新する
      * 
      */
     public function __invoke (Request $request)
@@ -32,6 +32,7 @@ class DoneController extends Controller
         //登録処理
         $dataDetail = Data::findOrFail($data_id);
         $dataDetail->name = $data['nameData'];
+        $dataDetail->sns_keyword = $data['keywordData'];
         $dataDetail->image_path = $image_path;
         $dataDetail->attribute1 = $data['at1Data'];
         $dataDetail->attribute2 = $data['at2Data'];

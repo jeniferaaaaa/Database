@@ -27,6 +27,7 @@ class CreateDataDetailTable extends Migration
             $table->text('detail1')->nullable();//詳細1
             $table->text('detail2')->nullable();//詳細2
             $table->text('detail3')->nullable();//詳細3
+            $table->string('sns_keyword')->nullable();//snsキーワード
             $table->tinyInteger('displayFlag')->nullable();//表示フラグ
             $table->timestamps();//作成日時と更新日時
         });

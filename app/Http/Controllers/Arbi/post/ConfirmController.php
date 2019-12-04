@@ -24,6 +24,7 @@ class ConfirmController extends Controller
 
         //リクエストデータの受け取り
         $nameData = $request->input('name');
+        $keywordData = $request->input('sns_keyword');
         $at1Data = $request->input('attribute1');
         $at2Data = $request->input('attribute2');
         $at3Data = $request->input('attribute3');
@@ -41,6 +42,7 @@ class ConfirmController extends Controller
         //セッション用の配列作成
         $data = [
             'nameData' => $nameData,
+            'sns_keyword' => $keywordData,
             'at1Data' => $at1Data,
             'at2Data' => $at2Data,
             'at3Data' => $at3Data,

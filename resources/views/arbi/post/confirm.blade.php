@@ -22,6 +22,16 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="sns_keyword" class="col-md-4 control-label">
+                                SNSキーワード
+                            </label>
+
+                            <div class="col-md-6">
+                                <label class="col-md-4 control-label" name="sns_keyword">{{ $data['keywordData'] }}</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="image_path" class="col-md-4 control-label">
                                 画像
                             </label>

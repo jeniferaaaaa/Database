@@ -27,6 +27,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group {{ $errors->has('sns_keyword') ? ' has-error' : '' }}">
+                            <label for="sns_keyword" class="col-md-4 control-label">
+                                SNSキーワード
+                            </label>
+
+                            <div class="col-md-6">
+                                <input id="sns_keyword" type="text" class="form-control" name="sns_keyword" value="{{ $dataDetail->sns_keyword }}">
+
+                            @if ($errors->has('sns_keyword'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('sns_keyword') }}</strong>
+                                </span>
+                            @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for="image_path" class="col-md-4 control-label"> 
                             画像
