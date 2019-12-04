@@ -60,7 +60,7 @@ header {
 
 header li {
     float: left;
-    padding: 22px 15px 30px 15px;
+    padding: 33px 15px 30px 15px;
 }
 
 header a {
@@ -73,27 +73,24 @@ header a:hover {
 }
 
 /*ロゴのみに下記適用*/
+li:first-child {
+    padding: 24px;
+}
+
 .logo {
     margin: 5px 80px 0 80px;
     font-size: 35px;
-    padding: 24px;
 }
 
 .logo:hover {
     color: #67A7CC;
 }
 
-/*ログイン情報表示部分*/
-.login-info {
-    padding: 0;
-    margin: 0 40px 10px 550px;
-}
-
-/*[ログアウト]ボタンに下記適用*/
-.logout{ 
+/*[ログイン]ボタンに下記適用*/
+.login { 
     color: #67A7CC;
     padding: 20px;
-    margin: 10px 50px 10px 0;
+    margin: 10px 50px 10px 50px;
     border: solid 3px #67A7CC;
     border-radius: 10px;
     text-decoration: none;
@@ -101,134 +98,52 @@ header a:hover {
     transition: .4s;
 }
  
-.logout:hover {
+.login:hover {
     background: #67A7CC;
     color: white;
   }
 
-/*メニュー欄*/
-.menu {
+/*カテゴリ編集完了欄*/
+.category_edit_done {
     background-color: rgba(103, 167, 204, 0.4);
     height: auto;
+    padding: 110px 80px;
 }
-.menu h2 {
-    font-size: 15px;
+
+.category_edit_done h2 {
+    font-size: 25px;
     font-weight: bold;
-    padding: 100px 0 30px 200px;
-
+    margin: 0 120px 0 120px;
 }
 
-/*メニューのボタン*/
-.edit-menu {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
+.category_edit_done h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    text-align: center;
+    margin: 50px;
+}
+
+.button a {
+    font-weight: bold;
     text-decoration: none;
-    display: inline-block;
-    transition: .4s;
+    color: black;
 }
 
-.edit-menu:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.setting-display-item {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
+.back_to_top {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
     border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
+    box-shadow: 2px 2px 4px gray;
 }
 
-.setting-display-item:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.setting-design {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.setting-design:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.edit-top {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 630px 0 660px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.edit-top:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.edit-category {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.edit-category:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.edit-post {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.edit-post:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.change-password {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 630px 60px 660px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.change-password:hover {
-    background: #67A7CC;
-    color: white;
+.back_to_top:hover {
+    background-color: #618BAD;
 }
 
 /*フッター部分*/
@@ -274,3 +189,4 @@ a.rule {
 li.policy {
     padding: 0;
 }
+

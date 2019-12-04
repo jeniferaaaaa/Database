@@ -60,7 +60,7 @@ header {
 
 header li {
     float: left;
-    padding: 22px 15px 30px 15px;
+    padding: 33px 15px 30px 15px;
 }
 
 header a {
@@ -73,27 +73,24 @@ header a:hover {
 }
 
 /*ロゴのみに下記適用*/
+li:first-child {
+    padding: 24px;
+}
+
 .logo {
     margin: 5px 80px 0 80px;
     font-size: 35px;
-    padding: 24px;
 }
 
 .logo:hover {
     color: #67A7CC;
 }
 
-/*ログイン情報表示部分*/
-.login-info {
-    padding: 0;
-    margin: 0 40px 10px 550px;
-}
-
-/*[ログアウト]ボタンに下記適用*/
-.logout{ 
+/*[ログイン]ボタンに下記適用*/
+.login { 
     color: #67A7CC;
     padding: 20px;
-    margin: 10px 50px 10px 0;
+    margin: 10px 50px 10px 50px;
     border: solid 3px #67A7CC;
     border-radius: 10px;
     text-decoration: none;
@@ -101,134 +98,145 @@ header a:hover {
     transition: .4s;
 }
  
-.logout:hover {
+.login:hover {
     background: #67A7CC;
     color: white;
   }
 
-/*メニュー欄*/
-.menu {
+/*投稿内容編集欄*/
+.post_edit {
     background-color: rgba(103, 167, 204, 0.4);
-    height: auto;
+    height: 1550px;
 }
-.menu h2 {
-    font-size: 15px;
+.post_edit h2 {
+    font-size: 25px;
     font-weight: bold;
-    padding: 100px 0 30px 200px;
-
+    padding: 100px 0 0 200px;
 }
 
-/*メニューのボタン*/
-.edit-menu {
+/*入力欄*/
+.input {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.hissu{
+    padding: 10px 10px 20px 10px;
+}
+
+.input span {
+    background-color: #67A7CC;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(5) td:first-child {
+    vertical-align: top;
+}
+
+table TR:nth-child(9) td:first-child {
+    vertical-align: top;
+}
+
+input {
+    height: 27px;
+    width: 250px;
+    padding: 0.5em 1em;
+    font-weight: bold;
     color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
+    background: #FFF;
     border: solid 3px #67A7CC;
     border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
 }
 
-.edit-menu:hover {
-    background: #67A7CC;
-    color: white;
+input:focus {
+    border: solid 3px #618BAD;
+    outline: 0;
 }
-
-.setting-display-item {
+ 
+textarea {
+    padding: 0.5em 1em;
+    font-weight: bold;
     color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
+    background: #FFF;
     border: solid 3px #67A7CC;
     border-radius: 10px;
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+textarea:focus {
+    border: solid 3px #618BAD;
+    outline: 0;  
+}
+
+.error_name {
+    color: red;
+} 
+
+.error_post_disp {
+    color: red;
+} 
+
+.error_sns_keyword{
+    color: red;
+}   
+
+.error_type {
+    color: red;
+}
+
+.error_cute_point {
+    color: red;
+}
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
     text-decoration: none;
-    display: inline-block;
-    transition: .4s;
+    color: black;
 }
 
-.setting-display-item:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.setting-design {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
+.back {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
     border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
+    box-shadow: 2px 2px 4px gray;
 }
 
-.setting-design:hover {
-    background: #67A7CC;
-    color: white;
+.back:hover {
+    background-color: #618BAD;
 }
 
-.edit-top {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 630px 0 660px;
-    border: solid 3px #67A7CC;
+.confirm {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
     border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
+    box-shadow: 2px 2px 4px gray;
 }
 
-.edit-top:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.edit-category {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.edit-category:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.edit-post {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.edit-post:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.change-password {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 630px 60px 660px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.change-password:hover {
-    background: #67A7CC;
-    color: white;
+.confirm:hover {
+    background-color: #618BAD;
 }
 
 /*フッター部分*/

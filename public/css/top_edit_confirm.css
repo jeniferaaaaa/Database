@@ -60,7 +60,7 @@ header {
 
 header li {
     float: left;
-    padding: 22px 15px 30px 15px;
+    padding: 33px 15px 30px 15px;
 }
 
 header a {
@@ -73,27 +73,24 @@ header a:hover {
 }
 
 /*ロゴのみに下記適用*/
+li:first-child {
+    padding: 24px;
+}
+
 .logo {
     margin: 5px 80px 0 80px;
     font-size: 35px;
-    padding: 24px;
 }
 
 .logo:hover {
     color: #67A7CC;
 }
 
-/*ログイン情報表示部分*/
-.login-info {
-    padding: 0;
-    margin: 0 40px 10px 550px;
-}
-
-/*[ログアウト]ボタンに下記適用*/
-.logout{ 
+/*[ログイン]ボタンに下記適用*/
+.login { 
     color: #67A7CC;
     padding: 20px;
-    margin: 10px 50px 10px 0;
+    margin: 10px 50px 10px 50px;
     border: solid 3px #67A7CC;
     border-radius: 10px;
     text-decoration: none;
@@ -101,134 +98,93 @@ header a:hover {
     transition: .4s;
 }
  
-.logout:hover {
+.login:hover {
     background: #67A7CC;
     color: white;
   }
 
-/*メニュー欄*/
-.menu {
+/*TOPページ入力確認画面（枠）*/
+.top_confirm {
     background-color: rgba(103, 167, 204, 0.4);
-    height: auto;
+    height: 780px;
 }
-.menu h2 {
-    font-size: 15px;
+
+.top_confirm h2 {
+    font-size: 25px;
     font-weight: bold;
-    padding: 100px 0 30px 200px;
-
+    padding: 100px 0 0 200px;
 }
 
-/*メニューのボタン*/
-.edit-menu {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
+.top_confirm h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*入力確認欄*/
+.input_confirm {
+    background-color: white;
     border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
+    padding: 50px;
+    margin: 0 120px 0 120px;
 }
 
-.edit-menu:hover {
-    background: #67A7CC;
+.input_confirm span {
+    background-color: #67A7CC;
     color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
 }
 
-.setting-display-item {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
+.input_confirm p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(6) td:first-child {
+    vertical-align: top;
+}
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
     border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
+    box-shadow: 2px 2px 4px gray;
 }
 
-.setting-display-item:hover {
-    background: #67A7CC;
-    color: white;
+.back:hover {
+    background-color: #618BAD;
 }
 
-.setting-design {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
+.ok {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
     border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
+    box-shadow: 2px 2px 4px gray;
 }
 
-.setting-design:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.edit-top {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 630px 0 660px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.edit-top:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.edit-category {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.edit-category:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.edit-post {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 670px 0 670px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.edit-post:hover {
-    background: #67A7CC;
-    color: white;
-}
-
-.change-password {
-    color: #67A7CC;
-    padding: 20px;
-    margin: 20px 630px 60px 660px;
-    border: solid 3px #67A7CC;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .4s;
-}
-
-.change-password:hover {
-    background: #67A7CC;
-    color: white;
+.ok:hover {
+    background-color: #618BAD;
 }
 
 /*フッター部分*/
@@ -274,3 +230,4 @@ a.rule {
 li.policy {
     padding: 0;
 }
+

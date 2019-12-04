@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">  
     <!--スタイルシートの適用-->
-    <link rel="stylesheet" href="css/top_edit_confirm.css">
+    <link rel="stylesheet" href="css/post_edit_confirm.css">
     <!--レスポンシブ対応スタイルシートの適用-->
-    <link rel="stylesheet" href="css/top_edit_confirm_responsive.css">
+    <link rel="stylesheet" href="css/post_edit_confirm_responsive.css">
     <!--viewportの設定-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
     <!--タイトル-->
-    <title>基本情報編集内容確認｜Anyshare</title>
+    <title>投稿編集内容確認｜Anyshare</title>
   </head>
   <body>
     
@@ -29,29 +29,49 @@
         </ul>
     </header>
 
-    <!--基本情報編集欄-->
-    <div class="main-confirm">
-      <h2>編集内容確認</h2><br />
+    <!--投稿編集内容確認欄-->
+    <div class="post_edit_confirm">
+      <h2>投稿編集内容確認</h2><br />
          
         <!--入力欄-->
-        <div class="input-confirm">
+        <div class="input_confirm">
           <form method="POST" action="#">
             <table>
               <tr>
-                <td><span>必須</span>ニックネーム<br /><br /></td>
-                <td><p class="name">たむらさま</p></td>
+                <td><span>必須</span>名前<br /><br /></td>
+                <td><p class="name">我が家のサモエド</p></td>
               </tr>
              <tr>
-                <td><span>必須</span>メールアドレス<br /><br /></td>
-                <td><p class="email">downs7ups8@gmail.com</p></td>
+                <td><span>必須</span>SNSキーワード<br /><br /></td>
+                <td><p class="sns_keyword">サモエド</p></td>
              </tr>
               <tr>
-                <td><span>必須</span>サイト名称<br /><br /></td>
-                <td><p class="site_name">癒し系大型（Ｕ＾ω＾）わんわんお！</td>
+                <td>画像<br /><br /></td>
+                <td><p class="picture">サモエドの写真</td>
               </tr>
               <tr>
-                <td><span>必須</span>サイト利用目的<br /><br /></td>
-                <td><p class="site_purpose">癒し系のわんこたちの知名度を上げるため</p></td>
+                <td><span>必須</span>タイプ<br /><br /></td>
+                <td><p class="type">大型犬</p></td>
+              </tr>
+              <tr>
+                <td>価格<br /><br /></td>
+                <td><p class="price">¥400,000前後</p></td>
+            　</tr>
+            　<tr>
+                <td>飼いやすさ<br /><br /></td>
+                <td><p class="breed">難しめ</p></td>
+            　</tr>
+              <tr>
+                <td>毛色<br /><br /></td>
+                <td><p class="color">白</p></td>
+              </tr>
+              <tr>
+                <td>もふもふ度<br /><br /></td>
+                <td><p class="fluffy">白</p></td>
+            　</tr>
+              <tr>
+                <td><span>必須</span>かわいさポイント<br /><br /></td>
+                <td><p class="type">大きくてハグすると癒されるところがポイント。</p></td>
               </tr>
             </table>
           </form>
