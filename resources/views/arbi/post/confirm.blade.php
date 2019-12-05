@@ -1,141 +1,81 @@
 @extends('layouts.app')
 
+@section('title')
+<!--タイトル-->
+<title>投稿内容確認｜Anyshare</title>
+@endsection
+
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">カテゴリ編集確認画面</div>
+<!--投稿編集内容確認欄-->
+<div class="post_edit_confirm">
+    <h2>投稿編集内容確認</h2><br />
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('post/edit/confirm/done') }}">
-                        {{ csrf_field() }}
+    <!--入力欄-->
+    <div class="input_confirm">
+        <form method="POST" action="{{ url('post/edit/confirm/done') }}">
+        {{ csrf_field() }}
+            <table>
+                <tr>
+                    <td><span>必須</span>名前<br /><br /></td>
+                    <td><p class="name">{{ $data['nameData'] }}</p></td>
+                </tr>
+                <tr>
+                    <td><span>必須</span>SNSキーワード<br /><br /></td>
+                    <td><p class="sns_keyword">{{ $data['keywordData'] }}</p></td>
+                </tr>
+                <tr>
+                    <td>画像<br /><br /></td>
+                    <td><p class="picture"><img src="/{{ $data['image_read_path'] }}" width="200" height="130"></p></td>
+                </tr>
+                <tr>
+                    <td><span>必須</span>名前<br /><br /></td>
+                    <td><p class="name">{{ $data['nameData'] }}</p></td>
+                </tr>
+                <tr>
+                    <td><span>必須</span>名前<br /><br /></td>
+                    <td><p class="name">{{ $data['nameData'] }}</p></td>
+                </tr>
+                @foreach ( $siteObjects as $siteData)
+                <tr>
+                    <td><span>必須</span>{{ $siteData->at1_name }}<br /><br /></td>
+                    <td><p class="type">{{ $data['at1Data'] }}</p></td>
+                </tr>
+                <tr>
+                    <td>{{ $siteData->at2_name }}<br /><br /></td>
+                    <td><p class="price">{{ $data['at2Data'] }}</p></td>
+                </tr>
+                <tr>
+                    <td>{{ $siteData->at3_name }}<br /><br /></td>
+                    <td><p class="breed">{{ $data['at3Data'] }}</p></td>
+                </tr>
+                <tr>
+                    <td>{{ $siteData->at4_name }}<br /><br /></td>
+                    <td><p class="color">{{ $data['at4Data'] }}</p></td>
+                </tr>
+                <tr>
+                    <td>{{ $siteData->at5_name }}<br /><br /></td>
+                    <td><p class="fluffy">{{ $data['at5Data'] }}</p></td>
+                </tr>
+                <tr>
+                    <td><span>必須</span>{{ $siteData->dt1_name }}<br /><br /></td>
+                    <td><p class="type">{{ $data['dt1Data'] }}</p></td>
+                </tr>
+                <tr>
+                    <td>{{ $siteData->dt2_name }}<br /><br /></td>
+                    <td><p class="type">{{ $data['dt2Data'] }}</p></td>
+                </tr>
+                <tr>
+                    <td>{{ $siteData->dt3_name }}<br /><br /></td>
+                    <td><p class="type">{{ $data['dt3Data'] }}</p></td>
+                </tr>
+                @endforeach
+            </table>
 
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                名前
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['nameData'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="sns_keyword" class="col-md-4 control-label">
-                                SNSキーワード
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="sns_keyword">{{ $data['keywordData'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="image_path" class="col-md-4 control-label">
-                                画像
-                            </label>
-
-                            <div class="col-md-6">
-                                <img src="/{{ $data['image_read_path'] }}" width="200" height="130">
-                            </div>
-                        </div>
-
-                        @foreach ( $siteObjects as $siteData)
-
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                {{ $siteData->at1_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['at1Data'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                {{ $siteData->at2_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['at2Data'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                {{ $siteData->at3_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['at3Data'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                {{ $siteData->at4_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['at4Data'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                {{ $siteData->at5_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['at5Data'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                {{ $siteData->dt1_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['dt1Data'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                {{ $siteData->dt2_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['dt2Data'] }}</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">
-                                {{ $siteData->dt3_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <label class="col-md-4 control-label" name="name">{{ $data['dt3Data'] }}</label>
-                            </div>
-                        </div>
-
-                        @endforeach
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    編集完了
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="button">
+                <a class="back" href="javascript:history.back();">編集画面に戻る</a>
+                <button type="submit" class="ok">ＯＫ</button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 @endsection

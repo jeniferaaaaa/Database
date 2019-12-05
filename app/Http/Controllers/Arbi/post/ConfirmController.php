@@ -42,7 +42,7 @@ class ConfirmController extends Controller
         //セッション用の配列作成
         $data = [
             'nameData' => $nameData,
-            'sns_keyword' => $keywordData,
+            'keywordData' => $keywordData,
             'at1Data' => $at1Data,
             'at2Data' => $at2Data,
             'at3Data' => $at3Data,

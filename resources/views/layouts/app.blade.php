@@ -1,80 +1,56 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <!--スタイルシートの適用-->
+    <link rel="stylesheet" href="{{ asset('css/post_edit.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/post_edit_confirm.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/post_edit_done.css') }}">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!--レスポンシブ対応スタイルシートの適用-->
+    <link rel="stylesheet" href="{{ asset('css/post_edit_responsible.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/post_edit_confirm_responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/post_edit_done_responsive.css') }}">
+    <!--viewportの設定-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    @yield('title')
+    
+  </head>
+  <body>
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+    <!--ヘッダー-->
+    <header>
+        <ul>
+            <li><a class="logo">Anyshare</a></li>
+            <li><a href="#">メニュー</a></li>
+            <li><a href="/basic">基本情報編集</a></li>
+            <li><a href="/item">表示項目設定</a></li>
+            <li><a href="/design">デザイン設定</a></li>
+            <li><a href="/top">TOPページ編集</a></li>
+            <li><a href="/category/list">カテゴリ編集</a></li>
+            <li><a href="/post/list">投稿内容編集</a></li>
+            <li><a href="{{ route('logout') }}"
+                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">ログアウト</a></li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+            </form>
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+        </ul>
+    </header>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
+    @yield('content')
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+    <!--フッター-->
+    <footer>
+        <ul>
+            <li class="policy"><a href="#">プライバシーポリシー</a></li>
+            <li>|</li>
+            <li><a href="#" class="rule">利用規約</a></li>
+        </ul>
+            <div class="copyright">
+                <a>Copyright © 2019 EqualShare All Rights Reserved.</a>
             </div>
-        </nav>
-
-        @yield('content')
-    </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
+    </footer>
+  </body>
 </html>

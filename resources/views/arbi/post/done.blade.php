@@ -1,24 +1,17 @@
 @extends('layouts.app')
 
+@section('title')
+<!--タイトル-->
+<title>投稿内容完了｜Anyshare</title>
+@endsection
+
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">投稿内容編集完了画面</div>
+<div class="post_edit_done">
+    <h2>投稿内容編集完了</h2><br /><br /><br /><br /><br />
+    <h3>編集が完了しました。</h3>
 
-                <div class="panel-body">
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">投稿内容を編集が完了したお</label>
-                    </div>
-
-                    <div class="form-group">
-                        <a href='/menu' class="col-md-4 control-label">メニュー画面へ</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+    <div class="button">
+        <a class="back_to_top" href="/menu">TOPに戻る</a>
     </div>
 </div>
 @endsection

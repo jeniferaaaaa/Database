@@ -1,217 +1,197 @@
 @extends('layouts.app')
 
+@section('title')
+<!--タイトル-->
+<title>投稿内容編集｜Anyshare</title>
+@endsection
+
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">投稿内容編集</div>
+<!--投稿内容編集欄-->
+<div class="post_edit">
+    <h2>投稿内容編集</h2><br />
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('post/edit/confirm') }}" enctype="multipart/form-data">
-                        {{ csrf_field() }}
+<!--入力欄-->
+<div class="input">
+    <form method="POST" action="{{ url('post/edit/confirm') }}" enctype="multipart/form-data">
+    {{ csrf_field() }}
 
-                        <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">
-                                名前
-                            </label>
+        <p class=hissu>※<span>必須</span>は必須入力項目です。</p>
+        <table>
+            <tr>
+                <td>
+                    <span>必須</span>投稿一覧への表示選択<br /><br />
+                    <div class="error_post_disp">※投稿一覧への表示選択は必須です。</div>
+                </td>
+                <td>
+                    <input type="radio" name="q1" value="disp" checked>表示する
+                    <input type="radio" name="q1" value="nodisp">表示しない
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>必須</span>名前<br /><br />
+                    @if ($errors->has('name'))
+                    <div class="error_name">※{{ $errors->first('name') }}</div>
+                    @endif
+                </td> 
+                <td>
+                    <input type="text" name="name" placeholder="例）我が家のサモエド" value="{{ $dataDetail->name }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>必須</span>SNSキーワード<br /><br />
+                    @if ($errors->has('sns_keyword'))
+                    <div class="error_sns_keyword">※{{ $errors->first('sns_keyword') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="text" name="sns_keyword" placeholder="例）サモエド" value="{{ $dataDetail->sns_keyword }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    画像<br /><br />
+                    @if ($errors->has('image_path'))
+                    <!--todo-->
+                    <div class="error_sns_keyword">※{{ $errors->first('image_path') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="file" name="image_path">
+                </td>
+            </tr>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ $dataDetail->name }}">
+            @foreach ( $siteObjects as $siteData)
 
-                            @if ($errors->has('name'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('name') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
+            @if ( $siteData->at1_name )
+            <tr>
+                <td>
+                    <span>必須</span>{{ $siteData->at1_name }}<br /><br />
+                    @if ($errors->has('attribute1'))
+                    <!--todo-->
+                    <div class="error_sns_keyword">※{{ $errors->first('attribute1') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="text" name="attribute1" placeholder="例）サモエド" value="{{ $dataDetail->attribute1 }}">
+                </td>
+            </tr>
+            @endif
 
-                        <div class="form-group {{ $errors->has('sns_keyword') ? ' has-error' : '' }}">
-                            <label for="sns_keyword" class="col-md-4 control-label">
-                                SNSキーワード
-                            </label>
+            @if ( $siteData->at2_name )
+            <tr>
+                <td>
+                    {{ $siteData->at2_name }}<br /><br />
+                    @if ($errors->has('attribute2'))
+                    <!--todo-->
+                    <div class="error_sns_keyword">※{{ $errors->first('attribute2') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="text" name="attribute2" placeholder="例）サモエド" value="{{ $dataDetail->attribute2 }}">
+                </td>
+            </tr>
+            @endif
 
-                            <div class="col-md-6">
-                                <input id="sns_keyword" type="text" class="form-control" name="sns_keyword" value="{{ $dataDetail->sns_keyword }}">
+            @if ( $siteData->at3_name )
+            <tr>
+                <td>
+                    {{ $siteData->at3_name }}<br /><br />
+                    @if ($errors->has('attribute3'))
+                    <!--todo-->
+                    <div class="error_sns_keyword">※{{ $errors->first('attribute3') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="text" name="attribute3" placeholder="例）サモエド" value="{{ $dataDetail->attribute3 }}">
+                </td>
+            </tr>
+            @endif
 
-                            @if ($errors->has('sns_keyword'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('sns_keyword') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
+            @if ( $siteData->at4_name )
+            <tr>
+                <td>
+                    {{ $siteData->at4_name }}<br /><br />
+                    @if ($errors->has('attribute4'))
+                    <!--todo-->
+                    <div class="error_sns_keyword">※{{ $errors->first('attribute4') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="text" name="attribute4" placeholder="例）サモエド" value="{{ $dataDetail->attribute4 }}">
+                </td>
+            </tr>
+            @endif
 
-                        <div class="form-group">
-                            <label for="image_path" class="col-md-4 control-label"> 
-                            画像
-                            </label>
+            @if ( $siteData->at5_name )
+            <tr>
+                <td>
+                    {{ $siteData->at5_name }}<br /><br />
+                    @if ($errors->has('attribute5'))
+                    <!--todo-->
+                    <div class="error_sns_keyword">※{{ $errors->first('attribute5') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="text" name="attribute5" placeholder="例）サモエド" value="{{ $dataDetail->attribute5 }}">
+                </td>
+            </tr>
+            @endif
 
-                            <div class="form-group{{ $errors->has('image_path') ? ' has-error' : '' }}">
-                                <input type="file" name="image_path">
-                            </div>
-                        </div>
+            @if ( $siteData->dt1_name )
+            <tr>
+                <td>
+                    <span>必須</span>{{ $siteData->dt1_name }}<br /><br />
+                    @if ($errors->has('detail1'))
+                    <!--todo-->
+                    <div class="error_sns_keyword">※{{ $errors->first('detail1') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="text" name="detail1" placeholder="例）サモエド" value="{{ $dataDetail->detail1 }}">
+                </td>
+            </tr>
+            @endif
 
-                        @foreach ( $siteObjects as $siteData)
+            @if ( $siteData->dt2_name )
+            <tr>
+                <td>
+                    {{ $siteData->dt2_name }}<br /><br />
+                    @if ($errors->has('detail2'))
+                    <!--todo-->
+                    <div class="error_sns_keyword">※{{ $errors->first('detail2') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="text" name="detail1" placeholder="例）サモエド" value="{{ $dataDetail->detail2 }}">
+                </td>
+            </tr>
+            @endif
 
-                        @if ( $siteData->at1_name )
-                        <div class="form-group {{ $errors->has('attribute1') ? ' has-error' : '' }}">
-                            <label for="attribute1" class="col-md-4 control-label">
-                                {{ $siteData->at1_name }}
-                            </label>
+            @if ( $siteData->dt3_name )
+            <tr>
+                <td>
+                    {{ $siteData->dt3_name }}<br /><br />
+                    @if ($errors->has('detail3'))
+                    <!--todo-->
+                    <div class="error_sns_keyword">※{{ $errors->first('detail3') }}</div>
+                    @endif
+                </td>
+                <td>
+                    <input type="text" name="detail3" placeholder="例）サモエド" value="{{ $dataDetail->detail3 }}">
+                </td>
+            </tr>
+            @endif
 
-                            <div class="col-md-6">
-                                <input id="attribute1" type="text" class="form-control" name="attribute1" value="{{ $dataDetail->attribute1 }}">
-
-                            @if ($errors->has('attribute1'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('attribute1') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-                        @endif
-
-                        @if ( $siteData->at2_name )
-                        <div class="form-group {{ $errors->has('attribute2') ? ' has-error' : '' }}">
-                            <label for="attribute2" class="col-md-4 control-label">
-                                {{ $siteData->at2_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="attribute2" type="text" class="form-control" name="attribute2" value="{{ $dataDetail->attribute2 }}">
-
-                            @if ($errors->has('attribute2'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('attribute2') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-                        @endif
-
-                        @if ( $siteData->at3_name )
-                        <div class="form-group {{ $errors->has('attribute3') ? ' has-error' : '' }}">
-                            <label for="attribute3" class="col-md-4 control-label">
-                                {{ $siteData->at3_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="attribute3" type="text" class="form-control" name="attribute3" value="{{ $dataDetail->attribute3 }}">
-
-                            @if ($errors->has('attribute3'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('attribute3') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-                        @endif
-
-                        @if ( $siteData->at4_name )
-                        <div class="form-group {{ $errors->has('attribute4') ? ' has-error' : '' }}">
-                            <label for="attribute4" class="col-md-4 control-label">
-                                {{ $siteData->at4_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="attribute4" type="text" class="form-control" name="attribute4" value="{{ $dataDetail->attribute4 }}">
-
-                            @if ($errors->has('attribute4'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('attribute4') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-                        @endif
-
-                        @if ( $siteData->at5_name )
-                        <div class="form-group {{ $errors->has('attribute5') ? ' has-error' : '' }}">
-                            <label for="attribute5" class="col-md-4 control-label">
-                                {{ $siteData->at5_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="attribute5" type="text" class="form-control" name="attribute5" value="{{ $dataDetail->attribute5 }}">
-
-                            @if ($errors->has('attribute5'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('attribute5') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-                        @endif
-
-                        @if ( $siteData->dt1_name )
-                        <div class="form-group {{ $errors->has('detail1') ? ' has-error' : '' }}">
-                            <label for="detail1" class="col-md-4 control-label">
-                                {{ $siteData->dt1_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="detail1" type="text" class="form-control" name="detail1" value="{{ $dataDetail->detail1 }}">
-
-                            @if ($errors->has('detail1'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('detail1') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-                        @endif
-
-                        @if ( $siteData->dt2_name )
-                        <div class="form-group {{ $errors->has('detail2') ? ' has-error' : '' }}">
-                            <label for="detail2" class="col-md-4 control-label">
-                                {{ $siteData->dt2_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="detail2" type="text" class="form-control" name="detail2" value="{{ $dataDetail->detail2 }}">
-
-                            @if ($errors->has('detail2'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('detail2') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-                        @endif
-
-                        @if ( $siteData->dt3_name )
-                        <div class="form-group {{ $errors->has('detail3') ? ' has-error' : '' }}">
-                            <label for="detail3" class="col-md-4 control-label">
-                                {{ $siteData->dt3_name }}
-                            </label>
-
-                            <div class="col-md-6">
-                                <input id="detail3" type="text" class="form-control" name="detail3" value="{{ $dataDetail->detail3 }}">
-
-                            @if ($errors->has('detail3'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('detail3') }}</strong>
-                                </span>
-                            @endif
-                            </div>
-                        </div>
-                        @endif
-
-                        @endforeach
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    確認画面へ
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            @endforeach
+        </table>
+        <!--確認・戻るボタン-->
+        <div class="button">
+            <a class="back" href="javascript:history.back();">戻る</a>
+            <button type="submit" class="confirm">確認画面へ進む</button>
         </div>
-    </div>
+    </form>
+</div>
 </div>
 @endsection
