@@ -1,24 +1,17 @@
 @extends('layouts.app')
 
+@section('title')
+<!--タイトル-->
+<title>TOPページ編集完了｜Anyshare</title>
+@endsection
+
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">TOPページ設定完了画面</div>
+<div class="top_edit_done">
+    <h2>TOPページ編集完了</h2><br /><br /><br /><br /><br />
+    <h3>編集が完了しました。</h3>
 
-                <div class="panel-body">
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">TOPページ設定が完了したお</label>
-                    </div>
-
-                    <div class="form-group">
-                        <a href='/menu' class="col-md-4 control-label">メニュー画面へ</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+    <div class="button">
+        <a class="back-to-top" href="/menu">TOPに戻る</a>
     </div>
 </div>
 @endsection

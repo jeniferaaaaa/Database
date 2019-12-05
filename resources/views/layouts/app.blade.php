@@ -3,11 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <!--スタイルシートの適用-->
+    <!--TOP画面編集-->
+    <link rel="stylesheet" href="{{ asset('css/top_edit_confirm.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/top_edit_confirm.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/top_edit_done.css') }}">
+    <!--投稿内容編集-->
     <link rel="stylesheet" href="{{ asset('css/post_edit.css') }}">
     <link rel="stylesheet" href="{{ asset('css/post_edit_confirm.css') }}">
     <link rel="stylesheet" href="{{ asset('css/post_edit_done.css') }}">
 
     <!--レスポンシブ対応スタイルシートの適用-->
+    <!--TOP画面編集-->
+    <link rel="stylesheet" href="{{ asset('css/top_edit_responsible.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/top_edit_confirm_responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/top_edit_done_responsive.css') }}">
+    <!--投稿内容編集-->
     <link rel="stylesheet" href="{{ asset('css/post_edit_responsible.css') }}">
     <link rel="stylesheet" href="{{ asset('css/post_edit_confirm_responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('css/post_edit_done_responsive.css') }}">
@@ -23,7 +33,7 @@
     <header>
         <ul>
             <li><a class="logo">Anyshare</a></li>
-            <li><a href="#">メニュー</a></li>
+            <li><a href="/menu">メニュー</a></li>
             <li><a href="/basic">基本情報編集</a></li>
             <li><a href="/item">表示項目設定</a></li>
             <li><a href="/design">デザイン設定</a></li>

@@ -1,91 +1,97 @@
 @extends('layouts.app')
 
+@section('title')
+<!--タイトル-->
+<title>TOPページ編集内容確認｜Anyshare</title>
+@endsection
+
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">TOPページ編集</div>
+<div class="top_confirm">
+    <h2>TOPページ編集</h2><br />
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('top/confirm') }}" enctype="multipart/form-data">
-                        {{ csrf_field() }}
+    <!--入力欄-->
+    <div class="input_confirm">
+        <form method="POST" action="{{ url('top/confirm') }}" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <p class=hissu>※<span>必須</span>は必須入力項目です。</p>
+        <table>
+        @foreach ($sites as $site)
+            <tr>
+                <td>
+                    <span>必須</span>メイン画像<br /><br />
+                    @if ($errors->has('main'))
+                    <div class="error_main_pic">※{{ $errors->first('main') }}</div>
+                    @endif
+                </td>
+                <td><input type="file" name="main">
+                    @if ($site->main_path == '')
+                    現在：なし
+                    @else
+                    現在：<img src="{{ asset($site->main_path) }}" width="200" height="130">
+                    @endif
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    サブ画像1<br /><br />
+                    @if ($errors->has('sub1'))
+                    <div class="error_main_pic">※{{ $errors->first('sub1') }}</div>
+                    @endif
+                </td>
+                <td><input type="file" name="sub1">
+                    @if ($site->sub_path1 == '')
+                    現在：なし
+                    @else
+                    現在：<img src="{{ asset($site->sub_path1) }}" width="200" height="130">
+                    @endif
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    サブ画像2<br /><br />
+                    @if ($errors->has('sub2'))
+                    <div class="error_main_pic">※{{ $errors->first('sub2') }}</div>
+                    @endif
+                </td>
+                <td><input type="file" name="sub2">
+                    @if ($site->sub_path2 == '')
+                    現在：なし
+                    @else
+                    現在：<img src="{{ asset($site->sub_path2) }}" width="200" height="130">
+                    @endif
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    サブ画像3<br /><br />
+                    @if ($errors->has('sub3'))
+                    <div class="error_main_pic">※{{ $errors->first('sub3') }}</div>
+                    @endif
+                </td>
+                <td><input type="file" name="sub2">
+                    @if ($site->sub_path3 == '')
+                    現在：なし
+                    @else
+                    現在：<img src="{{ asset($site->sub_path3) }}" width="200" height="130">
+                    @endif
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>必須</span>サイト説明<br /><br />
+                    <div class="error_site_exp">※サイト説明は必須です。</div>
+                </td>
+                <td><textarea name="site_exp" cols="40" rows="5" wrap="hard"></textarea></td>
+            </tr>
+        @endforeach
+        </table>
 
-                        @foreach ($sites as $site)
-
-                        <div class="form-group">
-                            <label for="main" class="col-md-4 control-label"> 
-                            メイン画像
-                            </label>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('main') ? ' has-error' : '' }}">
-                            <input type="file" name="main">
-                            @if ($site->main_path == '')
-                            現在：なし
-                            @else
-                            現在：<img src="{{ asset($site->main_path) }}" width="200" height="130">
-                            @endif
-                        </div>
-
-                        <div class="form-group">
-                            <label for="sub1" class="col-md-4 control-label"> 
-                            サブ画像1
-                            </label>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('sub1') ? ' has-error' : '' }}">
-                            <input type="file" name="sub1">
-                            @if ($site->sub_path1 == '')
-                            現在：なし
-                            @else
-                            現在：<img src="{{ asset($site->sub_path1) }}" width="200" height="130">
-                            @endif
-                        </div>
-
-                        <div class="form-group">
-                            <label for="sub2" class="col-md-4 control-label"> 
-                            サブ画像2
-                            </label>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('sub2') ? ' has-error' : '' }}">
-                            <input type="file" name="sub2">
-                            @if ($site->sub_path2 == '')
-                            現在：なし
-                            @else
-                            現在：<img src="{{ asset($site->sub_path2) }}" width="200" height="130">
-                            @endif
-                        </div>
-
-                        <div class="form-group">
-                            <label for="sub3" class="col-md-4 control-label"> 
-                            サブ画像3
-                            </label>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('sub3') ? ' has-error' : '' }}">
-                            <input type="file" name="sub3">
-                            @if ($site->sub_path3 == '')
-                            現在：なし
-                            @else
-                            現在：<img src="{{ asset($site->sub_path3) }}" width="200" height="130">
-                            @endif
-                        </div>
-
-                        @endforeach
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    確認画面へ
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <!--確認・戻るボタン-->
+        <div class="button">
+            <a class="back" href="javascript:history.back();">戻る</a>
+            <button type="submit" class="confirm">確認画面へ進む</button>
         </div>
+        </form>
     </div>
 </div>
 @endsection
