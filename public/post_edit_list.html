@@ -17,93 +17,99 @@
     <!--ヘッダー-->
     <header>
         <ul>
-            <li><a class="logo">Anyshare</a></li>
-            <li><a href="#">管理者メニュー</a></li>
-            <li><a href="#">基本情報編集</a></li>
-            <li><a href="#">表示項目設定</a></li>
-            <li><a href="#">デザイン設定</a></li>
-            <li><a href="#">TOPページ編集</a></li>
-            <li><a href="#">カテゴリ編集</a></li>
-            <li><a href="#">投稿内容編集</a></li>
-            <a href="#" class="login">ログイン</a>
-            </ul>
+         <li><a class="logo">Anyshare</a></li>
+         <li><a href="#">管理者メニュー</a></li>
+         <li><a href="#">基本情報編集</a></li>
+         <li><a href="#">表示項目設定</a></li>
+         <li><a href="#">デザイン設定</a></li>
+         <li><a href="#">TOPページ編集</a></li>
+         <li><a href="#">カテゴリ編集</a></li>
+         <li><a href="#">投稿内容編集</a></li>
+             <a href="#" class="login">ログイン</a>
+        </ul>
     </header>
 
     <!--投稿内容一覧欄-->
     <div class="post_edit_list">
             <h2>投稿内容一覧</h2><br />
 
-        <!--プルダウンゾーン-->
-        <table>
-            <tr>
-                <!--名称プルダウン--> 
-                <td><p>名称</p></td>  
-                <td>
-    　　            <select name=”name”>
-                        <option value=”name1”>我が家のサモエド</option>
-                        <option value=”name2”>子犬のサモエド</option>
-                        <option value=”name3”>サモエドスマイル</option>
-                        <option value=”name4”>かわいいサモエド</option>
-                        <option value=”name5”>いい子なサモエド</option>
-                    </select>
-                </td>
-                <td>
-                <!--カテゴリプルダウン-->
-                <td><p>カテゴリ</p></td> 
-                <td>
-                    <select name=”category”>
-                        <option value=”category1”>サモエド</option>
-                        <option value=”category2”>ゴールデンレトリバー</option>
-                        <option value=”category3”>ラブラドールレトリバー</option>
-                        <option value=”category4”>プードル</option>
-                        <option value=”category5”>チワワ</option>
-                    </select>
-                </td>
-            </tr><br />
+    <!--プルダウンゾーン-->
+    <div class="post_edit_table1">
+      <table>
+       <tr>
+        <!--名称プルダウン--> 
+         <td><p>名称</p></td>
+         <td>
+          <select name=”name”>
+            <option value=”name1”>我が家のサモエド</option>
+            <option value=”name2”>子犬のサモエド</option>
+            <option value=”name3”>サモエドスマイル</option>
+            <option value=”name4”>かわいいサモエド</option>
+            <option value=”name5”>いい子なサモエド</option>
+          </select>
+         </td>
+          <td>
+          <!--カテゴリプルダウン-->
+          <td><p>カテゴリ</p></td> 
+           <td>
+            <select name=”category”>
+              <option value=”category1”>サモエド</option>
+              <option value=”category2”>ゴールデンレトリバー</option>
+              <option value=”category3”>ラブラドールレトリバー</option>
+              <option value=”category4”>プードル</option>
+              <option value=”category5”>チワワ</option>
+            </select>
+           </td>
+        </tr><br />
+      </table>
+    </div>
 
-            <!--登録日時-->
-            <tr>
-                <td><p>登録日時</p></td>
-                <td>
-                    <select name="yyyy">
-                        <option value="default_yyyy1">yyyy</option>
-                    </select>
-                </td>
-                <td>
-                    <select name="mm">
-                        <option value="default_mm1">mm</option>
-                    </select>
-                </td>
-                <td>
-                    <select name="dd">
-                        <option value="default_dd1">dd</option>
-                    </select>
-                </td>
-                <td>
-                    <p>～</p>
-                </td>
-                <td>
-                    <select name="yyyy">
-                        <option value="default_yyyy2">yyyy</option>
-                    </select>
-                </td>
-                <td>
-                    <select name="mm">
-                        <option value="default_mm2">mm</option>
-                    </select>
-                </td>
-                <td>
-                    <select name="dd">
-                        <option value="default_dd2">dd</option>
-                    </select>
-                </td>
-                <td>
-                    <div class="search_button">
-                        <a class="search" href="#">検索</a>
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <!--登録日時-->
+      <div class="post_edit_table2">
+       <table>
+        <tr>
+          <td><p>登録日時</p></td>
+          <td>
+            <select name="yyyy">
+              <option value="default_yyyy1">yyyy</option>
+            </select>
+          </td>
+          <td>
+            <select name="mm">
+              <option value="default_mm1">mm</option>
+            </select>
+          </td>
+          <td>
+            <select name="dd">
+              <option value="default_dd1">dd</option>
+            </select>
+          </td>
+           <td>
+             <p>～</p>
+           </td>
+           <td>
+            <select name="yyyy">
+              <option value="default_yyyy2">yyyy</option>
+            </select>
+           </td>
+            <td>
+             <select name="mm">
+              <option value="default_mm2">mm</option>
+             </select>
+            </td>
+            <td>
+             <select name="dd">
+              <option value="default_dd2">dd</option>
+             </select>
+            </td>
+            <td>
+              <div class="search_button">
+                <a class="search" href="#">検索</a>
+              </div>
+            </td>
+          </tr>
+            </table><br />
+      
         
         <!--一覧表-->
         <table>
@@ -150,10 +156,11 @@
                 </td>
             </tr>
         </table>
-
+      </div>
         <!--「前へ」「次へ」ボタン-->
         <a class="prev" href="#">前へ</a>|
         <a class="next" href="#">次へ</a>
+    </div>
 
     <!--フッター-->
     <footer>

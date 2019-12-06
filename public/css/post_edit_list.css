@@ -108,10 +108,19 @@ li:first-child {
     background-color: rgba(103, 167, 204, 0.4);
     height: 1550px;
 }
+
 .post_edit_list h2 {
     font-size: 25px;
     font-weight: bold;
     padding: 100px 0 0 200px;
+}   
+
+.post_edit_table1 {
+    padding: 10px 100px;
+}
+
+.post_edit_table2 {
+    padding:0 100px;
 }
 
 /*フッター部分*/
