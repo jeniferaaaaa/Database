@@ -26,6 +26,8 @@ class ConfirmController extends Controller
         $sub1_tmp_path = $this->existSubImage($request->file('sub1'),fileConst::TMP_PATH);
         $sub2_tmp_path = $this->existSubImage($request->file('sub2'),fileConst::TMP_PATH);
         $sub3_tmp_path = $this->existSubImage($request->file('sub3'),fileConst::TMP_PATH);
+        //サイト説明
+        $site_text = $request->input('site_text');
         //リクエストデータを受け取り、tmpフォルダへ一時保存する
         $sub1_read_path = fileCommon::replaceReadName($sub1_tmp_path);
         $sub2_read_path = fileCommon::replaceReadName($sub2_tmp_path);
@@ -41,6 +43,7 @@ class ConfirmController extends Controller
             'sub1_tmp' => $sub1_tmp_path,
             'sub2_tmp' => $sub2_tmp_path,
             'sub3_tmp' => $sub3_tmp_path,
+            'site_text' => $site_text,
         );
 
         //セッションへデータ保存

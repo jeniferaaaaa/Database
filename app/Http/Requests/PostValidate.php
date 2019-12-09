@@ -24,10 +24,17 @@ class PostValidate extends FormRequest
     public function rules()
     {
         return [
+            'disp_flag' => 'required',
             'name' => 'required|max:30|',
-            'email' => 'required|max:255|email',
-            'site_name' => 'required|max:30|min:2',
-            'site_purpose' => 'required|max:100|min:5',
+            'sns_keyword' => 'required|max:255',
+            'attribute1' => 'required|max:30',
+            'attribute2' => 'required|max:30',
+            'attribute3' => 'required|max:30',
+            'attribute4' => 'required|max:30',
+            'attribute5' => 'required|max:30',
+            'detail1' => 'required|max:2000',
+            'detail2' => 'required|max:2000',
+            'detail3' => 'required|max:2000',
         ];
     }
     
@@ -38,17 +45,27 @@ class PostValidate extends FormRequest
     public function messages()
     {
         return [
+            'disp_flag.required' => '表示の有無を選択してください',
             'name.required' => '名前を入力してください',
             'name.max' => '名前は30文字以内で入力してください',
-            'email.required' => 'メールアドレスを入力してください',
-            'email.max' => 'メールアドレスは255文字以内で入力してください',
-            'email.email' => 'メールアドレスの形式で入力してください',
-            'site_name.required' => 'サイト名称を入力してください',
-            'site_name.max' => 'サイト名称は2文字以上30文字以内で入力してください',
-            'site_name.min' => 'サイト名称は2文字以上30文字以内で入力してください',
-            'site_purpose.required' => 'サイト利用目的を入力してください',
-            'site_purpose.max' => 'サイト利用目的は5文字以上100文字以内で入力してください',
-            'site_purpose.min' => 'サイト利用目的は5文字以上100文字以内で入力してください',
+            'sns_keyword.required' => 'SNSキーワードを入力してください',
+            'sns_keyword.max' => 'SNSキーワードは255文字以内で入力してください',
+            'attribute1.required' => '入力してください',
+            'attribute1.max' => '30文字以内で入力してください',
+            'attribute2.required' => '入力してください',
+            'attribute2.max' => '30文字以内で入力してください',
+            'attribute3.required' => '入力してください',
+            'attribute3.max' => '30文字以内で入力してください',
+            'attribute4.required' => '入力してください',
+            'attribute4.max' => '30文字以内で入力してください',
+            'attribute5.required' => '入力してください',
+            'attribute5.max' => '30文字以内で入力してください',
+            'detail1.required' => '入力してください',
+            'detail1.max' => '2000文字以内で入力してください',
+            'detail2.required' => '入力してください',
+            'detail2.max' => '2000文字以内で入力してください',
+            'detail3.required' => '入力してください',
+            'detail3.max' => '2000文字以内で入力してください',
         ];
     }
 }

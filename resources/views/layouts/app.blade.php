@@ -3,24 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <!--スタイルシートの適用-->
-    <!--TOP画面編集-->
-    <link rel="stylesheet" href="{{ asset('css/top_edit_confirm.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/top_edit_confirm.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/top_edit_done.css') }}">
-    <!--投稿内容編集-->
-    <link rel="stylesheet" href="{{ asset('css/post_edit.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/post_edit_confirm.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/post_edit_done.css') }}">
-
-    <!--レスポンシブ対応スタイルシートの適用-->
-    <!--TOP画面編集-->
-    <link rel="stylesheet" href="{{ asset('css/top_edit_responsible.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/top_edit_confirm_responsive.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/top_edit_done_responsive.css') }}">
-    <!--投稿内容編集-->
-    <link rel="stylesheet" href="{{ asset('css/post_edit_responsible.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/post_edit_confirm_responsive.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/post_edit_done_responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     <!--viewportの設定-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 

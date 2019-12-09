@@ -16,6 +16,17 @@
         {{ csrf_field() }}
             <table>
                 <tr>
+                    <td><span>必須</span>表示可否<br /><br /></td>
+                    <td><p class="name">
+                        @if ($data['flagData'] === 0)
+                        表示する
+                        @else
+                        表示しない
+                        @endif
+                        </p>
+                    </td>
+                </tr>
+                <tr>
                     <td><span>必須</span>名前<br /><br /></td>
                     <td><p class="name">{{ $data['nameData'] }}</p></td>
                 </tr>

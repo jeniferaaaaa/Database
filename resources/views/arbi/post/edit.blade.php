@@ -23,8 +23,8 @@
                     <div class="error_post_disp">※投稿一覧への表示選択は必須です。</div>
                 </td>
                 <td>
-                    <input type="radio" name="q1" value="disp" checked>表示する
-                    <input type="radio" name="q1" value="nodisp">表示しない
+                    <input type="radio" name="disp_flag" value="1" checked>表示する
+                    <input type="radio" name="disp_flag" value="0">表示しない
                 </td>
             </tr>
             <tr>

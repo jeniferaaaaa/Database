@@ -42,8 +42,8 @@ class DoneController extends Controller
         $dataDetail->detail1 = $data['dt1Data'];
         $dataDetail->detail2 = $data['dt2Data'];
         $dataDetail->detail3 = $data['dt3Data'];
+        $dataDetail->displayFlag = $data['flagData'];
         $dataDetail->save();
-
 
         return view('arbi.post.done');
 

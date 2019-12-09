@@ -38,6 +38,7 @@ class DoneController extends Controller
             $site->sub_path1 = $sub1_path;
             $site->sub_path2 = $sub2_path;
             $site->sub_path3 = $sub3_path;
+            $site->site_text = $data['site_text'];
             $site->save();
         }
 

@@ -28,7 +28,9 @@ class TopValidate extends FormRequest
             'sub1' => 'file|image|mimes:jpeg,png,PNG,jpg',
             'sub2' => 'file|image|mimes:jpeg,png,PNG,jpg',
             'sub3' => 'file|image|mimes:jpeg,png,PNG,jpg',
-        ];    }
+            'site_text' => 'required',
+        ];    
+    }
     
     /**
      * エラーメッセージのオーバーライド
@@ -50,6 +52,7 @@ class TopValidate extends FormRequest
             'sub3.file' => 'サブ画像3のファイルのアップロードに失敗しました',
             'sub3.image' => 'ファイルの形式が間違っています',
             'sub3.mines' => '画像はjpeg,pngのみアップロード可能です',
+            'site_text' => 'サイト説明は必須です',
         ];
     }
 }

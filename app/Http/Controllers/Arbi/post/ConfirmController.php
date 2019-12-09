@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Arbi\post;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\BasicValidateRequest;
+use App\Http\Requests\PostValidate;
 use Auth;
 
 use App\Consts\fileConst;
@@ -17,12 +17,13 @@ class ConfirmController extends Controller
      * 完了画面で登録するために入力データをセッションに保存
      * 
      */
-    public function __invoke (Request $request)
+    public function __invoke (PostValidate $request)
     {
         //ログインユーザに紐付くサイトモデル取得
         $siteObjects = Auth::user()->sites;
 
         //リクエストデータの受け取り
+        $flagData = $request->input('disp_flag');
         $nameData = $request->input('name');
         $keywordData = $request->input('sns_keyword');
         $at1Data = $request->input('attribute1');
@@ -41,6 +42,7 @@ class ConfirmController extends Controller
 
         //セッション用の配列作成
         $data = [
+            'flagData' => $flagData,
             'nameData' => $nameData,
             'keywordData' => $keywordData,
             'at1Data' => $at1Data,

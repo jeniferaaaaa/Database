@@ -13,7 +13,7 @@ class EditController extends Controller
      * ログインユーザのデータを取得して入力画面表示
      * 
      */
-    public function __invoke (Request $request) 
+    public function __invoke (Request $request)
     {
         //ログインユーザに紐付くサイトモデル取得
         $siteObjects = Auth::user()->sites;

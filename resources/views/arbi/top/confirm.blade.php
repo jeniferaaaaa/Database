@@ -46,6 +46,10 @@
                         @endif
                     </td>
                 </tr>
+                <tr>
+                    <td>サイト説明<br /><br /></td>
+                    <td><p class="email">{{ $data['site_text'] }}</p></td>
+                </tr>
             </table>
 
             <h3>この内容でよろしいでしょうか？</h3>
