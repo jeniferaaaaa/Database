@@ -49,7 +49,6 @@ body {
     font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
-
 /*ヘッダー部分*/
 header {
     background:  rgba(255, 255, 255, 0.7);
@@ -61,7 +60,7 @@ header {
 
 header li {
     float: left;
-    padding: 33px 50px 30px 50px;
+    padding: 33px 15px 30px 15px;
 }
 
 header a {
@@ -75,11 +74,11 @@ header a:hover {
 
 /*ロゴのみに下記適用*/
 li:first-child {
-    padding: 24px 24px 24px 90px;
+    padding: 24px;
 }
 
 .logo {
-    margin: 5px 300px 0 150px;
+    margin: 5px 80px 0 80px;
     font-size: 35px;
 }
 
@@ -87,8 +86,8 @@ li:first-child {
     color: #67A7CC;
 }
 
-/*[新規登録]ボタンに下記適用*/
-.register { 
+/*[ログイン]ボタンに下記適用*/
+.login { 
     color: #67A7CC;
     padding: 20px;
     margin: 10px 50px 10px 50px;
@@ -99,24 +98,24 @@ li:first-child {
     transition: .4s;
 }
  
-.register:hover {
+.login:hover {
     background: #67A7CC;
     color: white;
   }
 
-/*サイト登録確認（枠）*/
-.sign-up-confirm {
+/*基本情報確認画面（枠）*/
+.main-confirm {
     background-color: rgba(103, 167, 204, 0.4);
-    height: 950px;
+    height: 780px;
 }
 
-.sign-up-confirm h2 {
+.main-confirm h2 {
     font-size: 25px;
     font-weight: bold;
     padding: 100px 0 0 200px;
 }
 
-.sign-up-confirm h3 {
+.main-confirm h3 {
     font-size: 20px;
     text-align: center;
     margin: 20px;

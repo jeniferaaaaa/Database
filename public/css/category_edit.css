@@ -49,7 +49,6 @@ body {
     font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
-
 /*ヘッダー部分*/
 header {
     background:  rgba(255, 255, 255, 0.7);
@@ -61,7 +60,7 @@ header {
 
 header li {
     float: left;
-    padding: 33px 50px 30px 50px;
+    padding: 33px 15px 30px 15px;
 }
 
 header a {
@@ -75,11 +74,11 @@ header a:hover {
 
 /*ロゴのみに下記適用*/
 li:first-child {
-    padding: 24px 24px 24px 90px;
+    padding: 24px;
 }
 
 .logo {
-    margin: 5px 300px 0 150px;
+    margin: 5px 80px 0 80px;
     font-size: 35px;
 }
 
@@ -87,8 +86,8 @@ li:first-child {
     color: #67A7CC;
 }
 
-/*[新規登録]ボタンに下記適用*/
-.register { 
+/*[ログイン]ボタンに下記適用*/
+.login { 
     color: #67A7CC;
     padding: 20px;
     margin: 10px 50px 10px 50px;
@@ -99,38 +98,35 @@ li:first-child {
     transition: .4s;
 }
  
-.register:hover {
+.login:hover {
     background: #67A7CC;
     color: white;
   }
 
-/*サイト登録確認（枠）*/
-.sign-up-confirm {
+/*カテゴリ編集欄*/
+.category_edit {
     background-color: rgba(103, 167, 204, 0.4);
-    height: 950px;
+    height: 850px;
 }
-
-.sign-up-confirm h2 {
+.category_edit h2 {
     font-size: 25px;
     font-weight: bold;
     padding: 100px 0 0 200px;
 }
 
-.sign-up-confirm h3 {
-    font-size: 20px;
-    text-align: center;
-    margin: 20px;
-}
-
-/*入力確認欄*/
-.input-confirm {
+/*入力欄*/
+.input {
     background-color: white;
     border-radius: 10px;
     padding: 50px;
     margin: 0 120px 0 120px;
 }
 
-.input-confirm span {
+.hissu{
+    padding: 10px 10px 20px 10px;
+}
+
+.input span {
     background-color: #67A7CC;
     color: white;
     border-radius: 5px;
@@ -138,7 +134,7 @@ li:first-child {
     margin: 6px 7px;
 }
 
-.input-confirm p {
+.input p {
     margin: 6px 0 0 0;
 }
 
@@ -147,9 +143,52 @@ td {
     border-bottom: dashed 0.2px gray;
 }
 
-table TR:nth-child(6) td:first-child {
+table TR:nth-child(3) td:first-child {
     vertical-align: top;
 }
+
+input {
+    height: 27px;
+    width: 250px;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #67A7CC;
+    background: #FFF;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+}
+
+input:focus {
+    border: solid 3px #618BAD;
+    outline: 0;
+}
+ 
+textarea {
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #67A7CC;
+    background: #FFF;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+textarea:focus {
+    border: solid 3px #618BAD;
+    outline: 0;  
+}
+
+.error_category_name {
+    color: red;
+} 
+
+.error_category_pic {
+    color: red;
+} 
+
+.error_category_exp{
+    color: red;
+}   
 
 .button {
     text-align: center;
@@ -175,7 +214,7 @@ table TR:nth-child(6) td:first-child {
     background-color: #618BAD;
 }
 
-.ok {
+.confirm {
     background-color: #67A7CC;
     padding: 15px 40px 15px 40px;
     margin: 0 15px;
@@ -184,7 +223,7 @@ table TR:nth-child(6) td:first-child {
     box-shadow: 2px 2px 4px gray;
 }
 
-.ok:hover {
+.confirm:hover {
     background-color: #618BAD;
 }
 
@@ -231,4 +270,3 @@ a.rule {
 li.policy {
     padding: 0;
 }
-

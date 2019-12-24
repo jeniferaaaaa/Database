@@ -46,53 +46,77 @@ table {
 
 /*全体部分*/
 body {
-    font-family: 'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 /*ヘッダー部分*/
 header {
-    background-color: #F58F98;
+    background:  rgba(255, 255, 255, 0.7);
     height: 80px;
     font-weight: bold;
     position: fixed;
-    width: 2000px;
+    width: 100%;
 }
 
 header li {
     float: left;
-    padding: 35px 50px 30px 50px;
+    padding: 33px 50px 30px 50px;
 }
 
 header a {
-    text-decoration: none;
-    color: black;
+    color: #67A7CC;
+    text-decoration: none;    
 }
 
 header a:hover {
+    color:#618BAD;
+}
+
+/*ロゴのみに下記適用*/
+li:first-child {
+    padding: 24px 24px 24px 90px;
+}
+
+.logo {
+    margin: 5px 300px 0 150px;
+    font-size: 35px;
+}
+
+.logo:hover {
+    color: #67A7CC;
+}
+
+/*[新規登録]ボタンに下記適用*/
+.register { 
+    color: #67A7CC;
+    padding: 20px;
+    margin: 10px 50px 10px 50px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+ 
+.register:hover {
+    background: #67A7CC;
     color: white;
-}
+  }
 
-/*liの一つ目の要素*/
-header li:first-child {
-    padding: 7px 30px 0 80px;
-}
-
-/*サイト新規登録欄*/
+/*まずは～欄*/
 .sign-up {
-    background-color:#F6BABC;
-    height: 1060px;
-    padding: 110px 80px;
+    background-color: rgba(103, 167, 204, 0.4);
+    height: 1300px;
 }
-
 .sign-up h2 {
     font-size: 25px;
     font-weight: bold;
-    margin: 0 120px 0 120px;
+    padding: 100px 0 0 200px;
 }
 
 .sign-up h3 {
-    font-size: 18px;
-    margin: 0 120px 0 120px;
+    font-size: 20px;
+    padding: 10px 0 0 200px;
 }
 
 /*入力欄*/
@@ -108,7 +132,7 @@ header li:first-child {
 }
 
 .input span {
-    background-color: #F58F98;
+    background-color: #67A7CC;
     color: white;
     border-radius: 5px;
     padding: 2px;
@@ -133,31 +157,29 @@ input {
     width: 200px;
     padding: 0.5em 1em;
     font-weight: bold;
-    color: #F58F98;
+    color: #67A7CC;
     background: #FFF;
-    border: solid 3px #F58F98;
+    border: solid 3px #67A7CC;
     border-radius: 10px;
 }
 
 input:focus {
-    border: solid 3px #EF4868;
-    outline: 0;  
+    border: solid 3px #618BAD;
+    outline: 0;
   }
-
-
-
+  
 textarea {
     padding: 0.5em 1em;
     font-weight: bold;
-    color: #F58F98;
+    color: #67A7CC;
     background: #FFF;
-    border: solid 3px #F58F98;
+    border: solid 3px #67A7CC;
     border-radius: 10px;
-    font-family: 'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 textarea:focus {
-    border: solid 3px #EF4868;
+    border: solid 3px #618BAD;
     outline: 0;  
 }
 
@@ -201,7 +223,7 @@ textarea:focus {
 }
 
 .back {
-    background-color: #E95B6B;
+    background-color: #67A7CC;
     padding: 15px 40px 15px 40px;
     margin: 0 15px;
     height: 18px;
@@ -210,11 +232,11 @@ textarea:focus {
 }
 
 .back:hover {
-    background-color: #F6BABC;
+    background-color: #618BAD;
 }
 
 .confirm {
-    background-color: #E95B6B;
+    background-color: #67A7CC;
     padding: 15px 40px 15px 40px;
     margin: 0 15px;
     height: 18px;
@@ -223,12 +245,12 @@ textarea:focus {
 }
 
 .confirm:hover {
-    background-color: #F6BABC;
+    background-color: #618BAD;
 }
 
 /*フッター部分*/
 footer {
-    background-color: #F58F98;
+    background-color: rgba(103, 167, 204, 0.1);
     margin: auto;
     height: 100px;
 }
@@ -236,6 +258,7 @@ footer {
 footer li {
     float: left;
     margin: 15px 0 0 0;
+    font-weight: bold;
 }
 
 footer a {
@@ -243,6 +266,11 @@ footer a {
     text-decoration: none;
     color: black;
     font-size: 13px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #618BAD;
 }
 
 /*利用規約部分*/
@@ -251,8 +279,15 @@ a.rule {
 }
 
 .copyright a {
+    color: black;
     float: right;
     margin: 80px 20px 0 0;
 }
 
+.copyright a:hover {
+    color: black;
+}
 
+li.policy {
+    padding: 0;
+}
