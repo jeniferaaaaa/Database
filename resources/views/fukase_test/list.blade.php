@@ -28,13 +28,13 @@
     <!-- 繰り返し -->
     @foreach ($items as $item)
         <tr>
-            <td>{{$items->image_path}}</td>
-            <td>{{$items->name}}</td>
-            <td>{{$items->attribute1}}</td>
-            <td>{{$items->attribute2}}</td>
-            <td>{{$items->attribute3}}</td>
-            <td>{{$items->attribute4}}</td>
-            <td>{{$items->attribute5}}</td>
+            <td>{{$item->main_path}}</td>
+            <td>{{$item->site_name}}</td>
+            <td>{{$item->at1_name}}</td>
+            <td>{{$item->at2_name}}</td>
+            <td>{{$item->at3_name}}</td>
+            <td>{{$item->at4_name}}</td>
+            <td>{{$item->at5_name}}</td>
         </tr>
     @endforeach
     </table><br>

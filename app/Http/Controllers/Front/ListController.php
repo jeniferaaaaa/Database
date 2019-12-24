@@ -1,17 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\List;
+namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Model\Data;
+use App\Model\Site;
 
-class SiteFrontController extends Controller
+class ListController extends Controller
 {
     // 一覧画面
     public function list(Request $request) 
     {
-        $items = Data::all();
+        $items = DB::select('select * from site where id=1');
+        \Log::info('ログ出力テスト');
+        logger($items);
         return view('fukase_test.list', ['items'=>$items]);
     }
     
