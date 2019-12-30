@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace App\Http\Controllers\test_Fukase;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

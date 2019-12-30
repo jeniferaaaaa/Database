@@ -46,5 +46,6 @@ Route::post('/top/confirm/done', 'Arbi\top\DoneController@index');
 
 // fukase_test
 // site_front
-Route::get('/list', 'Front\ListController@list');
+Route::get('test_Fukase/list', 'test_Fukase\ListController@list');
+Route::get('test_Fukase/detail', 'test_Fukase\DetailController@detail');
 
