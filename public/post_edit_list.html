@@ -3,175 +3,176 @@
   <head>
     <meta charset="UTF-8">
     <!--スタイルシートの適用-->
-    <link rel="stylesheet" href="css/post_edit_list.css">
+    <link rel="stylesheet" href="css/admin_stylesheet.css">
     <!--レスポンシブ対応スタイルシートの適用-->
-    <link rel="stylesheet" href="css/post_edit_list_responsible.css">
+    <link rel="stylesheet" href="css/admin_responsible_stylesheet.css">
     <!--viewportの設定-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 
     <!--タイトル-->
     <title>投稿内容編集一覧｜Anyshare</title>
   </head>
-  <body>
 
+  <body>
     <!--ヘッダー-->
     <header>
-        <ul>
-         <li><a class="logo">Anyshare</a></li>
-         <li><a href="#">管理者メニュー</a></li>
-         <li><a href="#">基本情報編集</a></li>
-         <li><a href="#">表示項目設定</a></li>
-         <li><a href="#">デザイン設定</a></li>
-         <li><a href="#">TOPページ編集</a></li>
-         <li><a href="#">カテゴリ編集</a></li>
-         <li><a href="#">投稿内容編集</a></li>
-             <a href="#" class="login">ログイン</a>
-        </ul>
+      <ul>
+        <li><a class="logo">Anyshare</a></li>
+        <li><a href="#">管理者メニュー</a></li>
+        <li><a href="#">基本情報編集</a></li>
+        <li><a href="#">表示項目設定</a></li>
+        <li><a href="#">デザイン設定</a></li>
+        <li><a href="#">TOPページ編集</a></li>
+        <li><a href="#">カテゴリ編集</a></li>
+        <li><a href="#">投稿内容編集</a></li>
+            <a href="#" class="login">ログイン</a>
+      </ul>
     </header>
 
     <!--投稿内容一覧欄-->
     <div class="post_edit_list">
-            <h2>投稿内容一覧</h2><br />
+      <h2>投稿内容一覧</h2><br />
 
-    <!--プルダウンゾーン-->
-    <div class="post_edit_table1">
-      <table>
-       <tr>
-        <!--名称プルダウン--> 
-         <td><p>名称</p></td>
-         <td>
-          <select name=”name”>
-            <option value=”name1”>我が家のサモエド</option>
-            <option value=”name2”>子犬のサモエド</option>
-            <option value=”name3”>サモエドスマイル</option>
-            <option value=”name4”>かわいいサモエド</option>
-            <option value=”name5”>いい子なサモエド</option>
-          </select>
-         </td>
-          <td>
-          <!--カテゴリプルダウン-->
-          <td><p>カテゴリ</p></td> 
-           <td>
-            <select name=”category”>
-              <option value=”category1”>サモエド</option>
-              <option value=”category2”>ゴールデンレトリバー</option>
-              <option value=”category3”>ラブラドールレトリバー</option>
-              <option value=”category4”>プードル</option>
-              <option value=”category5”>チワワ</option>
-            </select>
-           </td>
-        </tr><br />
-      </table>
-    </div>
+      <!--プルダウンゾーン-->
+      <div class="post_edit_table1">
+        <table>
+          <tr>
+            <!--名称プルダウン--> 
+            <td><p>名称</p></td>
+            <td>
+              <select name=”name”>
+                <option value=”name1”>我が家のサモエド</option>
+                <option value=”name2”>子犬のサモエド</option>
+                <option value=”name3”>サモエドスマイル</option>
+                <option value=”name4”>かわいいサモエド</option>
+                <option value=”name5”>いい子なサモエド</option>
+              </select>
+            </td>
+            <td>
+            <!--カテゴリプルダウン-->
+            <td><p>カテゴリ</p></td> 
+            <td>
+              <select name=”category”>
+                <option value=”category1”>サモエド</option>
+                <option value=”category2”>ゴールデンレトリバー</option>
+                <option value=”category3”>ラブラドールレトリバー</option>
+                <option value=”category4”>プードル</option>
+                <option value=”category5”>チワワ</option>
+              </select>
+            </td>
+          </tr><br />
+        </table>
+      </div>
 
-        <!--登録日時-->
+      <!--登録日時テーブル-->
       <div class="post_edit_table2">
-       <table>
-        <tr>
-          <td><p>登録日時</p></td>
-          <td>
-            <select name="yyyy">
-              <option value="default_yyyy1">yyyy</option>
-            </select>
-          </td>
-          <td>
-            <select name="mm">
-              <option value="default_mm1">mm</option>
-            </select>
-          </td>
-          <td>
-            <select name="dd">
-              <option value="default_dd1">dd</option>
-            </select>
-          </td>
-           <td>
-             <p>～</p>
-           </td>
-           <td>
-            <select name="yyyy">
-              <option value="default_yyyy2">yyyy</option>
-            </select>
-           </td>
+        <table>
+          <tr>
+            <td><p>登録日時</p></td>
             <td>
-             <select name="mm">
-              <option value="default_mm2">mm</option>
-             </select>
+              <select name="yyyy">
+                <option value="default_yyyy1">yyyy</option>
+              </select>
             </td>
             <td>
-             <select name="dd">
-              <option value="default_dd2">dd</option>
-             </select>
+              <select name="mm">
+                <option value="default_mm1">mm</option>
+              </select>
             </td>
             <td>
+              <select name="dd">
+                <option value="default_dd1">dd</option>
+              </select>
+            </td>
+            <td>
+              <p>～</p>
+            </td>
+            <td>
+              <select name="yyyy">
+                <option value="default_yyyy2">yyyy</option>
+              </select>
+            </td>
+            <td>
+              <select name="mm">
+                <option value="default_mm2">mm</option>
+              </select>
+            </td>
+            <td>
+              <select name="dd">
+                <option value="default_dd2">dd</option>
+              </select>
+            </td>
+            <td>
+              <!--検索ボタン-->
               <div class="search_button">
                 <a class="search" href="#">検索</a>
               </div>
             </td>
           </tr>
-            </table><br />
-      
-        
+        </table><br />
+
         <!--一覧表-->
         <table>
-            <!--横列-->
-            <tr>
-                <td>
+          <!--横列-->
+          <tr>
+            <td>
 
-                </td>
-                <td>
+            </td>
+            <td>
 
-                </td>
-                <td>
-                    <p>登録日</p>
-                </td>
-                <td>
-                    <p>表示可否</p>
-                </td>
-                <td>
-                    <p>編集</p>
-                </td>
-                <td>
-                    <p>削除</p>
-                </td>
-            </tr>
-            <!--横列-->
-            <tr>    
-                <td>
-                    <p>写真1</p>
-                </td>
-                <td>
-                    <p>我が家のサモエド</p>
-                </td>
-                <td>
-                    <p>yyyy/mm/dd hh:mm</p>
-                </td>
-                <td>
-                    <p>表示</p>
-                </td>
-                <td>
-                    <a class="edit" href="#">編集</a>
-                </td>
-                <td>
-                    <a class="delete" href="#">削除</a>
-                </td>
-            </tr>
+            </td>
+            <td>
+              <p>登録日</p>
+            </td>
+            <td>
+              <p>表示可否</p>
+            </td>
+            <td>
+              <p>編集</p>
+            </td>
+            <td>
+              <p>削除</p>
+            </td>
+          </tr>
+          <!--横列-->
+          <tr>
+            <td>
+              <p>写真1</p>
+            </td>
+            <td>
+              <p>我が家のサモエド</p>
+            </td>
+            <td>
+              <p>yyyy/mm/dd hh:mm</p>
+            </td>
+            <td>
+              <p>表示</p>
+            </td>
+            <td>
+              <a class="edit" href="#">編集</a>
+            </td>
+            <td>
+              <a class="delete" href="#">削除</a>
+            </td>
+          </tr>
         </table>
       </div>
-        <!--「前へ」「次へ」ボタン-->
-        <a class="prev" href="#">前へ</a>|
-        <a class="next" href="#">次へ</a>
+      <!--「前へ」「次へ」ボタン-->
+      <a class="prev" href="#">前へ</a>|
+      <a class="next" href="#">次へ</a>
     </div>
 
     <!--フッター-->
     <footer>
-        <ul>
-            <li class="policy"><a href="#">プライバシーポリシー</a></li>
-            <li>|</li>
-            <li><a href="#" class="rule">利用規約</a></li>
-        </ul>
-            <div class="copyright">
-                <a>Copyright © 2019 EqualShare All Rights Reserved.</a>
-            </div>
+      <ul>
+        <li class="policy"><a href="#">プライバシーポリシー</a></li>
+        <li>|</li>
+        <li><a href="#" class="rule">利用規約</a></li>
+      </ul>
+      <div class="copyright">
+        <a>Copyright © 2019 EqualShare All Rights Reserved.</a>
+      </div>
     </footer>
+
   </body>
 </html>
