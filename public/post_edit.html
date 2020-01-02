@@ -12,130 +12,131 @@
     <!--タイトル-->
     <title>投稿内容編集｜Anyshare</title>
   </head>
-  <body>
 
+  <body>
     <!--ヘッダー-->
     <header>
-        <ul>
-            <li><a class="logo">Anyshare</a></li>
-            <li><a href="#">管理者メニュー</a></li>
-            <li><a href="#">基本情報編集</a></li>
-            <li><a href="#">表示項目設定</a></li>
-            <li><a href="#">デザイン設定</a></li>
-            <li><a href="#">TOPページ編集</a></li>
-            <li><a href="#">カテゴリ編集</a></li>
-            <li><a href="#">投稿内容編集</a></li>
+      <ul>
+        <li><a class="logo">Anyshare</a></li>
+        <li><a href="#">管理者メニュー</a></li>
+        <li><a href="#">基本情報編集</a></li>
+        <li><a href="#">表示項目設定</a></li>
+        <li><a href="#">デザイン設定</a></li>
+        <li><a href="#">TOPページ編集</a></li>
+        <li><a href="#">カテゴリ編集</a></li>
+        <li><a href="#">投稿内容編集</a></li>
             <a href="#" class="login">ログイン</a>
-            </ul>
+      </ul>
     </header>
 
     <!--投稿内容編集欄-->
     <div class="post_edit">
-            <h2>投稿内容編集</h2><br />
-            
-    <!--入力欄-->
-    <div class="input">
-            <form method="POST" action="#">
-              <p class=hissu>※<span>必須</span>は必須入力項目です。</p>
-              <table>
-                <tr>
-                  <td>
-                    <span>必須</span>投稿一覧への表示選択<br /><br />
-                    <div class="error_post_disp">※投稿一覧への表示選択は必須です。</div>
-                  </td>
-                    <td>
-                      <input type="radio" name="q1" value="disp" checked>表示する
-                      <input type="radio" name="q1" value="nodisp">表示しない
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span>必須</span>名前<br /><br />
-                        <div class="error_name">※名前は必須です。</div>
-                    </td> 
-                    <td><input type="text" name="name" placeholder="例）我が家のサモエド"></td>
-                </tr>   
-                <tr>
-                  <td>
-                    <span>必須</span>SNSキーワード<br /><br />
-                    <div class="error_sns_keyword">※SNSキーワードは必須です。</div>
-                  </td> 
-                  <td><input type="text" name="sns_keyword" placeholder="例）サモエド"></td>
-                </tr>   
-                <tr>
-                  <td>
-                    画像<br /><br />
-                  </td>
-                  <td>
-                    <input type="file" name="picture">
-                  </td>
-               </tr>
-                <tr>
-                    <td>
-                        <span>必須</span>タイプ<br /><br />
-                        <div class="error_type">※タイプは必須です。</div>
-                    </td> 
-                    <td><input type="text" name="type" placeholder="例）大型犬"></td>
-                </tr>   
-                <tr>
-                  <td>
-                   価格<br /><br />
-                  </td>
-                  <td>
-                    <input type="text" name="price" placeholder="例）¥400,000前後">
-                  </td>
-                </tr>
-                <tr>
-                    <td>
-                        飼いやすさ<br /><br />
-                    </td>
-                    <td>
-                        <input type="text" name="breed" placeholder="例）難しめ">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        毛色<br /><br />
-                    </td>
-                    <td>
-                        <input type="text" name="color" placeholder="例）白">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        もふもふ度<br /><br />
-                    </td>
-                    <td>
-                        <input type="text" name="fluffy" placeholder="例）★★★★★">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span>必須</span>かわいさポイント<br /><br />
-                        <div class="error_cute_point">※かわいさポイントは必須です。</div>
-                    </td> 
-                    <td><textarea name="cute_point" cols="50" rows="5" placeholder="例）大きくてハグすると癒されるところがポイント。"></textarea></td>    
-                    </tr>
-              </table>
-            </form>
-          </div>
-    <!--確認・戻るボタン-->
-        <div class="button">  
-            <a class="back" href="#">戻る</a>
-            <a class="confirm" href="#">確認画面へ進む</a>
-        </div>
+      <h2>投稿内容編集</h2><br />
+
+      <!--入力欄-->
+      <div class="input">
+        <form method="POST" action="#">
+        <p class=hissu>※<span>必須</span>は必須入力項目です。</p>
+          <table>
+            <tr>
+              <td>
+                <span>必須</span>投稿一覧への表示選択<br /><br />
+                <div class="error_post_disp">※投稿一覧への表示選択は必須です。</div>
+              </td>
+              <td>
+                <input type="radio" name="q1" value="disp" checked>表示する
+                <input type="radio" name="q1" value="nodisp">表示しない
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>必須</span>名前<br /><br />
+                <div class="error_name">※名前は必須です。</div>
+              </td> 
+              <td><input type="text" name="name" placeholder="例）我が家のサモエド"></td>
+            </tr>
+            <tr>
+              <td>
+                <span>必須</span>SNSキーワード<br /><br />
+                <div class="error_sns_keyword">※SNSキーワードは必須です。</div>
+              </td> 
+              <td><input type="text" name="sns_keyword" placeholder="例）サモエド"></td>
+            </tr>   
+            <tr>
+              <td>
+                画像<br /><br />
+              </td>
+              <td>
+                <input type="file" name="picture">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>必須</span>タイプ<br /><br />
+                <div class="error_type">※タイプは必須です。</div>
+              </td> 
+              <td><input type="text" name="type" placeholder="例）大型犬"></td>
+            </tr>
+            <tr>
+              <td>
+                価格<br /><br />
+              </td>
+              <td>
+                <input type="text" name="price" placeholder="例）¥400,000前後">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                飼いやすさ<br /><br />
+              </td>
+              <td>
+                <input type="text" name="breed" placeholder="例）難しめ">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                毛色<br /><br />
+              </td>
+              <td>
+                <input type="text" name="color" placeholder="例）白">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                もふもふ度<br /><br />
+              </td>
+              <td>
+                <input type="text" name="fluffy" placeholder="例）★★★★★">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>必須</span>かわいさポイント<br /><br />
+                <div class="error_cute_point">※かわいさポイントは必須です。</div>
+              </td> 
+              <td><textarea name="cute_point" cols="50" rows="5" placeholder="例）大きくてハグすると癒されるところがポイント。"></textarea></td>    
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <!--確認・戻るボタン-->
+      <div class="button">
+        <a class="back" href="#">戻る</a>
+        <a class="confirm" href="#">確認画面へ進む</a>
+      </div>
     </div>
-        
+
     <!--フッター-->
     <footer>
-        <ul>
-            <li class="policy"><a href="#">プライバシーポリシー</a></li>
-            <li>|</li>
-            <li><a href="#" class="rule">利用規約</a></li>
-        </ul>
-            <div class="copyright">
-                <a>Copyright © 2019 EqualShare All Rights Reserved.</a>
-            </div>
+      <ul>
+        <li class="policy"><a href="#">プライバシーポリシー</a></li>
+        <li>|</li>
+        <li><a href="#" class="rule">利用規約</a></li>
+      </ul>
+      <div class="copyright">
+        <a>Copyright © 2019 EqualShare All Rights Reserved.</a>
+      <div>
     </footer>
   </body>
 </html>
