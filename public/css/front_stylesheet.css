@@ -125,50 +125,11 @@ li:first-child {
     padding: 30px;
 }
 
-.image1 {
+.image {
     height: 200px;
     width: 200px;
 }
 
-.image2 {
-    height: 200px;
-    width: 200px;
-}
-
-.image3 {
-    height: 200px;
-    width: 200px;
-}
-
-.image4 {
-    height: 200px;
-    width: 200px;
-}
-
-.image5 {
-    height: 200px;
-    width: 200px;
-}
-
-.image6 {
-    height: 200px;
-    width: 200px;
-}
-
-.image7 {
-    height: 200px;
-    width: 200px;
-}
-
-.image8 {
-    height: 200px;
-    width: 200px;
-}
-
-.image9 {
-    height: 200px;
-    width: 200px;
-}
 
 table {
     text-align: center;
@@ -259,6 +220,8 @@ li.prev {
 
 /*入力欄*/
 .input {
+    height:990px;
+    width: 1200px;
     background-color: white;
     border-radius: 10px;
     padding: 50px;
@@ -281,18 +244,16 @@ li.prev {
     margin: 6px 0 0 0;
 }
 
-td {
-    padding: 25px 60px 25px 10px;
-    border-bottom: dashed 0.2px gray;
+.input td {
+    padding: 25px;
+    border-bottom: dashed 1px #67A7CC;
 }
 
-table TR:nth-child(6) td:first-child {
-    vertical-align: top;
+/*table TR:nth-child(6) td:first-child {
+    vertical-align: top;*/
 }
 
 input {
-    height: 27px;
-    width: 200px;
     padding: 0.5em 1em;
     font-weight: bold;
     color: #67A7CC;
@@ -425,11 +386,6 @@ textarea:focus {
     margin: 6px 0 0 0;
 }
 
-td {
-    padding: 25px 60px 25px 10px;
-    border-bottom: dashed 0.2px gray;
-}
-
 table TR:nth-child(6) td:first-child {
     vertical-align: top;
 }
@@ -524,12 +480,12 @@ table TR:nth-child(6) td:first-child {
 }
 
 /*入力欄*/
-.input {
+/*.input {
     background-color:#fff;
     border-radius: 10px;
     padding: 100px;
     margin: 100px 500px 0 500px;
-}
+}*/
 
 .input p {
     margin: 14px 0 0 0;
@@ -575,7 +531,7 @@ textarea:focus {
     color: red;
 }
 
-.button {
+/*.button {
     background-color:#67A7CC;
     padding: 15px 20px 15px 20px;
     margin: 30px 15px;
@@ -593,6 +549,7 @@ textarea:focus {
 .button:hover {
     background-color: #618BAD;
 }
+
 
 /*フッター部分*/
 footer {
