@@ -1,0 +1,1400 @@
+/*リセットCSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}   
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*全体部分*/
+body {
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/*ヘッダー部分*/
+header {
+    background:  rgba(255, 255, 255, 0.7);
+    height: 80px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+}
+
+header li {
+    float: left;
+    padding: 33px 15px 30px 15px;
+}
+
+header a {
+    color: #67A7CC;
+    text-decoration: none;    
+}
+
+header a:hover {
+    color:#618BAD;
+}
+
+/*ロゴのみに下記適用*/
+li:first-child {
+    padding: 24px;
+}
+
+.logo {
+    margin: 5px 80px 0 80px;
+    font-size: 35px;
+}
+
+.logo:hover {
+    color: #67A7CC;
+}
+
+/*[ログイン]ボタンに下記適用*/
+.login { 
+    color: #67A7CC;
+    padding: 20px;
+    margin: 10px 50px 10px 50px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+ 
+.login:hover {
+    background: #67A7CC;
+    color: white;
+  }
+
+/*top_edit.css*/
+/*TOPページ入力確認画面（枠）*/
+.top_confirm {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: 780px;
+}
+
+.top_confirm h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 100px 0 0 200px;
+}
+
+.top_confirm h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*入力確認欄*/
+.input_confirm {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.input_confirm span {
+    background-color: #67A7CC;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input_confirm p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(6) td:first-child {
+    vertical-align: top;
+}
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back:hover {
+    background-color: #618BAD;
+}
+
+.ok {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.ok:hover {
+    background-color: #618BAD;
+}
+
+/*フッター部分*/
+footer {
+    background-color: rgba(103, 167, 204, 0.1);
+    margin: auto;
+    height: 100px;
+}
+
+footer li {
+    float: left;
+    margin: 15px 0 0 0;
+    font-weight: bold;
+}
+
+footer a {
+    margin: 15px 0 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #618BAD;
+}
+
+/*利用規約部分*/
+a.rule {
+    margin: 0;
+}
+
+.copyright a {
+    color: black;
+    float: right;
+    margin: 80px 20px 0 0;
+}
+
+.copyright a:hover {
+    color: black;
+}
+
+li.policy {
+    padding: 0;
+}
+
+/*top_edit_confirm*/
+/*リセットCSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}   
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*全体部分*/
+body {
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/*ヘッダー部分*/
+header {
+    background:  rgba(255, 255, 255, 0.7);
+    height: 80px;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+}
+
+header li {
+    float: left;
+    padding: 33px 15px 30px 15px;
+}
+
+header a {
+    color: #67A7CC;
+    text-decoration: none;
+}
+
+header a:hover {
+    color:#618BAD;
+}
+
+/*ロゴのみに下記適用*/
+li:first-child {
+    padding: 24px;
+}
+
+.logo {
+    margin: 5px 80px 0 80px;
+    font-size: 35px;
+}
+
+.logo:hover {
+    color: #67A7CC;
+}
+
+/*[ログイン]ボタンに下記適用*/
+.login { 
+    color: #67A7CC;
+    padding: 20px;
+    margin: 10px 50px 10px 50px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+ 
+.login:hover {
+    background: #67A7CC;
+    color: white;
+  }
+
+/*TOPページ入力確認画面（枠）*/
+.top_confirm {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: 780px;
+}
+
+.top_confirm h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 100px 0 0 200px;
+}
+
+.top_confirm h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*入力確認欄*/
+.input_confirm {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.input_confirm span {
+    background-color: #67A7CC;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input_confirm p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(6) td:first-child {
+    vertical-align: top;
+}
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back:hover {
+    background-color: #618BAD;
+}
+
+.ok {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.ok:hover {
+    background-color: #618BAD;
+}
+
+/*フッター部分*/
+footer {
+    background-color: rgba(103, 167, 204, 0.1);
+    margin: auto;
+    height: 100px;
+}
+
+footer li {
+    float: left;
+    margin: 15px 0 0 0;
+    font-weight: bold;
+}
+
+footer a {
+    margin: 15px 0 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #618BAD;
+}
+
+/*利用規約部分*/
+a.rule {
+    margin: 0;
+}
+
+.copyright a {
+    color: black;
+    float: right;
+    margin: 80px 20px 0 0;
+}
+
+.copyright a:hover {
+    color: black;
+}
+
+li.policy {
+    padding: 0;
+}
+
+/*top_edit_done.css*/
+/*TOPページ編集完了欄*/
+.top_edit_done {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: auto;
+    padding: 110px 80px;
+}
+
+.top_edit_done h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 120px 0 120px;
+}
+
+.top_edit_done h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    text-align: center;
+    margin: 50px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back-to-top {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back-to-top:hover {
+    background-color: #618BAD;
+}
+
+/*main.css*/
+/*基本情報編集欄*/
+.main {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: 1000px;
+}
+.main h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 100px 0 0 200px;
+}
+
+.main h3 {
+    font-size: 20px;
+    padding: 10px 0 0 200px;
+}
+
+/*入力欄*/
+.input {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.hissu{
+    padding: 10px 10px 20px 10px;
+}
+
+.input span {
+    background-color: #67A7CC;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(4) td:first-child {
+    vertical-align: top;
+}
+
+input {
+    height: 27px;
+    width: 200px;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #67A7CC;
+    background: #FFF;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+}
+
+input:focus {
+    border: solid 3px #618BAD;
+    outline: 0;
+  }
+  
+textarea {
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #67A7CC;
+    background: #FFF;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+textarea:focus {
+    border: solid 3px #618BAD;
+    outline: 0;  
+}
+
+.error_name {
+    color: red;
+}   
+
+.error_email {
+    color: red;
+}
+
+.error_pass1 {
+    color: red;
+}
+
+.error_pass2 {
+    color: red;
+}
+
+.error_site_name {
+    color: red;
+}
+
+.error_site_purpose {
+    color: red;
+}
+
+.error_domain {
+    color: red;
+}
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back:hover {
+    background-color: #618BAD;
+}
+
+.confirm {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.confirm:hover {
+    background-color: #618BAD;
+}
+
+/*main_confirm.css*/
+/*基本情報確認画面（枠）*/
+.main-confirm {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: 780px;
+}
+
+.main-confirm h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 100px 0 0 200px;
+}
+
+.main-confirm h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*入力確認欄*/
+.input-confirm {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.input-confirm span {
+    background-color: #67A7CC;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input-confirm p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(6) td:first-child {
+    vertical-align: top;
+}
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back:hover {
+    background-color: #618BAD;
+}
+
+.ok {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.ok:hover {
+    background-color: #618BAD;
+}
+
+/*main_done.css*/
+/*基本情報編集完了欄*/
+.main-done {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: auto;
+    padding: 110px 80px;
+}
+
+.main-done h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 120px 0 120px;
+}
+
+.main-done h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    text-align: center;
+    margin: 50px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back-to-top {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back-to-top:hover {
+    background-color: #618BAD;
+}
+
+/*menu.css*/
+/*メニュー欄*/
+.menu {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: auto;
+}
+.menu h2 {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 100px 0 30px 200px;
+
+}
+
+/*メニューのボタン*/
+.edit-menu {
+    color: #67A7CC;
+    padding: 20px;
+    margin: 20px 670px 0 670px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+
+.edit-menu:hover {
+    background: #67A7CC;
+    color: white;
+}
+
+.setting-display-item {
+    color: #67A7CC;
+    padding: 20px;
+    margin: 20px 670px 0 670px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+
+.setting-display-item:hover {
+    background: #67A7CC;
+    color: white;
+}
+
+.setting-design {
+    color: #67A7CC;
+    padding: 20px;
+    margin: 20px 670px 0 670px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+
+.setting-design:hover {
+    background: #67A7CC;
+    color: white;
+}
+
+.edit-top {
+    color: #67A7CC;
+    padding: 20px;
+    margin: 20px 630px 0 660px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+
+.edit-top:hover {
+    background: #67A7CC;
+    color: white;
+}
+
+.edit-category {
+    color: #67A7CC;
+    padding: 20px;
+    margin: 20px 670px 0 670px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+
+.edit-category:hover {
+    background: #67A7CC;
+    color: white;
+}
+
+.edit-post {
+    color: #67A7CC;
+    padding: 20px;
+    margin: 20px 670px 0 670px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+
+.edit-post:hover {
+    background: #67A7CC;
+    color: white;
+}
+
+.change-password {
+    color: #67A7CC;
+    padding: 20px;
+    margin: 20px 630px 60px 660px;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .4s;
+}
+
+.change-password:hover {
+    background: #67A7CC;
+    color: white;
+}
+
+/*category_edit.css*/
+/*カテゴリ編集欄*/
+.category_edit {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: 850px;
+}
+.category_edit h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 100px 0 0 200px;
+}
+
+/*入力欄*/
+.input {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.hissu{
+    padding: 10px 10px 20px 10px;
+}
+
+.input span {
+    background-color: #67A7CC;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(3) td:first-child {
+    vertical-align: top;
+}
+
+input {
+    height: 27px;
+    width: 250px;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #67A7CC;
+    background: #FFF;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+}
+
+input:focus {
+    border: solid 3px #618BAD;
+    outline: 0;
+}
+ 
+textarea {
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #67A7CC;
+    background: #FFF;
+    border: solid 3px #67A7CC;
+    border-radius: 10px;
+    font-family: "游ゴシック", "Yu Gothic",'メイリオ', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+textarea:focus {
+    border: solid 3px #618BAD;
+    outline: 0;  
+}
+
+.error_category_name {
+    color: red;
+} 
+
+.error_category_pic {
+    color: red;
+} 
+
+.error_category_exp{
+    color: red;
+}   
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back:hover {
+    background-color: #618BAD;
+}
+
+.confirm {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.confirm:hover {
+    background-color: #618BAD;
+}
+
+/*category_edit_confirm.css*/
+/*カテゴリ編集確認画面（枠）*/
+.category_edit_confirm {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: 780px;
+}
+
+.category_edit_confirm h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 100px 0 0 200px;
+}
+
+.category_edit_confirm h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*カテゴリ編集確認欄*/
+.input_confirm {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.input_confirm span {
+    background-color: #67A7CC;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input_confirm p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back:hover {
+    background-color: #618BAD;
+}
+
+.ok {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.ok:hover {
+    background-color: #618BAD;
+}
+
+/*category_edit_done.css*/
+/*カテゴリ編集完了欄*/
+.category_edit_done {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: auto;
+    padding: 110px 80px;
+}
+
+.category_edit_done h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 120px 0 120px;
+}
+
+.category_edit_done h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    text-align: center;
+    margin: 50px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back_to_top {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back_to_top:hover {
+    background-color: #618BAD;
+}
+
+/*post_edit_list*/
+/*投稿内容一覧欄*/
+.post_edit_list {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: 1550px;
+}
+
+.post_edit_list h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 100px 0 0 200px;
+}   
+
+.post_edit_table1 {
+    padding: 10px 100px;
+}
+
+.post_edit_table2 {
+    padding:0 100px;
+}
+
+/*post_edit_confirm.css*/
+/*投稿編集内容確認画面（枠）*/
+.post_edit_confirm {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: 1200px;
+}
+
+.post_edit_confirm h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 100px 0 0 200px;
+}
+
+.post_edit_confirm h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*入力確認欄*/
+.input_confirm {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 120px 0 120px;
+}
+
+.input_confirm span {
+    background-color: #67A7CC;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 6px 7px;
+}
+
+.input_confirm p {
+    margin: 6px 0 0 0;
+}
+
+td {
+    padding: 25px 60px 25px 10px;
+    border-bottom: dashed 0.2px gray;
+}
+
+table TR:nth-child(6) td:first-child {
+    vertical-align: top;
+}
+
+.button {
+    text-align: center;
+    margin: 40px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back:hover {
+    background-color: #618BAD;
+}
+
+.ok {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.ok:hover {
+    background-color: #618BAD;
+}
+
+/*post_edit_done.css*/
+/*投稿内容編集完了欄*/
+.post_edit_done {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: auto;
+    padding: 110px 80px;
+}
+
+.post_edit_done h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 120px 0 120px;
+}
+
+.post_edit_done h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    text-align: center;
+    margin: 50px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back_to_top {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back_to_top:hover {
+    background-color: #618BAD;
+}
+
+/*disp_setting_done.css*/
+/*表示項目設定完了欄*/
+.disp_setting_done {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: auto;
+    padding: 110px 80px;
+}
+
+.disp_setting_done h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 120px 0 120px;
+}
+
+.disp_setting_done h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    text-align: center;
+    margin: 50px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back_to_top {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back_to_top:hover {
+    background-color: #618BAD;
+}
+
+/*design_setting_done.css*/
+/*デザイン設定完了欄*/
+.design_setting_done {
+    background-color: rgba(103, 167, 204, 0.4);
+    height: auto;
+    padding: 110px 80px;
+}
+
+.design_setting_done h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 120px 0 120px;
+}
+
+.design_setting_done h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.button {
+    text-align: center;
+    margin: 50px;
+}
+
+.button a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.back_to_top {
+    background-color: #67A7CC;
+    padding: 15px 40px 15px 40px;
+    margin: 0 15px;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.back_to_top:hover {
+    background-color: #618BAD;
+}
