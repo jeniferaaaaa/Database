@@ -132,13 +132,12 @@ li:first-child {
 
 
 table {
-    text-align: center;
     width: 1000px;
     margin: auto;
 }
 
 /*テーブルの余白設定*/
-td,th {
+.top_td {
     padding: 15px;
 }
 
@@ -154,9 +153,6 @@ a:hover {
 
 /*ページャー*/
 * {
-    margin: auto;
-    padding: 0;
-    font-style: normal;
     list-style: none;
 }
 
@@ -205,7 +201,7 @@ li.prev {
 /*まずは～欄*/
 .sign-up {
     background-color: rgba(103, 167, 204, 0.4);
-    height: 1300px;
+    height: 1600px;
 }
 .sign-up h2 {
     font-size: 25px;
@@ -220,7 +216,7 @@ li.prev {
 
 /*入力欄*/
 .input {
-    height:990px;
+    height:1100px;
     width: 1200px;
     background-color: white;
     border-radius: 10px;
@@ -245,16 +241,12 @@ li.prev {
 }
 
 .input td {
-    padding: 25px;
+    padding: 25px 25px 25px 0;
     border-bottom: dashed 1px #67A7CC;
 }
 
-/*table TR:nth-child(6) td:first-child {
-    vertical-align: top;*/
-}
-
 input {
-    padding: 0.5em 1em;
+    padding: 25px 25px 25px 0;
     font-weight: bold;
     color: #67A7CC;
     background: #FFF;
@@ -479,15 +471,7 @@ table TR:nth-child(6) td:first-child {
     
 }
 
-/*入力欄*/
-/*.input {
-    background-color:#fff;
-    border-radius: 10px;
-    padding: 100px;
-    margin: 100px 500px 0 500px;
-}*/
-
-.input p {
+.login_input p {
     margin: 14px 0 0 0;
     font-weight: bold;
 }
@@ -496,6 +480,7 @@ input {
     height: 27px;
     width: 200px;
     padding: 0.5em 1em;
+    margin: 20px;
     font-weight: bold;
     color: #67A7CC;
     background: #FFF;
@@ -531,7 +516,7 @@ textarea:focus {
     color: red;
 }
 
-/*.button {
+.button {
     background-color:#67A7CC;
     padding: 15px 20px 15px 20px;
     margin: 30px 15px;
