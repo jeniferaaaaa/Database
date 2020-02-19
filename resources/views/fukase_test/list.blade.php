@@ -38,6 +38,15 @@
         </tr>
     @endforeach
     </table><br>
-    </form>
+    <a href="{{ url('test_Fukase/detail') }}"> 詳細画面 </a>
+    <div class="page-main" role="main">
+        <div id="buttons1">
+            <h2>BUTTONS1</h2>
+            <div class="innner clearfix">
+                <button>ぼたん</button>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="{{asset('/js/jquery.min.js')}}"></script>
 </html>
